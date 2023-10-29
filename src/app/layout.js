@@ -1,6 +1,7 @@
 import { Lato } from 'next/font/google'
 import './globals.css'
 import { DestaqueAdocao } from '@/components/DestaqueAdocao'
+import { DestaqueOngs } from '@/components/DestaqueOngs'
 
 const lato = Lato({
    subsets: ['latin'], 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-br">
       <body className={lato.className}>
         <DestaqueAdocao />
+        <DestaqueOngs />
         {children}
         </body>
     </html>
