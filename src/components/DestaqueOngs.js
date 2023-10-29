@@ -31,7 +31,7 @@ export function DestaqueOngs () {
                             <div className=" text-center"><p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p></div>
                         </div>
                     </a>
-                </div>
+                </div>             
 
             </div>
         </div>
