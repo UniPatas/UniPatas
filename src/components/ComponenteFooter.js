@@ -5,7 +5,6 @@ import Facebook from '@/assets/icons8-facebook-100.png'
 import TwitterX from '@/assets/icons8-twitterx-100.png'
 import Instagram from '@/assets/icon-insta.png'
 import LogoBranca from '@/assets/Logo-UniPatas-Vector-branca.png'
-import LogoRoxa from '@/assets/Logo-UniPatas-Vector-roxa.png'
 
 export function ComponenteFooter () {
 
