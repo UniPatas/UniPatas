@@ -93,7 +93,11 @@ export function ComponenteFooter () {
                 </div>
             </div>
 
-            <div className=" w-full h-[45px] bg-yellow"></div>
+            <div className=" flex justify-center items-center w-full h-[45px] bg-yellow">
+                <div>
+                    <p className=" text-darker-purple">	&copy; Copyright 2023 - UniPatas - Todos os direitos reservados</p>
+                </div>
+            </div>
 
         </div>
 
