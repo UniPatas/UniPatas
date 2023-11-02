@@ -5,6 +5,7 @@ import { DestaqueOngs } from '@/components/DestaqueOngs'
 import { ComponenteFooter } from '@/components/ComponenteFooter'
 import { ComponenteAnuncio } from '@/components/ComponenteAnuncio'
 import { ComponenteNavBar } from '@/components/ComponenteNavBar'
+import { ComponenteForum } from '@/components/ComponenteForum'
 
 const lato = Lato({
    subsets: ['latin'], 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         <DestaqueAdocao />
         <DestaqueOngs />
         <ComponenteAnuncio />
+        <ComponenteForum />
         <ComponenteFooter />
         {children}
         </body>
