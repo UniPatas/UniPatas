@@ -12,9 +12,14 @@ module.exports = {
         'ligther-purple': '#d141e1',
         'pool-green': '#33b3a6',
         'yellow': '#ffc501',
-        'brown': '714329'
-      }
-    
+        'brown': '714329',
+        'pinky':'#d141e1',
+       
+      },
+     
+    spacing: {
+      '400': 400,
+    }
     },
   },
   plugins: [],
