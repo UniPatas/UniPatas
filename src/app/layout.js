@@ -4,6 +4,7 @@ import { DestaqueAdocao } from '@/components/DestaqueAdocao'
 import { DestaqueOngs } from '@/components/DestaqueOngs'
 import { ComponenteFooter } from '@/components/ComponenteFooter'
 import { ComponenteAnuncio } from '@/components/ComponenteAnuncio'
+import { ComponenteNavBar } from '@/components/ComponenteNavBar'
 
 const lato = Lato({
    subsets: ['latin'], 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={lato.className}>
+        <ComponenteNavBar />
         <DestaqueAdocao />
         <DestaqueOngs />
         <ComponenteAnuncio />
