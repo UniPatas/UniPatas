@@ -1,15 +1,14 @@
-import { Lato } from 'next/font/google'
+import { Anybody } from 'next/font/google'
 import './globals.css'
 import { DestaqueAdocao } from '@/components/DestaqueAdocao'
-import { DestaqueOngs } from '@/components/DestaqueOngs'
 import { ComponenteFooter } from '@/components/ComponenteFooter'
 import { ComponenteAnuncio } from '@/components/ComponenteAnuncio'
 import { ComponenteNavBar } from '@/components/ComponenteNavBar'
 import { ComponenteForum } from '@/components/ComponenteForum'
 
-const lato = Lato({
+const anybody = Anybody({
    subsets: ['latin'], 
-  weight: ['300', '400', '700']
+  weight: ['200', '300', '400', '600', '700']
   })
 
 export const metadata = {
@@ -20,10 +19,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body className={lato.className}>
+      <body className={anybody.className}>
         <ComponenteNavBar />
         <DestaqueAdocao />
-        <DestaqueOngs />
         <ComponenteAnuncio />
         <ComponenteForum />
         <ComponenteFooter />
