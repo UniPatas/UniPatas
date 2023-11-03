@@ -1,6 +1,6 @@
 import { Anybody } from 'next/font/google'
 import './globals.css'
-import { ComponenteFooter } from '@/components/ComponenteFooter'
+import { ComponenteAnuncio } from '@/components/ComponenteAnuncio'
 
 const anybody = Anybody({
    subsets: ['latin'], 
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={anybody.className}>
-        <ComponenteFooter />
+        <ComponenteAnuncio />
         {children}
         </body>
     </html>
