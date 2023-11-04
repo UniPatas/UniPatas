@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Logo from '../assets/logo-unipatas.png'
 import Facebook from '../assets/facebook.png'
 import Google from '../assets/google.png'
-
+import Nome from '../assets/logo-roxa-texto.png'
 
 export default function Login() {
   return (
@@ -17,7 +17,11 @@ export default function Login() {
         
         <div class="flex flex-col items-center pt-14">  {/* conteiner da frase de boas vindas*/}
         <a class="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center  w-64 font-bold text-3xl rounded-full ">Bem vindos a</a>  
-        <a class="flex justify-center text-[#a110a9] font-bold text-6xl pt-2">UniPatas</a>
+        <Image src={Nome}
+        width={320}
+        height={100}
+        alt='text-unipatas'
+        class="pt-2"/>
         </div>
         </div>
 
