@@ -1,20 +1,21 @@
-import { Lato } from 'next/font/google'
-import './globals.css'
-import Image from 'next/image'
+import { Anybody } from 'next/font/google'
+import Login from "./components/Login"
 
-
-const lato = Lato({
+const fontes = Anybody({
    subsets: ['latin'], 
   weight: ['300', '400', '700']
   })
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-br">
-      <body className={lato.className}>{children}</body>
-      <head>
-      <link rel="icon" href="/image/logo-unipatas.png"/>
+    <head> 
+    <html lang="pt-br"> 
+      <body className={fontes.className}>
+        <Login/>
+        {children}
+        </body>
+         </html>
       </head>
-    </html>
+   
   )
 }

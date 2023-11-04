@@ -13,7 +13,15 @@ module.exports = {
         'pool-green': '#33b3a6',
         'yellow': '#ffc501',
         'brown': '714329',
-        'pinky':'#d141e1',
+
+        theme: {
+          extend: {
+            backgroundImage: {
+              'capa': "url('/assets/capa.png')",
+              'logo':  "url('/assets/logo.png')",
+            },
+          },
+        },
        
       },
      
