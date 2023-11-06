@@ -25,7 +25,7 @@ export function NavBar() {
                     href="#"
                     className="text-darker-purple text-[20px] font-extrabold transition-all ease-in-out duration-200 hover:text-white hover:bg-darker-purple px-[15px] py-[5px] rounded-full"
                   >
-                    AJUDA
+                    ADOTE
                   </a>
                 </div>
 
@@ -61,7 +61,7 @@ export function NavBar() {
                     href="#"
                     className="text-darker-purple text-[20px] font-extrabold transition-all ease-in-out duration-200 hover:text-white hover:bg-darker-purple px-[15px] py-[5px] rounded-full"
                   >
-                    ADOTE
+                    AJUDA
                   </a>
                 </div>
               </div>
