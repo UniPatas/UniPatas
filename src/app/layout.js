@@ -1,6 +1,6 @@
 import { Anybody } from 'next/font/google'
 import './globals.css'
-import { ComponenteForum } from '@/components/ComponenteForum'
+import { SliderOngs } from '@/components/pagHome/Slider_Ongs/SliderOngs'
 
 const anybody = Anybody({
    subsets: ['latin'], 
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={anybody.className}>
-        <ComponenteForum />
+        <SliderOngs />
         {children}
         </body>
     </html>
