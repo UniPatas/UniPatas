@@ -1,22 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&family=Nanum+Gothic:wght@700&family=Roboto&family=Roboto+Slab:wght@200;500&family=Ubuntu+Mono:wght@700&display=swap');
-
-body{
-    box-sizing: border-box;
-    background-color: #a110a9;
-    font-family: 'Ubunto-Mono' sans-serif;
-}
-@layer components{
-    .input-unipatas{
-          @apply bg-gray-200 p-4 rounded-md w-72 h-2 text-xs
-
-    }
-}
-@layer components{
-    .buttom-facebook-google{
-        @apply  pt-2 flex justify-center text-xs
-    }
-}
