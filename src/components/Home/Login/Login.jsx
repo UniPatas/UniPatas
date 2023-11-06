@@ -1,9 +1,9 @@
-import '../globals.css'
+import Capa from '@/assets/capa.png'
 import Image from 'next/image'
-import Logo from '../assets/logo-unipatas.png'
-import Facebook from '../assets/facebook.png'
-import Google from '../assets/google.png'
-import Nome from '../assets/logo-roxa-texto.png'
+import Logo from '@/assets/logo-unipatas.png'
+import Facebook from '@/assets/facebook.png'
+import Google from '@/assets/google.png'
+import Nome from '@/assets/logo-roxa-texto.png'
 
 export default function Login() {
   return (
@@ -13,7 +13,7 @@ export default function Login() {
           <title>Login | UniPatas</title>
         </head>
 
-        <div class=" w-96 h-full bg-cover p-18 bg-[url('./assets/capa.png')] rounded-l-lg  alt= Cachorro de porte médio amarelo ">{/* conteiner do mascote*/}
+        <div class=" w-96 h-full p-18 rounded-l-lg ">{/* conteiner do mascote*/}
         
         <div class="flex flex-col items-center pt-14">  {/* conteiner da frase de boas vindas*/}
         <a class="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center  w-64 font-bold text-3xl rounded-full ">Bem vindos a</a>  

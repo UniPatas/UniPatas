@@ -1,5 +1,5 @@
 import { Anybody } from 'next/font/google'
-import Login from "./components/Login"
+import Login from "../components/Home/Login/Login"
 
 const fontes = Anybody({
    subsets: ['latin'], 
