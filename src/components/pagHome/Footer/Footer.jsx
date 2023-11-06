@@ -18,7 +18,7 @@ export function Footer() {
               {/* Breve apresentação da UniPatas com a Logo. */}
               <div className=" max-w-[35%] ">
                 <div>
-                  <a href="http://localhost:3000/">
+                  <a href="/home">
                     <Image
                       className="w-[230px] transition-all ease-in-out duration-200 hover:scale-125"
                       src={LogoBranca}

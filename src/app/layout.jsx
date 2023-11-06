@@ -16,8 +16,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={anybody.className}>
-        <Footer />
         {children}
+        <Footer />
       </body>
     </html>
   );
