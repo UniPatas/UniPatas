@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Logo from "@/assets/Logo-UniPatas-Vector-roxa.png";
-import slider from "@/components/pagHome/Slider_Ongs/slider";
+import Slider from "@/components/pagHome/SliderOngs/Slider";
 
 export function SliderOngs() {
   return (
@@ -16,6 +16,7 @@ export function SliderOngs() {
             id="wrapper"
             className=" flex justify-center items-center relative "
           >
+            {/* Botão de passar o slide da esquerda */}
             <div id="left" className="arrows absolute left-[-23px] top-[50%]">
               <button>
                 <div className=" h-[60px] w-[60px] bg-yellow rounded-full flex justify-center items-center ">
@@ -25,16 +26,18 @@ export function SliderOngs() {
                 </div>
               </button>
             </div>
-
+            {/* Div que contém todos os cards */}
             <div
               id="carousel"
-              onMouseMove={slider}
+              onMouseMove={Slider}
               className=" flex justify-center items-center max-w-[900px] overflow-hidden scroll-smooth"
             >
               <a href="#">
                 <div className="card ml-0">
                   <div className=" cursor-pointer flex justify-around items-center flex-col h-[355px] w-[285px] rounded-custom5 bg-pool-green">
                     <div>
+                      {" "}
+                      {/* As imagens, nomes e descrições das ONGs serão acrescentadas quando decidirmos as ONGS que estarão aqui. */}
                       <Image
                         className=" h-[170px] w-[255px] mt-[7px] rounded-custom6 bg-white"
                         src={Logo}
@@ -193,7 +196,7 @@ export function SliderOngs() {
                 </div>
               </a>
             </div>
-
+            {/* Botão de passar o slide da direita */}
             <div id="rigth" className="arrows absolute right-[-23px] top-[50%]">
               <button>
                 <div className=" h-[60px] w-[60px] bg-yellow rounded-full flex justify-center items-center ">

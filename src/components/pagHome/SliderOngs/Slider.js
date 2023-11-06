@@ -1,4 +1,4 @@
-export default function slider() {
+export default function Slider() {
   const CAROUSEL = document.querySelector("#carousel"),
     firstCard = CAROUSEL.querySelectorAll(".card")[0],
     arrowsIcons = document.querySelectorAll(".arrows");
