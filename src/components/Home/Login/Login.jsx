@@ -7,23 +7,31 @@ import Nome from '@/assets/logo-roxa-texto.png'
 
 export default function Login() {
   return (
-    
+
+     <>
        <div class=" bg-[#a110a9] w-screen h-screen flex items-center justify-center p-16 align-center "> {/* conteiner principal*/}
         <head>
           <title>Login | UniPatas</title>
         </head>
 
-        <div class=" w-96 h-full p-18 rounded-l-lg ">{/* conteiner do mascote*/}
         
-        <div class="flex flex-col items-center pt-14">  {/* conteiner da frase de boas vindas*/}
-        <a class="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center  w-64 font-bold text-3xl rounded-full ">Bem vindos a</a>  
+        <div class=" w-96 h-full p-18 rounded-l-lg">{/* conteiner do mascote*/}
+
+         <div class="flex flex-col items-center pt-8 bg-white" >  {/* conteiner da frase de boas vindas*/}
+           <a class="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w-64 font-bold text-3xl rounded-full ">Bem vindos a</a>  
         <Image src={Nome}
-        width={320}
+        width={306}
         height={100}
         alt='text-unipatas'
         class="pt-2"/>
+
+        <Image src={Capa}
+        width={337}
+        height={100}
+        alt='Cachorro amarelo de porte médio'/>
+
         </div>
-        </div>
+         </div>
 
          <div class= "h-full w-96 bg-white rounded-r-lg flex flex-col p-8 ">
           <div class="flex justify-center pt-4">
@@ -68,6 +76,6 @@ export default function Login() {
 
         </div>
       </div> 
-  
+       </>
   )
 }
