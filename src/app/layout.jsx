@@ -1,4 +1,7 @@
 import { Anybody } from "next/font/google";
+import "./globals.css";
+import { NavBar } from "@/components/NavBar";
+import { SliderOngs } from '@/components/SliderOngs/SliderOngs':
 
 const anybody = Anybody({
   subsets: ["latin"],
@@ -12,10 +15,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <>
-      <html lang="pt-br">
-        <body className={anybody.className}>{children}</body>
-      </html>
-    </>
+    <html lang="pt-br">
+      <body className={anybody.className}>
+        <NavBar />
+        <SliderOngs />
+        {children}
+      </body>
+    </html>
   );
 }
