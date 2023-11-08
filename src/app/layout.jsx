@@ -1,6 +1,6 @@
 import { Anybody } from "next/font/google";
 import "./globals.css";
-import { ContainerImg } from "@/pagAdote/Container/ContainerImg";
+import { ContainerImg } from "@/components/ContainerImg";
 
 const anybody = Anybody({
   subsets: ["latin"],
