@@ -7,14 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      cores:{
+      colors:{
         'darker-purple': '#a110a9',
         'ligther-purple': '#d141e1',
         'pool-green': '#33b3a6',
         'yellow': '#ffc501',
-        'brown': '714329'
-      }
-    
+        'brown': '#714329'
+      },    
     },
   },
   plugins: [],
