@@ -1,11 +1,7 @@
-import Layout from "@/components/Layout";
-
-export default function AjudaLayout() {
-  return <>
-
-    <Layout>
-      <h1>Ajuda</h1>
-    </Layout>
-
-  </>;
+export default function Layout() {
+  return (
+    <>
+      <h1>Os componentes vem aqui</h1>
+    </>
+  );
 }

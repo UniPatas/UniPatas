@@ -11,7 +11,7 @@ export function NavBar() {
             <div className="flex justify-between ">
               <div className=" flex justify-between items-center w-[60%] py-[30px]">
                 <div>
-                  <a href="http://localhost:3000">
+                  <a href="/">
                     <Image
                       className=" w-[150px] transition-all ease-in-out duration-200 hover:scale-125"
                       src={Logo}
@@ -22,7 +22,7 @@ export function NavBar() {
 
                 <div className=" pt-[5px]">
                   <a
-                    href="#"
+                    href="/adote"
                     className="text-darker-purple text-[20px] font-extrabold transition-all ease-in-out duration-200 hover:text-white hover:bg-darker-purple px-[15px] py-[5px] rounded-full"
                   >
                     AJUDA
@@ -31,7 +31,7 @@ export function NavBar() {
 
                 <div className=" pt-[5px]">
                   <a
-                    href="#"
+                    href="/ongs"
                     className="text-darker-purple text-[20px] font-extrabold transition-all ease-in-out duration-200 hover:text-white hover:bg-darker-purple px-[15px] py-[5px] rounded-full"
                   >
                     ONG's
@@ -40,7 +40,7 @@ export function NavBar() {
 
                 <div className=" pt-[5px]">
                   <a
-                    href="#"
+                    href="/doe"
                     className="text-darker-purple text-[20px] font-extrabold transition-all ease-in-out duration-200 hover:text-white hover:bg-darker-purple px-[15px] py-[5px] rounded-full"
                   >
                     DOE
@@ -49,7 +49,7 @@ export function NavBar() {
 
                 <div className=" pt-[5px]">
                   <a
-                    href="#"
+                    href="/sobre-nos"
                     className="text-darker-purple text-[20px] font-extrabold transition-all ease-in-out duration-200 hover:text-white hover:bg-darker-purple px-[15px] py-[5px] rounded-full"
                   >
                     SOBRE NÓS
@@ -58,7 +58,7 @@ export function NavBar() {
 
                 <div className=" pt-[5px]">
                   <a
-                    href="#"
+                    href="/ajuda"
                     className="text-darker-purple text-[20px] font-extrabold transition-all ease-in-out duration-200 hover:text-white hover:bg-darker-purple px-[15px] py-[5px] rounded-full"
                   >
                     ADOTE
@@ -69,7 +69,7 @@ export function NavBar() {
               <div className="flex justify-between items-center w-[40%] pt-[5px]">
                 <div className=" pl-[130px] ">
                   <a
-                    href="#"
+                    href="/login"
                     className="text-darker-purple text-[20px] font-extrabold transition-all ease-in-out duration-200 hover:text-white hover:bg-darker-purple px-[15px] py-[5px] rounded-full"
                   >
                     LOGIN

@@ -1,11 +1,7 @@
-import Layout from "@/components/Layout";
-
-export default function OngsLayout() {
-  return <>
-
-    <Layout>
-      <h1>Ongs aq</h1>
-    </Layout>
-
-  </>;
+export default function Layout() {
+  return (
+    <>
+      <h1>Os componentes vem aqui</h1>
+    </>
+  );
 }

@@ -1,12 +1,11 @@
-import Login from "@/components/Home/Login/Login";
-
 export default function LoginLayout() {
   return (
     <>
       <html>
-        <div>
-          <Login />
-        </div>
+        <body>
+          <div>vou morrer</div>
+          <h1>morri ja</h1>
+        </body>
       </html>
     </>
   );
