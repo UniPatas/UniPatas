@@ -1,6 +1,6 @@
 import { Anybody } from "next/font/google";
 import "./globals.css";
-import { NavBar } from "@/components/pagHome/NavBar";
+import { NavBar } from "@/components/NavBar";
 import { SliderOngs } from '@/components/SliderOngs/SliderOngs';
 
 const anybody = Anybody({
