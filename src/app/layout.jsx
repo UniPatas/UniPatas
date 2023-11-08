@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
         <NavBar />
         <SliderOngs />
         {children}
+        <><br></br>o footer vem aqui</>
       </body>
     </html>
   );
