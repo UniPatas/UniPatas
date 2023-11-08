@@ -1,6 +1,6 @@
 import { Anybody } from "next/font/google";
 import "./globals.css";
-import { NavBar } from "@/components/pagHome/NavBar";
+import { NavBar } from "@/components/NavBar";
 
 const anybody = Anybody({
   subsets: ["latin"],
