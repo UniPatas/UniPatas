@@ -1,6 +1,6 @@
 import { Anybody } from "next/font/google";
 import "./globals.css";
-import { Footer } from "@/components/pagHome/Footer/Footer";
+import { Footer } from "@/components/pagHome/Footer";
 
 const anybody = Anybody({
   subsets: ["latin"],
