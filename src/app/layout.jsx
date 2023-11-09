@@ -18,7 +18,9 @@ export default function RootLayout({ children }) {
       <body className={anybody.className}>
         <NavBar />
         {children}
-        <><br></br>o footer vem aqui</>
+        <>
+          <br></br>o footer vem aqui
+        </>
       </body>
     </html>
   );
