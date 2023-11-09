@@ -1,7 +1,9 @@
-import Image from 'next/image'
+import { SliderOngs } from "@/components/SliderOngs/SliderOngs";
 
 export default function Home() {
   return (
-    <><br></br>os componentes da home vem aqui</>
-  )
+    <>
+      <SliderOngs />
+    </>
+  );
 }

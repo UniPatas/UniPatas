@@ -1,7 +1,6 @@
 import { Anybody } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/NavBar";
-import { SliderOngs } from '@/components/SliderOngs/SliderOngs';
 
 const anybody = Anybody({
   subsets: ["latin"],
@@ -18,9 +17,10 @@ export default function RootLayout({ children }) {
     <html lang="pt-br">
       <body className={anybody.className}>
         <NavBar />
-        <SliderOngs />
         {children}
-        <><br></br>o footer vem aqui</>
+        <>
+          <br></br>o footer vem aqui
+        </>
       </body>
     </html>
   );
