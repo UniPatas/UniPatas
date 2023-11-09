@@ -1,8 +1,5 @@
 @tailwind base;
-<<<<<<< HEAD
-@tailwind ;
-@tailwind utilities;
-=======
 @tailwind components;
 @tailwind utilities;
->>>>>>> LP02-130
+
+
