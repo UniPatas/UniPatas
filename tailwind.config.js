@@ -7,7 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-<<<<<<< HEAD
       colors: {
         "darker-purple": "#a110a9",
         "ligther-purple": "#d141e1",
@@ -24,30 +23,9 @@ module.exports = {
         custom5: "50px",
         custom6: "30px",
       },
-=======
-      cores:{
-        'darker-purple': '#a110a9',
-        'ligther-purple': '#d141e1',
-        'pool-green': '#33b3a6',
-        'yellow': '#ffc501',
-        'brown': '714329',
-
-        theme: {
-          extend: {
-            backgroundImage: {
-              'capa': "url('/assets/capa.png')",
-              'logo':  "url('/assets/logo.png')",
-            },
-          },
-        },
-       
-      },
-     
-    spacing: {
+      spacing: {
       '400': 400,
-    }
->>>>>>> LP02-130
-    },
+    }},
   },
   plugins: [],
 };
