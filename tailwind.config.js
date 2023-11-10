@@ -23,7 +23,9 @@ module.exports = {
         custom5: "50px",
         custom6: "30px",
       },
-    },
+      spacing: {
+      '400': 400,
+    }},
   },
   plugins: [],
 };

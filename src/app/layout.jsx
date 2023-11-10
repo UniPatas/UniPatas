@@ -1,6 +1,7 @@
 import { Anybody } from 'next/font/google'
 import './globals.css'
-import { SliderOngs } from '@/components/SliderOngs/SliderOngs'
+import { SliderOngs } from '@/components/Home/SliderOngs/SliderOngs'
+
 
 const anybody = Anybody({
    subsets: ['latin'], 
