@@ -1,4 +1,4 @@
-import { SliderOngs } from "@/components/SliderOngs/SliderOngs";
+import { SliderOngs } from "@/components/Home/SliderOngs/SliderOngs";
 
 export default function Home() {
   return (
