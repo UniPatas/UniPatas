@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Logo from "@/assets/Logo-UniPatas-Vector-roxa.png";
 import Lupa from "@/assets/lupa.png";
-import "@/app/globals.css"
 
 export function NavBar() {
   return (
@@ -26,7 +25,7 @@ export function NavBar() {
                     href="/adote"
                     className="text-darker-purple text-[20px] font-extrabold transition-all ease-in-out duration-200 hover:text-white hover:bg-darker-purple px-[15px] py-[5px] rounded-full"
                   >
-                    ADOTE
+                    AJUDA
                   </a>
                 </div>
 
