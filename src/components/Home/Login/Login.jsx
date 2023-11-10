@@ -33,7 +33,7 @@ export default function Login() {
             </div>
             </div>
 
-            <div class= "h-full w-96 bg-white rounded-r-lg flex flex-col p-8 ">
+            <div class= "h-full w-96 bg-white rounded-r-lg flex flex-col p-8 ">  {/*conteiner da logo */}
             <div class="flex justify-center pt-4">
                  <Image src={Logo}
                     width={120}
