@@ -14,14 +14,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-br">
-      <body className={anybody.className}>
-        <NavBar />
-        {children}
-        <>
+    <>
+      <html lang="pt-br">
+        <body className={anybody.className}>
+          <NavBar />
+          {children}
           <br></br>o footer vem aqui
-        </>
-      </body>
-    </html>
+        </body>
+      </html>
+    </>
   );
 }
