@@ -1,3 +1,4 @@
+"use client";
 import Capa from "@/assets/capa.png";
 import Image from "next/image";
 import Logo from "@/assets/logo-unipatas.png";
@@ -6,6 +7,7 @@ import Google from "@/assets/google.png";
 import Nome from "@/assets/logo-roxa-texto.png";
 
 export default function Login() {
+
   return (
     <>
       <div class=" bg-[#a110a9] w-screen h-screen flex items-center justify-center p-16 align-center ">
@@ -60,7 +62,7 @@ export default function Login() {
               Entrar
             </button>
             <button class="bg-gray-200 h-6 w-18 rounded-md px-2 font-bold text-xs">
-              {" "}
+              {""}
               Cadastre-se
             </button>
           </div>
