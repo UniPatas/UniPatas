@@ -5,6 +5,7 @@ import Logo from "@/assets/logo-unipatas.png";
 import Facebook from "@/assets/facebook.png";
 import Google from "@/assets/google.png";
 import Nome from "@/assets/logo-roxa-texto.png";
+import Link from "next/link";
 
 export default function Login() {
 
@@ -19,12 +20,12 @@ export default function Login() {
         <div class=" w-96 h-full p-18 rounded-l-lg">
           {/* conteiner do mascote*/}
 
-          <div class="flex flex-col items-center pt-8 bg-white">
+          <div class="flex flex-col items-center pt-8 bg-white rounded-l-lg ">
             {" "}
             {/* conteiner da frase de boas vindas*/}
-            <a class="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w-64 font-bold text-3xl rounded-full ">
+            <p class="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w-64 font-bold text-3xl rounded-full ">
               Bem vindos a
-            </a>
+            </p>
             <Image
               src={Nome}
               width={306}
@@ -61,15 +62,18 @@ export default function Login() {
             <button class="bg-[#a110a9] h-6 w-16 rounded-md text-white font-bold text-xs">
               Entrar
             </button>
-            <button class="bg-gray-200 h-6 w-18 rounded-md px-2 font-bold text-xs">
+
+            <Link href={"/cadastro"} class="bg-gray-200 h-6 w-18 rounded-md px-2 font-bold text-xs ">
               {""}
               Cadastre-se
-            </button>
+            </Link>
+
           </div>
-          <a class="pt-4 flex justify-center items-center text-xs font-bold">
+          <p class="pt-4 flex justify-center items-center text-xs font-bold">
             Esqueceu a senha?
-          </a>
+          </p>
           <br />
+
           <div class="flex justify-center text-xs">
             {" "}
             {/* conteiner google-facebook*/}
