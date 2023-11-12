@@ -12,16 +12,17 @@ export default function Login() {
   return (
     <>
       <div class=" bg-[#a110a9] w-screen h-screen flex items-center justify-center p-16 align-center ">
-        {" "}
+
         {/* conteiner principal*/}
         <head>
           <title>Login | UniPatas</title>
         </head>
+
         <div class=" w-96 h-full p-18 rounded-l-lg">
           {/* conteiner do mascote*/}
 
           <div class="flex flex-col items-center pt-8 bg-white rounded-l-lg ">
-            {" "}
+
             {/* conteiner da frase de boas vindas*/}
             <p class="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w-64 font-bold text-3xl rounded-full ">
               Bem vindos a
@@ -56,15 +57,13 @@ export default function Login() {
             <label> Senha </label>
             <input type="password" class="bg-gray-200 h-8 rounded-md" />
           </form>
-          <div class="flex justify-around">
-            {" "}
-            {/* conteiner dos botões*/}
-            <button class="bg-[#a110a9] h-6 w-16 rounded-md text-white font-bold text-xs">
+
+          <div class="flex justify-around "> {/* conteiner dos botões*/}
+            <button class="bg-[#a110a9] h-6 w-16 px-2 rounded-md text-white font-bold text-xs">
               Entrar
             </button>
 
-            <Link href={"/cadastro"} class="bg-gray-200 h-6 w-18 rounded-md px-2 font-bold text-xs ">
-              {""}
+            <Link href={"/cadastro"} class="bg-gray-200 h-6 w-18 rounded-md px-2 pt-1 font-bold text-xs">
               Cadastre-se
             </Link>
 
@@ -74,9 +73,8 @@ export default function Login() {
           </p>
           <br />
 
-          <div class="flex justify-center text-xs">
-            {" "}
-            {/* conteiner google-facebook*/}
+          <div class="flex justify-center text-xs"> {/* conteiner google-facebook*/}
+
             <Image src={Google} width={20} height={50} alt="logo-google" />
             <button>Entrar com o Google</button>
           </div>
