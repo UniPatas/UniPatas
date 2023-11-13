@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Capa from "@/assets/capa.png";
 import Image from "next/image";
 import Logo from "@/assets/logo-unipatas.png";
@@ -43,13 +43,13 @@ export default function Login() {
           </div>
         </div>
         <div class="h-full w-96 bg-white rounded-r-lg flex flex-col p-8 ">
-          {" "}
+          
           {/*conteiner da logo */}
           <div class="flex justify-center pt-4">
             <Image src={Logo} width={120} height={50} alt="logo-unipatas" />
           </div>
           <form class="p-6 pr-6 flex jutify-center flex-col font-bold">
-            {" "}
+            
             {/*formulario do login */}
             <label> Login </label>
             <input type="email" class="bg-gray-200 h-8 rounded-md " />

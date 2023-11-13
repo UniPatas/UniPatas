@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Link from "next/link";
 import Image from "next/image";
 import Nome from "@/assets/logo-roxa-texto.png";
@@ -50,7 +50,7 @@ export default function Cadastro() {
 
                     <div className="flex justify-center space-x-4 pt-2">
                         <Link href={"#"} className="bg-[#a110a9] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">Usuario</Link>
-                        <Link href={"#"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">ONG</Link>
+                        <Link href={"/ong"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">ONG</Link>
                     </div>
 
                     <form class="p-2 pr-6 flex jutify-center flex-col font-bold"> {/*formulario do cadastro */}
@@ -73,7 +73,7 @@ export default function Cadastro() {
                         <div className="text-xs pt-1">  {/*Conteiner checkbox */}
                             <input type="checkbox" name="aceitarTermos" id="aceitarTermos" />
                             <label htmlFor="aceitarTermos"> Permito exibir minhas opções de contato no perfil</label>
-                            <br/>
+                            <br />
                             <input type="checkbox" name="#" id="#" />
                             <label htmlFor="#">Lar temporário/voluntário</label>
                         </div>
