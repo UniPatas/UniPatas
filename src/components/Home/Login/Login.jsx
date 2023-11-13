@@ -52,10 +52,10 @@ export default function Login() {
             
             {/*formulario do login */}
             <label> Login </label>
-            <input type="email" class="bg-gray-200 h-8 rounded-md " />
+            <input type="email" class="bg-gray-200 h-8 rounded-md p-1" />
             <br />
             <label> Senha </label>
-            <input type="password" class="bg-gray-200 h-8 rounded-md" />
+            <input type="password" class="bg-gray-200 h-8 rounded-md p-1" />
           </form>
 
           <div class="flex justify-around "> {/* conteiner dos botões*/}
