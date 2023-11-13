@@ -19,7 +19,7 @@ export default function Cadastro() {
                     <div className="flex flex-col items-center pt-8 bg-white rounded-l-lg ">
 
                         {/* conteiner da frase 'faça parte da'*/}
-                        <p class="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w-64 font-bold text-3xl rounded-full ">
+                        <p className="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w-64 font-bold text-3xl rounded-full ">
                             Faça parte da
                         </p>
                         <Image
@@ -49,8 +49,8 @@ export default function Cadastro() {
                     </div>
 
                     <div className="flex justify-center space-x-4 pt-2">
-                        <Link href={"/"} className="bg-[#a110a9] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">Usuario</Link>
-                        <Link href={"/"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">ONG</Link>
+                        <Link href={"#"} className="bg-[#a110a9] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">Usuario</Link>
+                        <Link href={"#"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">ONG</Link>
                     </div>
 
                     <form class="p-2 pr-6 flex jutify-center flex-col font-bold"> {/*formulario do cadastro */}
@@ -69,11 +69,13 @@ export default function Cadastro() {
 
                         <label> Senha </label>
                         <input type="password" class="bg-gray-200 h-8 rounded-md p-2 " />
-                        <br />
 
-                        <div className="text-xs">  {/*Conteiner checkbox */}
+                        <div className="text-xs pt-1">  {/*Conteiner checkbox */}
                             <input type="checkbox" name="aceitarTermos" id="aceitarTermos" />
                             <label htmlFor="aceitarTermos"> Permito exibir minhas opções de contato no perfil</label>
+                            <br/>
+                            <input type="checkbox" name="#" id="#" />
+                            <label htmlFor="#">Lar temporário/voluntário</label>
                         </div>
                     </form>
 
