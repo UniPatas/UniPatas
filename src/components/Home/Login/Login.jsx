@@ -4,6 +4,7 @@ import Logo from "@/assets/logo-unipatas.png";
 import Facebook from "@/assets/facebook.png";
 import Google from "@/assets/google.png";
 import Nome from "@/assets/logo-roxa-texto.png";
+import "@/app/globals.css"
 
 export default function Login() {
   return (

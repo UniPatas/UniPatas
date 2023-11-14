@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Logo from "@/assets/Logo-UniPatas-Vector-roxa.png";
 import Lupa from "@/assets/lupa.png";
+import "@/app/globals.css"
 
 export function NavBar() {
   return (
