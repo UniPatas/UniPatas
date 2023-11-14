@@ -1,6 +1,5 @@
 import { Anybody } from "next/font/google";
 import "./globals.css";
-import { NavBar } from "@/components/Home/NavBar";
 
 const anybody = Anybody({
   subsets: ["latin"],
@@ -16,11 +15,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={anybody.className}>
-        <NavBar />
         {children}
-        <>
-          <br></br>o footer vem aqui
-        </>
+        <></>
       </body>
     </html>
   );
