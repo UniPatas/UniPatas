@@ -1,4 +1,3 @@
-import { NavBar } from "@/components/Home/NavBar";
 import { Anybody } from "next/font/google";
 
 const anybody = Anybody({
