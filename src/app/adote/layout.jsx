@@ -1,7 +1,11 @@
-export default function Layout() {
+import Layout from "@/components/Layout";
+
+export default function AdoteLayout() {
   return (
     <>
-      <h1>Os componentes vem aqui</h1>
+      <Layout>
+        <h1>Adote</h1>
+      </Layout>
     </>
   );
 }
