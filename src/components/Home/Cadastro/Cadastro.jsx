@@ -10,16 +10,12 @@ export default function Cadastro() {
     return (
         <>
             <div className=" bg-[#a110a9] w-screen h-screen flex items-center justify-center p-16 align-center ">
-                <head>
-                    <title>
-                        Cadastro | UniPatas
-                    </title>
-                </head>
+               
                 <div className=" w-96 h-full p-18 rounded-l-lg">
                     <div className="flex flex-col items-center pt-8 bg-white rounded-l-lg ">
 
                         {/* conteiner da frase 'faça parte da'*/}
-                        <p className="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w-64 font-bold text-3xl rounded-full ">
+                        <p className="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w- font-bold text-3xl rounded-full ">
                             Faça parte da
                         </p>
                         <Image
@@ -81,7 +77,7 @@ export default function Cadastro() {
 
                     <div className="flex space-x-20">
                         <Link href={"/login"}> Voltar </Link>
-                        <button className="bg-[#a110a9] h-8 w-24 rounded-md text-white font-bold text-sm "> Cadraste-se </button>
+                        <button className="bg-[#a110a9] h-8 w-24 rounded-md text-white font-bold text-xs "> Cadraste-se </button>
                     </div>
                 </div>
             </div>
