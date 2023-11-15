@@ -25,7 +25,7 @@ export function NavBar() {
                     href="/adote"
                     className="text-darker-purple text-[20px] font-extrabold transition-all ease-in-out duration-200 hover:text-white hover:bg-darker-purple px-[15px] py-[5px] rounded-full"
                   >
-                    AJUDA
+                    ADOTE
                   </a>
                 </div>
 
