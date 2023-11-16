@@ -9,7 +9,7 @@ import LogoBranca from "@/assets/Logo-UniPatas-Vector-branca.png";
 export function Footer() {
   return (
     <>
-      <footer>
+      <footer className=" pt-[30px]">
         <div className=" w-full h-[45px] bg-yellow"></div>
         {/* Div que contem os três elementos dentro do footer */}
         <div>
