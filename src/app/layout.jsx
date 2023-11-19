@@ -1,6 +1,5 @@
 import { Anybody } from "next/font/google";
 import "./globals.css";
-import { BarraHomeAdote } from "@/components/BarraHomeAdote";
 
 const anybody = Anybody({
   subsets: ["latin"],
@@ -16,8 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={anybody.className}>
-        <BarraHomeAdote />
-        {children}</body>
+        {children}
+        <></>
+      </body>
     </html>
   );
 }
