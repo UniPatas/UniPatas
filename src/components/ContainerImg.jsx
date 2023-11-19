@@ -4,7 +4,7 @@ import Exemplo from "@/assets/exemplo.png"
 export function ContainerImg() {
   return (
     <>
-      <section className="p-[30px]">
+      <section className="py-[30px]">
         <div className="w-full mx-auto">
           <div className="max-w-[1246px] mx-auto">
             <div>
