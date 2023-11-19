@@ -8,7 +8,7 @@ export function BotaoNovaPub () {
         <>
             <section>
                 <button>
-                    <div className=" flex items-center justify-between bg-pool-green p-[10px] rounded-[10px] border-[3px] border-darker-purple">
+                    <div className=" flex items-center justify-between bg-lighter-green p-[10px] rounded-[10px] border-[3px] border-darker-purple">
                         <div>
                             <Image className=" w-[40px]"
                             src={ Plus }
