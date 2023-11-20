@@ -8,7 +8,7 @@ export default function CadastroOngs() {
     return (
         <>
             <section className="box-border h-screen flex ">
-                <div className="flex w-screen h-auto border-red-700 border-2">
+                <div className="flex w-screen h-auto">
                     <div className="w-[642px] h-auto relative">
                         <Image
                             src={Caramelo}
@@ -100,9 +100,8 @@ export default function CadastroOngs() {
 
                             <div className=" text-sm font-bold space-x-8">
                                 <br />
-                                <Link href={"/cadastro"}> Voltar para cadastro de usuário</Link>
-
-                                <button className="bg-[#a110a9] h-6 w-24 rounded-md text-white font-bold text-xs">Proximo</button>
+                                <Link href={"/cadastro"}> <a>Voltar para cadastro de usuário</a></Link>
+                                <Link href={"/redes-sociais"} className="p-[5px] px-[20px] rounded-md bg-[#a110a9] text-white w-[20px] ">Proximo</Link>
                             </div>
 
                             <div className="relative">
