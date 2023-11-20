@@ -1,4 +1,3 @@
-import { BotaoNovaPub } from "@/components/BotaoNovaPub";
 import Layout from "@/components/Layout";
 
 export default function DoeLayout() {
@@ -6,7 +5,6 @@ export default function DoeLayout() {
     <>
       <Layout>
         <h1>Doe</h1>
-        <BotaoNovaPub />
       </Layout>
     </>
   );

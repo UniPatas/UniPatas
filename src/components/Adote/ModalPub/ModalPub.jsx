@@ -1,13 +1,15 @@
-export default function ModalPub() {
+const ModalPub = ({ isVisible, onClose }) => {
+  if (!isVisible) return null;
+
   return (
     <>
       {/* MODELO DE MODAL */}
 
-      <div className=" w-screen h-screen relative top-0 left-0 bg-yellow flex items-center justify-center z-[999]">
-        <div className="w-[60%] min-w-[450px] min-h-[200px] bg-white">
+      <div className=" fixed inset-0 bg-black-opacity-25 backdrop-blur-sm flex items-center justify-center">
+        <div className=" bg-white w-[50%] h-[50%]">
           {/* CONTEÚDO DO MODALA QUI */}
           <div className=" w-[20px] h-[20px] bg-darker-purple text-center hover:text-white">
-            <button>X</button>
+            <button onClick={() => onClose()}>X</button>
           </div>
           <div>
             {/* perfil user e logo unipatas */}
@@ -33,4 +35,6 @@ export default function ModalPub() {
       </div>
     </>
   );
-}
+};
+
+export default ModalPub;
