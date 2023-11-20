@@ -100,10 +100,9 @@ export default function CadastroOngs() {
 
                             <div className=" text-sm font-bold space-x-8">
                                 <br />
-                                <a
-                                    href="/cadastro"> Voltar para cadastro de usuário</a>
+                                <Link href={"/cadastro"}> Voltar para cadastro de usuário</Link>
 
-                                <button className="bg-[#a110a9] h-6 w-24 rounded-md text-white font-bold text-xs  ">Proximo</button>
+                                <button className="bg-[#a110a9] h-6 w-24 rounded-md text-white font-bold text-xs">Proximo</button>
                             </div>
 
                             <div className="relative">
