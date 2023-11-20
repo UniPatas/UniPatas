@@ -5,7 +5,7 @@ import Caramelo from "@/assets/caramelo.png";
 import Logo from "@/assets/logo-verde-texto.png"
 import Yellow from "@/assets/logo-unipatas-yellow.png"
 
-export default function CadastroOngs() {
+export default function CadastroConcluido() {
     return (
         <>
             <section className="box-border h-screen flex ">
@@ -18,7 +18,8 @@ export default function CadastroOngs() {
                         <div className="relative">
                             <Image
                                 src={Logo}
-                                className="w-[350px] absolute inset-y-64 left-36 bottom-0" />
+                                className="w-[350px] absolute inset-y-64 left-36 bottom-0"
+                                 />
                         </div>
 
                         <div className=" relative" >
@@ -101,30 +102,11 @@ export default function CadastroOngs() {
 
                             <div className=" text-sm font-bold space-x-8">
                                 <br />
-                                <Link href={"/cadastro"}> <a>Voltar para cadastro de usuário</a></Link>
-                                <Link href={"/redes-sociais"} className="p-[5px] px-[20px] rounded-md bg-[#a110a9] text-white w-[20px] ">Proximo</Link>
+                                <Link href={"/redes-sociais"}> <a>Voltar para redes</a></Link>
+                                <button className="bg-[#33b3a6] h-8 w-24 rounded-md text-white font-bold text-xs "> Concluir</button>
                             </div>
 
-                            <div className="relative">
-                                <p className="absolute inset-x-96 right-12 bottom-[280px]">Foco da ONG</p>
-                            </div>
-                            <div className="relative ">
-                                <ul className="absolute inset-x-96 right-12 bottom-[235px] flex justify-between  ">
-                                    <li className=""><input type="checkbox" name="cachorro" id="icachorro" /><label>Cachorro</label> </li>
-                                    <li className=""><input type="checkbox" name="gato" id="igato" /><label>Gato</label></li>
-                                    <li className=""><input type="checkbox" name="ambos" id="iambos" /><label>Ambos</label></li>
-                                </ul>
-                            </div>
-                            <div className="relative">
-                                <p className="absolute inset-x-96 right-12 bottom-[180px]" >Categorias</p>
-                            </div>
-                            <div className="relative">
-                                <ul className="absolute inset-x-96 right-12 bottom-[100px]  ">
-                                    <li className=""><input type="checkbox" name="lar" id="lar" /><label>Lar de acolhimento</label> </li>
-                                    <li className=""><input type="checkbox" name="temporario" id="temporario" /><label>Lar temporario</label></li>
-                                    <li className=""><input type="checkbox" name="terapia" id="terapia" /><label>Terapia infantil com animais</label></li>
-                                </ul>
-                            </div>
+
                         </form>
                         <div>
                         </div>
