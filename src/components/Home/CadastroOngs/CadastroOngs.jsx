@@ -7,7 +7,7 @@ import Yellow from "@/assets/logo-unipatas-yellow.png"
 export default function CadastroOngs() {
     return (
         <>
-            <section className="box-size h-screen flex ">
+            <section className="box-border h-screen flex ">
                 <div className="flex w-screen h-auto border-red-700 border-2">
                     <div className="w-[642px] h-auto relative">
                         <Image
@@ -29,6 +29,19 @@ export default function CadastroOngs() {
                                 src={Yellow}
                                 className="w-[150px] h-150px absolute inset-y-8 left-60 bottom-0" />
                         </div>
+
+                        <div className="relative">
+                            <p className="bg-[#33b3a6] pb-12 text-center h-[60px] text-white absolute inset-y-12 left-[450px] bottom-0 w-[168%] font-bold text-3xl rounded-l-full"></p>
+                        </div>
+
+                        <div className="relative ">
+                            <ul className=" absolute inset-y-6 left-[100%] bottom-0 flex space-x-72 font-bold ">
+                                <li> ONG</li>
+                                <li> Redes </li>
+                                <li> Concluído</li>
+                            </ul>
+                        </div>
+
                     </div>
 
                     <div className="w-[642px] h-auto relative ">
@@ -80,8 +93,6 @@ export default function CadastroOngs() {
                                 </div>
                             </div>
 
-
-
                             <div>
                                 <label className="block" htmlFor="endereço">Endereço</label>
                                 <input className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="endereço"></input>
@@ -93,6 +104,27 @@ export default function CadastroOngs() {
                                     href="/cadastro"> Voltar para cadastro de usuário</a>
 
                                 <button className="bg-[#a110a9] h-6 w-24 rounded-md text-white font-bold text-xs  ">Proximo</button>
+                            </div>
+
+                            <div className="relative">
+                                <p className="absolute inset-x-96 right-12 bottom-[280px]">Foco da ONG</p>
+                            </div>
+                            <div className="relative ">
+                                <ul className="absolute inset-x-96 right-12 bottom-[235px] flex justify-between  ">
+                                    <li className=""><input type="checkbox" name="cachorro" id="icachorro" /><label>Cachorro</label> </li>
+                                    <li className=""><input type="checkbox" name="gato" id="igato" /><label>Gato</label></li>
+                                    <li className=""><input type="checkbox" name="ambos" id="iambos" /><label>Ambos</label></li>
+                                </ul>
+                            </div>
+                            <div className="relative">
+                                <p className="absolute inset-x-96 right-12 bottom-[180px]" >Categorias</p>
+                            </div>
+                            <div className="relative">
+                                <ul className="absolute inset-x-96 right-12 bottom-[100px]  ">
+                                    <li className=""><input type="checkbox" name="lar" id="lar" /><label>Lar de acolhimento</label> </li>
+                                    <li className=""><input type="checkbox" name="temporario" id="temporario" /><label>Lar temporario</label></li>
+                                    <li className=""><input type="checkbox" name="terapia" id="terapia" /><label>Terapia infantil com animais</label></li>
+                                </ul>
                             </div>
                         </form>
                         <div>
