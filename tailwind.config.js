@@ -24,6 +24,11 @@ module.exports = {
         custom5: "50px",
         custom6: "30px",
       },
+
+      boxShadow: {
+        box1: "0px 0px 24px 1600px rgba(0,0,0,0.2)",
+      },
+
       spacing: {
       '400': 400,
     }},

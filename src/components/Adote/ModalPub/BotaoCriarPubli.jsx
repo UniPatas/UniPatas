@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import Plus from "@/assets/plus-button.png";
-import Modal from "./ModalPub";
+import Modal from "./ModalPubli";
 import { useState } from "react";
 
-export function BotaoNovaPub() {
+export function BotaoCriarPubli() {
 
   const [OpenModal, setOpenModal] = useState(false);
 
@@ -27,6 +27,12 @@ export function BotaoNovaPub() {
           </div>
         </div>
       </section>
+
+      {/* PUBLICAÇÕES AQUI */}
+      <section>
+        
+      </section>
+
     </>
   );
 }

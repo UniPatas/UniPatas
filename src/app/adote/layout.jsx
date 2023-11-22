@@ -1,12 +1,11 @@
-import { BotaoNovaPub } from "@/components/Adote/ModalPub/BotaoNovaPub";
+import { BotaoCriarPubli } from "@/components/Adote/ModalPub/BotaoCriarPubli";
 import Layout from "@/components/Layout";
 
 export default function AdoteLayout() {
   return (
     <>
       <Layout>
-        <h1>Adote</h1>
-        <BotaoNovaPub />
+        <BotaoCriarPubli />
       </Layout>
     </>
   );
