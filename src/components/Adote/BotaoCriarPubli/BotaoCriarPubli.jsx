@@ -27,12 +27,6 @@ export function BotaoCriarPubli() {
           </div>
         </div>
       </section>
-
-      {/* PUBLICAÇÕES AQUI */}
-      <section>
-        
-      </section>
-
     </>
   );
 }

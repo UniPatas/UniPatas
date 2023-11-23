@@ -55,9 +55,9 @@ const ModalPubli = ({ isVisible, onClose }) => {
 
             {/* LOGO */}
             <div className=" flex justify-center items-center mb-[20px] ">
-              <a className="flex justify-center items-center" href="/">
+              <a className="flex justify-center items-center w-[20%]" href="/">
                 <Image
-                  className=" w-[20%] transition-all ease-in-out duration-200 hover:scale-[1.10]"
+                  className=" transition-all ease-in-out duration-200 hover:scale-[1.10]"
                   src={Logo}
                   alt="Logo da UniPatas"
                 />
@@ -72,7 +72,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                     <p className=" text-[18px] mb-[10px]">Nome do animal:</p>
                     <input
                       type="text"
-                      className=" w-[100%] h-[40%] bg-yellow p-[22px] rounded"
+                      className=" w-[100%] h-[40%] bg-yellow p-[22px] rounded placeholder:text-black" placeholder="Digite o nome do animal..."
                     ></input>
                   </div>
 
@@ -86,7 +86,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                       <div className=" bg-yellow p-[10px] h-[40%] w-[40%] rounded mr-[20px]">
                         <label
                           for="canino"
-                          className="flex items-center justify-center"
+                          className="flex items-center justify-center cursor-pointer"
                         >
                           <Image className=" w-[20%] mr-[5px]" src={Dog} />{" "}
                           <span className=" font-bold">Canino</span>
@@ -94,7 +94,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="especie"
                             id="canino"
-                            className="ml-[5px] text-darker-purple"
+                            className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
                       </div>
@@ -102,7 +102,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                       <div className=" bg-yellow p-[10px] h-[40%] w-[40%] rounded">
                         <label
                           for="felino"
-                          className="flex items-center justify-center"
+                          className="flex items-center justify-center cursor-pointer"
                         >
                           <Image className=" w-[20%] mr-[5px]" src={Cat} />{" "}
                           <span className=" font-bold">Felino</span>
@@ -110,7 +110,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="especie"
                             id="felino"
-                            className="ml-[5px] text-darker-purple"
+                            className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
                       </div>
@@ -126,7 +126,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                       <div className="bg-yellow p-[10px] h-[40%] w-[33.33%] rounded mr-[20px]">
                         <label
                           for="pequeno"
-                          className="flex items-center justify-between"
+                          className="flex items-center justify-between cursor-pointer"
                         >
                           {" "}
                           <span className=" font-bold">Pequeno</span>
@@ -134,7 +134,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="porte"
                             id="pequeno"
-                            className="ml-[5px] text-darker-purple"
+                            className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
                       </div>
@@ -142,7 +142,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                       <div className="bg-yellow p-[10px] h-[40%] w-[33.33%] rounded mr-[20px]">
                         <label
                           for="medio"
-                          className="flex items-center justify-between"
+                          className="flex items-center justify-between cursor-pointer"
                         >
                           {" "}
                           <span className=" font-bold">Médio</span>
@@ -150,7 +150,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="porte"
                             id="medio"
-                            className="ml-[5px] text-darker-purple"
+                            className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
                       </div>
@@ -158,7 +158,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                       <div className="bg-yellow p-[10px] h-[40%] w-[33.33%] rounded mr-[20px]">
                         <label
                           for="grande"
-                          className="flex items-center justify-between"
+                          className="flex items-center justify-between cursor-pointer"
                         >
                           {" "}
                           <span className=" font-bold">Grande</span>
@@ -166,7 +166,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="porte"
                             id="grande"
-                            className="ml-[5px] text-darker-purple"
+                            className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
                       </div>
@@ -180,7 +180,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                       <div className=" bg-darker-purple p-[10px] h-[40%] w-[40%] rounded mr-[20px]">
                         <label
                           for="fem"
-                          className="flex items-center justify-center"
+                          className="flex items-center justify-center cursor-pointer"
                         >
                           <Image className=" w-[20%] mr-[5px]" src={Fem} />{" "}
                           <span className=" font-bold">Fêmea</span>
@@ -188,7 +188,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="sexo"
                             id="fem"
-                            className="ml-[5px] text-darker-purple"
+                            className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
                       </div>
@@ -196,7 +196,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                       <div className=" bg-pool-green p-[10px] h-[40%] w-[40%] rounded">
                         <label
                           for="mach"
-                          className="flex items-center justify-center"
+                          className="flex items-center justify-center cursor-pointer"
                         >
                           <Image className=" w-[20%] mr-[5px]" src={Mach} />{" "}
                           <span className=" font-bold">Macho</span>
@@ -204,33 +204,31 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="sexo"
                             id="mach"
-                            className="ml-[5px] text-darker-purple"
+                            className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              {/* CARACTERÍSTICA DO ANIMAL */}
+                  {/* CARACTERÍSTICA DO ANIMAL */}
               <div className=" w-[45%] h-[100%]">
                 <div className=" mb-[10px]">
                   <h1 className=" text-center text-[18px]">Características:</h1>
                 </div>
-                <div className=" mb-[10px] bg-yellow p-[10px]">
+                <div className=" mb-[10px] bg-yellow p-[10px] rounded">
                 <div className=" grid grid-rows-2 grid-flow-col">
                   <div className=" flex justify-center items-center p-[10px]">
                     <label
                       for="agitado"
-                      className="flex items-center justify-between"
+                      className="flex items-center justify-between cursor-pointer"
                     >
                       {" "}
                       <input
                         type="radio"
                         name="comportamento"
                         id="agitado"
-                        className="mr-[5px] text-darker-purple"
+                        className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Agitado</span>
                     </label>
@@ -238,14 +236,14 @@ const ModalPubli = ({ isVisible, onClose }) => {
                   <div className=" flex justify-center items-center p-[10px]">
                     <label
                       for="amoroso"
-                      className="flex items-center justify-between"
+                      className="flex items-center justify-between cursor-pointer"
                     >
                       {" "}
                       <input
                         type="radio"
                         name="comportamento"
                         id="amoroso"
-                        className="mr-[5px] text-darker-purple"
+                        className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Amoroso</span>
                     </label>
@@ -253,14 +251,14 @@ const ModalPubli = ({ isVisible, onClose }) => {
                   <div className=" flex justify-center items-center p-[10px]">
                     <label
                       for="calmo"
-                      className="flex items-center justify-between"
+                      className="flex items-center justify-between cursor-pointer"
                     >
                       {" "}
                       <input
                         type="radio"
                         name="comportamento"
                         id="calmo"
-                        className="mr-[5px] text-darker-purple"
+                        className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Calmo</span>
                     </label>
@@ -268,32 +266,32 @@ const ModalPubli = ({ isVisible, onClose }) => {
                   <div className=" flex justify-center items-center p-[10px]">
                     <label
                       for="brincalhao"
-                      className="flex items-center justify-between"
+                      className="flex items-center justify-between cursor-pointer"
                     >
                       {" "}
                       <input
                         type="radio"
                         name="comportamento"
                         id="brincalhao"
-                        className="mr-[5px] text-darker-purple"
+                        className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Brincalhão</span>
                     </label>
                   </div>
                 </div>
-                <hr className=" text-darker-purple my-[5px]"></hr>
+                <hr className=" my-[5px]"></hr>
                 <div className=" flex justify-between">
                 <div className=" flex justify-center items-center p-[10px]">
                     <label
                       for="filhote"
-                      className="flex items-center justify-between"
+                      className="flex items-center justify-between cursor-pointer"
                     >
                       {" "}
                       <input
                         type="radio"
                         name="idade"
                         id="filhote"
-                        className="mr-[5px] text-darker-purple"
+                        className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Filhote</span>
                     </label>
@@ -301,14 +299,14 @@ const ModalPubli = ({ isVisible, onClose }) => {
                   <div className=" flex justify-center items-center p-[10px]">
                     <label
                       for="adulto"
-                      className="flex items-center justify-between"
+                      className="flex items-center justify-between cursor-pointer"
                     >
                       {" "}
                       <input
                         type="radio"
                         name="idade"
                         id="adulto"
-                        className="mr-[5px] text-darker-purple"
+                        className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Adulto</span>
                     </label>
@@ -316,14 +314,14 @@ const ModalPubli = ({ isVisible, onClose }) => {
                   <div className=" flex justify-center items-center p-[10px]">
                     <label
                       for="idoso"
-                      className="flex items-center justify-between"
+                      className="flex items-center justify-between cursor-pointer"
                     >
                       {" "}
                       <input
                         type="radio"
                         name="idade"
                         id="idoso"
-                        className="mr-[5px] text-darker-purple"
+                        className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Idoso</span>
                     </label>
@@ -332,11 +330,27 @@ const ModalPubli = ({ isVisible, onClose }) => {
                 </div>
               </div>
 
+              <div>
+                <div className=" mb-[10px]">
+                  <h1 className=" text-[18px] text-center ">Descrição:</h1>
+                </div>
+
+                <div>
+                  <textarea name="" id="" cols="30" rows="10" placeholder="Descreva o animal em poucas palavras..." className=" bg-yellow rounded p-[15px] w-[315px] h-[160px] placeholder:text-black"></textarea>
+                </div>
+              </div>
+
+                </div>
+                {/* FIM FA DIV COM OS AS INFORMAÇÕES DO PET */}
+              </div>
+
+              
+
               {/* IMAGEM DO ANIMAL */}
 
               <div>
                 <p className=" text-center text-[18px] mb-[10px]">
-                  Escolha uma foto para o pet:{" "}
+                  Escolha uma foto para o animal:{" "}
                 </p>
                 <label
                   id="picture"
@@ -358,6 +372,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                   Publicar
                 </button>
               </div>
+              {/* FIM DA DIV COM OS CONTENTS */}
             </div>
           </form>
         </div>
