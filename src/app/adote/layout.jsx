@@ -1,10 +1,11 @@
+import { BarraHomeAdote } from "@/components/BarraHomeAdote";
 import Layout from "@/components/Layout";
 
 export default function AdoteLayout() {
   return (
     <>
       <Layout>
-        <h1>Adote</h1>
+        <BarraHomeAdote />
       </Layout>
     </>
   );
