@@ -1,4 +1,5 @@
 import { BarraHomeAdote } from "@/components/BarraHomeAdote";
+import { ContainerImg } from "@/components/ContainerImg";
 import Layout from "@/components/Layout";
 
 export default function AdoteLayout() {
@@ -6,6 +7,7 @@ export default function AdoteLayout() {
     <>
       <Layout>
         <BarraHomeAdote />
+        <ContainerImg />
       </Layout>
     </>
   );
