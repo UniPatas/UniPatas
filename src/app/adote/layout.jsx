@@ -6,7 +6,7 @@ export default function AdoteLayout() {
   return (
     <>
       <Layout>
-        <h1>Adote</h1>
+        
         <ContainerImg />
       </Layout>
     </>
