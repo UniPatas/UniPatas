@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import Logo from "@/assets/Logo-UniPatas-Vector-roxa.png";
-import Slider from "@/components/SliderOngs/Slider";
+import Slider from "@/components/Home/SliderOngs/Slider";
+import "@/app/globals.css"
 
 export function SliderOngs() {
   return (
