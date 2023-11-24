@@ -1,4 +1,4 @@
-import { DestaqueAdocao } from "@/components/DestaqueAdocao";
+import { DestaqueAdocao } from "@/components/Home/DestaqueAdocao";
 import { SliderOngs } from "@/components/Home/SliderOngs/SliderOngs";
 import Layout from "@/components/Layout";
 
