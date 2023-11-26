@@ -11,8 +11,9 @@ module.exports = {
         "darker-purple": "#a110a9",
         "ligther-purple": "#d141e1",
         "pool-green": "#33b3a6",
-        yellow: "#ffc501",
-        brown: "#714329",
+        "lighter-green": "#a3ddd7",
+        "yellow": "#ffc501",
+        "brown": "#714329",
       },
 
       borderRadius: {
@@ -23,6 +24,11 @@ module.exports = {
         custom5: "50px",
         custom6: "30px",
       },
+
+      boxShadow: {
+        box1: "0px 0px 24px 1600px rgba(0,0,0,0.2)",
+      },
+
       spacing: {
       '400': 400,
     }},
