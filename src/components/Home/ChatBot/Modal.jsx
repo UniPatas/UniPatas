@@ -39,8 +39,7 @@ const Modal = ({ onClose, children }) => {
                             
                     </header>
                     
-                    <div className="h-[336px]"> {/*Modal Area de mensagens*/}
-                        
+                    <div className="h-[336px] text-black text-center	"> {/*Modal Area de mensagens*/}
                         {children}
                     </div>
 

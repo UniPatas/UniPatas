@@ -7,15 +7,25 @@ import { useState } from "react";
 export default function ChatBot () {
 
     const [showModal, setShowModal] = useState(false); {/*Usado para rastrear se deve exibir o modal ou não */}
+
+    const modalMessages = ({/*Parametros */}) => {
+        const carameloMessage = ""; {/*Armazena as mensgens do boot caramelo */}
+        const userMessage = ""; {/*Armazena as mensagens do usuario */}
+
+
+    };
     
     const modalIsOpen = () => {
+
         if (showModal === true ) {
             let elementoChat = document.getElementById('chatBot');
-            elementoChat.classList.add('ring', 'ring-[#33b3a6]', 'ring-offset-2', 'bg-[#3f968a]')
+            elementoChat.classList.add('ring', 'ring-[#33b3a6]', 'ring-offset-2', 'bg-[#3f968a]');
+
+
         }
     }; {/*Função que verifica se o modal está aberto, e adiciona classes*/}
 
-    const fecharModal = () => { {/*Essa função é chamada ao clica no icone de fechar o modal, ela alterna o estado da variavel de controel, e também remove o efeito ring do icone de chat */}
+    const fecharModal = () => { {/*Essa função é chamada ao clicar no icone de fechar o modal, ela alterna o estado da variavel de controel, e também remove o efeito ring do icone de chat */}
         setShowModal(false);
         
         let elementoChat = document.getElementById('chatBot');
