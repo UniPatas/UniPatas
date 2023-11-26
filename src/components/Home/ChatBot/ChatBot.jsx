@@ -8,7 +8,7 @@ export default function ChatBot () {
 
     const [showModal, setShowModal] = useState(false); {/*Usado para rastrear se deve exibir o modal ou não */}
 
-    const modalMessages = ({/*Parametros */}) => {
+    const modalMessages = ({/*Parametros */}) => { {/*Essa função vai criar as mensgaens e consumir a api */}
         const carameloMessage = ""; {/*Armazena as mensgens do boot caramelo */}
         const userMessage = ""; {/*Armazena as mensagens do usuario */}
 
