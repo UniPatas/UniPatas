@@ -9,6 +9,7 @@ export default function Layout({ children }) {
       {children}
       <ChatBot />
       <Footer />
+      <div id="modal-root"></div>
 
 
     </>
