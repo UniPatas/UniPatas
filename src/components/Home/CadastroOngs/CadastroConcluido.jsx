@@ -103,7 +103,7 @@ export default function CadastroConcluido() {
                             <div className=" text-sm font-bold space-x-8">
                                 <br />
                                 <Link href={"/redes-sociais"}> <a>Voltar para redes</a></Link>
-                                <button className="bg-[#33b3a6] h-8 w-24 rounded-md text-white font-bold text-xs "> Concluir</button>
+                                <button type="button" className="bg-[#33b3a6] h-8 w-24 rounded-md text-white font-bold text-xs "> Concluir</button>
                             </div>
 
 

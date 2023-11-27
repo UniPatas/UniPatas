@@ -116,7 +116,7 @@ export default function CadastroOngs() {
                                 </ul>
                             </div>
                             <div className="relative">
-                                <p className="absolute inset-x-96 right-12 bottom-[180px]" >Categorias</p>
+                                <p className="absolute inset-x-96 right-12 bottom-[200px]" >Categorias</p>
                             </div>
                             <div className="relative">
                                 <ul className="absolute inset-x-96 right-12 bottom-[100px]  ">
