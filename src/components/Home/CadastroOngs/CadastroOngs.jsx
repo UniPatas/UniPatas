@@ -108,11 +108,11 @@ export default function CadastroOngs() {
                             <div className="relative">
                                 <p className="absolute inset-x-96 right-12 bottom-[280px]">Foco da ONG</p>
                             </div>
-                            <div className="relative ">
-                                <ul className="absolute inset-x-96 right-12 bottom-[235px] flex justify-between  ">
-                                    <li className=""><input type="checkbox" name="cachorro" id="icachorro" /><label>Cachorro</label> </li>
-                                    <li className=""><input type="checkbox" name="gato" id="igato" /><label>Gato</label></li>
-                                    <li className=""><input type="checkbox" name="ambos" id="iambos" /><label>Ambos</label></li>
+                            <div className="relative">
+                                <ul className="absolute inset-x-88 left-[380px] bottom-[235px] flex justify-around gap-6">
+                                    <li className="py-2 rounded-full text-white text-xs bg-[#33b3a6]"><input className=" hidden peer rounded-full w-[90px] text-center hover:text-gray-600" type="checkbox" name="Cachorro" id="icachorro" /><label htmlFor="icachorro" className=" p-2 border-2 w-full rounded-full peer-checked:border-blue-700">Cachorro</label></li>
+                                    <li className="py-2 bg-[#a110a9] rounded-full text-white text-xs "><input className="hidden peer rounded-full w-[90px] text-center hover:text-gray-600" type="checkbox" name="Gato" id="igato" /><label htmlFor="igato" className="p-2 border-2 w-full rounded-full peer-checked:border-blue-700">Gatos</label></li>
+                                    <li className="py-2 bg-[#ffc501] rounded-full text-white text-xs"><input className="hidden peer rounded-full w-[90px] text-center hover:text-gray-600" type="checkbox" name="Ambos" id="iambos" /><label htmlFor="iambos" className=" p-2 border-2 w-full rounded-full peer-checked:border-blue-700">Ambos</label></li>
                                 </ul>
                             </div>
                             <div className="relative">
@@ -120,9 +120,9 @@ export default function CadastroOngs() {
                             </div>
                             <div className="relative">
                                 <ul className="absolute inset-x-96 right-12 bottom-[100px]  ">
-                                    <li className=""><input type="checkbox" name="lar" id="lar" /><label>Lar de acolhimento</label> </li>
-                                    <li className=""><input type="checkbox" name="temporario" id="temporario" /><label>Lar temporario</label></li>
-                                    <li className=""><input type="checkbox" name="terapia" id="terapia" /><label>Terapia infantil com animais</label></li>
+                                    <li className=""><input type="checkbox" name="lar" id="lar" /><label> Lar de acolhimento</label> </li>
+                                    <li className=""><input type="checkbox" name="temporario" id="temporario" /><label> Lar temporario</label></li>
+                                    <li className=""><input type="checkbox" name="terapia" id="terapia" /><label> Terapia infantil com animais</label></li>
                                 </ul>
                             </div>
                         </form>
