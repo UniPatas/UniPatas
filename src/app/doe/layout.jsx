@@ -1,10 +1,14 @@
 import Layout from "@/components/Layout";
+import NavigateToHome from "@/components/Doe/NavigateToHome";
 
 export default function DoeLayout() {
   return (
     <>
       <Layout>
-        <h1>Doe</h1>
+        <NavigateToHome
+          tela="Doe"
+          rota="doe"
+        />
       </Layout>
     </>
   );
