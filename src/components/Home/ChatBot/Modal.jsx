@@ -18,27 +18,27 @@ const Modal = ({ onClose, children }) => {
 
             <div className="fixed flex backdrop-opacity-10 rounded-2xl bottom-35 right-11 w-[500px] h-[500px]"> {/*Modal wrapper*/}
             
-                <a className="justify-self-start place-self-start" href="#" onClick={handleCloseClick}>
-                    <span class="material-symbols-outlined">
-                        cancel
-                    </span>
-                </a>  {/*Modal Botão de fechar*/}
-
                 <div className="bg-white drop-shadow-2xl shadow-2xl flex flex-col h-full w-full rounded-2xl"> {/*Modal-Body*/}
-                    <header className="bg-red-700 flex rounded-tr-lg flex-nowrap w-[500px] h-16 bg-gradient-to-r from-[#A110A9] to-[#33B3A6]"> {/*Modal Cabeçalho*/}
+                    <header className="bg-red-700 flex rounded-t-lg flex-nowrap w-[500px] h-16 bg-gradient-to-r from-[#A110A9] to-[#33B3A6]"> {/*Modal Cabeçalho*/}
 
                         <div className="w-[14%]"> {/*Imamgem caramelo*/}
-                            <Image className=" w-auto h-full" src={Caramelo} alt="Imagem do mascote da plataforma, caramelo, olhando para o horizonte." />
+                            <Image className=" w-auto h-full rounded-t-lg" src={Caramelo} alt="Imagem do mascote da plataforma, caramelo, olhando para o horizonte." />
                         </div>
 
 
-                        <div className="w-[80%] text-center items-center self-center text-white	font-bold
-                        ">
+                        <div className="w-[80%] text-center items-center self-center text-white	font-bold">
                             <h1 className="text-2xl tracking-wide">Caramelo irá te ajudar!</h1>
-                        </div>
+                        </div>                              
                             
-                    </header>
-                    
+                        <div className="">
+                            <a className=" relative left-[8px] bottom-[2px]" href="#" onClick={handleCloseClick}>
+                                <span class="material-symbols-outlined">
+                                    cancel
+                                </span>
+                            </a>  {/*Modal Botão de fechar*/}
+                        </div>
+                    </header>       
+
                     <div className="h-[336px] text-black text-center	"> {/*Modal Area de mensagens*/}
                         {children}
                     </div>
