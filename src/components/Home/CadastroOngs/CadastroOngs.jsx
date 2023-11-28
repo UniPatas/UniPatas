@@ -4,8 +4,39 @@ import Link from "next/link";
 import Caramelo from "@/assets/caramelo.png";
 import Logo from "@/assets/logo-verde-texto.png"
 import Yellow from "@/assets/logo-unipatas-yellow.png"
+import { useState } from "react";
 
-export default function CadastroOngs() {
+export default function CadastroOngs() { 
+
+    const [formValues, setFormValues] = useState({
+        nomeOng: "",
+        nomeResponsavel: "",
+        numeroContato: "",
+        cpfResponsavel: "",
+        cep: "",
+        cidade: "",
+        uf: "",
+        endereco: "",
+        focoOng: [],
+        categorias: [],
+      });
+    
+      const recuperaValor = (id) => {
+        const idInput = id;
+        const valorInput = document.getElementById(idInput).value;
+        setFormValues((prevValues) => ({
+          ...prevValues,
+          [idInput]: valorInput,
+        }));
+      };
+    
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Valores do Formulário:", formValues);
+        // Adicione aqui a lógica para enviar os dados ao backend ou exibi-los em uma tela de confirmação
+      };
+    
+ 
     return (
         <>
             <section className="box-border h-screen flex ">
@@ -13,12 +44,14 @@ export default function CadastroOngs() {
                     <div className="w-[642px] h-auto relative">
                         <Image
                             src={Caramelo}
-                            className="w-[850px] h-[420px] absolute inset-y-18 left-0 bottom-8 " />
+                            className="w-[850px] h-[420px] absolute inset-y-18 left-0 bottom-8 "
+                            alt="Mascote da unipatas, cachorro caramelo!"/>
 
                         <div className="relative">
                             <Image
                                 src={Logo}
-                                className="w-[350px] absolute inset-y-64 left-36 bottom-0" />
+                                className="w-[350px] absolute inset-y-64 left-36 bottom-0"
+                                alt="Logo verde com nome da UniPatas!" />
                         </div>
 
                         <div className=" relative" >
@@ -28,7 +61,8 @@ export default function CadastroOngs() {
                         <div className="relative">
                             <Image
                                 src={Yellow}
-                                className="w-[150px] h-150px absolute inset-y-8 left-60 bottom-0" />
+                                className="w-[150px] h-150px absolute inset-y-8 left-60 bottom-0" 
+                                alt="Logo amarela da uniptas!"/>
                         </div>
 
                         <div className="relative">
@@ -51,52 +85,52 @@ export default function CadastroOngs() {
                             <div className="">
                                 <label className="block" htmlFor="nomeOng">Nome da ong</label>
                                 <div>
-                                    <input className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="nomeOng"></input>
+                                    <input onChange={() => recuperaValor("nomeOng")} className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="nomeOng"></input>
                                 </div>
                             </div>
 
                             <div className="relative">
                                 <label className="absolute inset-x-96 right-12 bottom-[55px] " htmlFor="nomeResponsavel">Nome do responsável</label>
                                 <div className="relative">
-                                    <input className="bg-gray-200 h-8 w-[350px] rounded-md absolute inset-x-96 right-24 bottom-[22px] " type="text" id="nomeResponsavel"></input>
+                                    <input onChange={() => recuperaValor("nomeResponsavel")} className="bg-gray-200 h-8 w-[350px] rounded-md absolute inset-x-96 right-24 bottom-[22px] " type="text" id="nomeResponsavel"></input>
                                 </div>
                             </div>
 
 
                             <div className="">
                                 <label className="block" htmlFor="numeroContato">Número de contato</label>
-                                <input className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="numeroContato"></input>
+                                <input onChange={() => recuperaValor("numeroContato")} className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="numeroContato"></input>
                             </div>
 
                             <div className="relative">
                                 <label className="absolute inset-x-96 right-12 bottom-[59px]" htmlFor="cpfResponsavel">CPF do responsável</label>
                                 <div>
-                                    <input className="bg-gray-200 h-8 rounded-md w-[350px] absolute inset-x-96 right-24 bottom-[28px] " type="text" id="cpfResponsavel"></input>
+                                    <input onChange={() => recuperaValor("cpfResponsavel")} className="bg-gray-200 h-8 rounded-md w-[350px] absolute inset-x-96 right-24 bottom-[28px] " type="text" id="cpfResponsavel"></input>
                                 </div>
                             </div>
 
                             <div>
                                 <label className="block" htmlFor="cep">CEP</label>
-                                <input type="text" className="bg-gray-200 h-8 rounded-md w-[188px] " id="cep"></input>
+                                <input onChange={() => recuperaValor("cep")} type="text" className="bg-gray-200 h-8 rounded-md w-[188px] " id="cep"></input>
                             </div>
 
                             <div className=" ">
                                 <label className="" htmlFor="cidade">Cidade</label>
                                 <div>
-                                    <input className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="cidade"></input>
+                                    <input onChange={() => recuperaValor("cidade")} className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="cidade"></input>
                                 </div>
                             </div>
 
                             <div className="relativo">
                                 <label className="absolute inset-x-96 left-64 bottom-[345px]" htmlFor="uf">UF</label>
                                 <div>
-                                    <input className="bg-gray-200 h-8 rounded-md w-[40px] absolute inset-x-96 left-64 bottom-[312px]" type="text" id="uf"></input>
+                                    <input onChange={() => recuperaValor("uf")} className="bg-gray-200 h-8 rounded-md w-[40px] absolute inset-x-96 left-64 bottom-[312px]" type="text" id="uf"></input>
                                 </div>
                             </div>
 
                             <div>
                                 <label className="block" htmlFor="endereço">Endereço</label>
-                                <input className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="endereço"></input>
+                                <input onChange={() => recuperaValor("endereco")}  className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="endereco"></input>
                             </div>
 
                             <div className=" text-sm font-bold space-x-8">
