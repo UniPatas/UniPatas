@@ -31,7 +31,7 @@ const Modal = ({ onClose, children }) => {
                         </div>                              
                             
                         <div className="">
-                            <a className=" relative left-[8px] bottom-[2px]" href="#" onClick={handleCloseClick}>
+                            <a className=" relative left-9 bottom-[2px]" href="#" onClick={handleCloseClick}>
                                 <span class="material-symbols-outlined">
                                     cancel
                                 </span>

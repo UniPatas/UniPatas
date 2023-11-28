@@ -39,12 +39,12 @@ export default function ChatBot () {
 
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> {/*Api do google, para importar icones */}
 
-                <aside> {/*Icone arredondado do chatBot */}
+                <aside> 
 
                     <a href='#' onClick={() => setShowModal(true)}>
                         <button id='chatBot' className="rounded-full bg-[#33b3a6] hover:bg-[#3f968a] focus:bg-[#3f968a] focus:ring-2 
                         focus:ring-[#33b3a6] focus:ring-offset-2 w-[70px] h-[70px] fixed right-[19px] justify-center items-center flex
-                        active:ring active:ring-[#33b3a6] active:ring-offset-2 ">
+                        active:ring active:ring-[#33b3a6] active:ring-offset-2 bottom-4 "> {/*Icone arredondado do chatBot */}
 
                             {showModal && modalIsOpen()} {/*Adiciona o efeito ring ao indentificar que o modal está aberto */}
 
