@@ -1,6 +1,7 @@
 import { DestaqueAdocao } from "@/components/Home/DestaqueAdocao";
 import { SliderOngs } from "@/components/Home/SliderOngs/SliderOngs";
 import { SliderNoticia } from "@/components/Home/SliderNoticia/SliderNoticia";
+import { ContainerAnuncio } from "@/components/Home/ContainerAnuncio";
 import { ComponenteForum } from "@/components/Home/ComponenteForum";
 import Layout from "@/components/Layout";
 
@@ -11,6 +12,7 @@ export default function Home() {
         <SliderNoticia />
         <DestaqueAdocao />
         <SliderOngs />
+        <ContainerAnuncio />
         <ComponenteForum />
       </Layout>
     </>
