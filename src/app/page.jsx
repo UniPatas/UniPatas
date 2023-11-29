@@ -12,6 +12,7 @@ export default function Home() {
         <DestaqueAdocao />
         <SliderOngs />
         <ComponenteForum />
+        <ComponenteForum />
         <Relatos />
       </Layout>
     </>
