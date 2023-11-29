@@ -6,8 +6,8 @@ export function NavBar() {
   return (
     <>
       <header>
-        <div className=" w-full h-[80px] ">
-          <div className="w-full max-w-[1246px] mx-auto ">
+        <div className=" w-full h-[80px]">
+          <div className="w-full max-w-[1246px] mx-auto">
             <div className="flex justify-between ">
               <div className=" flex justify-between items-center w-[60%] py-[30px]">
                 <div>
