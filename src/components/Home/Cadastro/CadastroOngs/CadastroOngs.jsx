@@ -7,35 +7,37 @@ import Yellow from "@/assets/logo-unipatas-yellow.png"
 import { useState } from "react";
 
 export default function CadastroOngs() { 
+    const [nome, setNome] = useState(''); //Nome de ong
+    const [nomeResponsavel, setNomeResponsavel] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [cpf, setCPF] = useState('');
+    const [cep, setCep] = useState('');
+    const [cidade, setCidade] = useState('');
+    const [uf, setUf] = useState('');
+    const [endereco, setEndereco] = useState('');
+ 
 
-    const [formValues, setFormValues] = useState({
-        nomeOng: "",
-        nomeResponsavel: "",
-        numeroContato: "",
-        cpfResponsavel: "",
-        cep: "",
-        cidade: "",
-        uf: "",
-        endereco: "",
-        focoOng: [],
-        categorias: [],
-      });
-    
-      const recuperaValor = (id) => {
-        const idInput = id;
-        const valorInput = document.getElementById(idInput).value;
-        setFormValues((prevValues) => ({
-          ...prevValues,
-          [idInput]: valorInput,
-        }));
-      };
-    
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Valores do Formulário:", formValues);
-        // Adicione aqui a lógica para enviar os dados ao backend ou exibi-los em uma tela de confirmação
-      };
-    
+    const handleChange = (event) => {
+        const { name,  value } = event.target; //Captura o name do input que registrou o evento, e o seu valor
+        // Verifica o name do input onde o evento foi registrado, caso seja igual ele vai setar o valor do input na variavel correspondente
+
+        const sets = { // Objeto cujo chaves sejam funções (os sets)
+            'nome':(valor)  => {setNome(valor)},
+            'nomeResponsavel': (valor) => {setNomeResponsavel(valor)},
+            'telefone': (valor) => {setTelefone(valor)},
+            'cpf': (valor) => {setCPF(valor)},
+            'cep': (valor) => {setCep(valor)},
+            'cidade': (valor) => {setCidade(valor)},
+            'uf': (valor) => {setUf(valor)},
+            'endereco': (valor) => {setEndereco(valor)}
+
+        };
+
+        if (sets[name]) {
+            sets[name](value);
+        };
+
+    }
  
     return (
         <>
@@ -85,57 +87,57 @@ export default function CadastroOngs() {
                             <div className="">
                                 <label className="block" htmlFor="nomeOng">Nome da ong</label>
                                 <div>
-                                    <input onChange={() => recuperaValor("nomeOng")} className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="nomeOng"></input>
+                                    <input onChange={handleChange} className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="nomeOng" name="nome"></input>
                                 </div>
                             </div>
 
                             <div className="relative">
                                 <label className="absolute inset-x-96 right-12 bottom-[55px] " htmlFor="nomeResponsavel">Nome do responsável</label>
                                 <div className="relative">
-                                    <input onChange={() => recuperaValor("nomeResponsavel")} className="bg-gray-200 h-8 w-[350px] rounded-md absolute inset-x-96 right-24 bottom-[22px] " type="text" id="nomeResponsavel"></input>
+                                    <input onChange={handleChange} name="nomeResponsavel" className="bg-gray-200 h-8 w-[350px] rounded-md absolute inset-x-96 right-24 bottom-[22px] " type="text" id="nomeResponsavel"></input>
                                 </div>
                             </div>
 
 
                             <div className="">
                                 <label className="block" htmlFor="numeroContato">Número de contato</label>
-                                <input onChange={() => recuperaValor("numeroContato")} className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="numeroContato"></input>
+                                <input onChange={handleChange} name="telefone" className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="numeroContato"></input>
                             </div>
 
                             <div className="relative">
                                 <label className="absolute inset-x-96 right-12 bottom-[59px]" htmlFor="cpfResponsavel">CPF do responsável</label>
                                 <div>
-                                    <input onChange={() => recuperaValor("cpfResponsavel")} className="bg-gray-200 h-8 rounded-md w-[350px] absolute inset-x-96 right-24 bottom-[28px] " type="text" id="cpfResponsavel"></input>
+                                    <input onChange={handleChange} name="cpf" className="bg-gray-200 h-8 rounded-md w-[350px] absolute inset-x-96 right-24 bottom-[28px] " type="text" id="cpfResponsavel"></input>
                                 </div>
                             </div>
 
                             <div>
                                 <label className="block" htmlFor="cep">CEP</label>
-                                <input onChange={() => recuperaValor("cep")} type="text" className="bg-gray-200 h-8 rounded-md w-[188px] " id="cep"></input>
+                                <input onChange={handleChange} type="text" name="cep" className="bg-gray-200 h-8 rounded-md w-[188px] " id="cep"></input>
                             </div>
 
                             <div className=" ">
                                 <label className="" htmlFor="cidade">Cidade</label>
                                 <div>
-                                    <input onChange={() => recuperaValor("cidade")} className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="cidade"></input>
+                                    <input onChange={handleChange} name="cidade" className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="cidade"></input>
                                 </div>
                             </div>
 
                             <div className="relativo">
                                 <label className="absolute inset-x-96 left-64 bottom-[345px]" htmlFor="uf">UF</label>
                                 <div>
-                                    <input onChange={() => recuperaValor("uf")} className="bg-gray-200 h-8 rounded-md w-[40px] absolute inset-x-96 left-64 bottom-[312px]" type="text" id="uf"></input>
+                                    <input onChange={handleChange} name="uf" className="bg-gray-200 h-8 rounded-md w-[40px] absolute inset-x-96 left-64 bottom-[312px]" type="text" id="uf"></input>
                                 </div>
                             </div>
 
                             <div>
                                 <label className="block" htmlFor="endereço">Endereço</label>
-                                <input onChange={() => recuperaValor("endereco")}  className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="endereco"></input>
+                                <input onChange={handleChange} name="endereco" className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="endereco"></input>
                             </div>
 
                             <div className=" text-sm font-bold space-x-8">
                                 <br />
-                                <Link href={"/cadastro"}> <a>Voltar para cadastro de usuário</a></Link>
+                                <Link href={"/cadastro"}> Voltar para cadastro de usuário</Link>
                                 <Link href={"/redes-sociais"} className="p-[5px] px-[20px] rounded-md bg-[#a110a9] text-white w-[20px] ">Proximo</Link>
                             </div>
 

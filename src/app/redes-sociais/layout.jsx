@@ -1,4 +1,4 @@
-import RedesSociais from "@/components/Home/CadastroOngs/RedeSociais"
+import RedesSociais from "@/components/Home/Cadastro/CadastroOngs/RedeSociais"
 
 export default function RedesSociaisLayout() {
     return (

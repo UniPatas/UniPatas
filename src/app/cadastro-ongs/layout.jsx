@@ -1,4 +1,4 @@
-import CadastroOngs from "@/components/Home/CadastroOngs/CadastroOngs";
+import CadastroOngs from "@/components/Home/Cadastro/CadastroOngs/CadastroOngs";
 
 export default function CadastroOngsLayout() {
     return (

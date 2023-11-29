@@ -1,4 +1,4 @@
-import CadastroConcluido from "@/components/Home/CadastroOngs/CadastroConcluido";
+import CadastroConcluido from "@/components/Home/Cadastro/CadastroOngs/CadastroConcluido";
 
 export default function CasdastroConcluido() {
     return (
