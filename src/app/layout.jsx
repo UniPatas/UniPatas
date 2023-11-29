@@ -16,7 +16,6 @@ export default function RootLayout({ children }) {
     <html lang="pt-br">
       <body className={anybody.className}>
         {children}
-        <></>
       </body>
     </html>
   );
