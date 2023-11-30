@@ -4,14 +4,17 @@ import Link from "next/link";
 import Caramelo from "@/assets/caramelo.png";
 import Logo from "@/assets/logo-verde-texto.png"
 import Yellow from "@/assets/logo-unipatas-yellow.png"
+import "@/app/globals.css"
 import { useContext, useEffect, useState } from 'react';
 import { CadastroContext } from "@/contexts/CadastroContext";
+import MultiStepForm from "./MultiFormStep";
 
 
 export default function CadastroConcluido() {
     // Desestruturar o contextValue la do meu useContext(CadastroContext). Dessa maneira, vai ser possivel consumir o valor de contexto que está sendo compartilhado via provider
     // Desestruturamos os dados que estão sendo exportados 
     const { nomeOng, nomeResponsavel, telefone, cpf, cep, cidade, uf, endereco } = useContext(CadastroContext);
+    const page = 3;
 
     const listId = { //Objeto que armazena cada id de cada input, e uma função para armazenar dentro do input o valor que vem pelo contexto
         'nomeOng': function () {
@@ -42,16 +45,18 @@ export default function CadastroConcluido() {
 
     
     useEffect(() => { //Função que executa algo quando a pagina é carregada
-        console.log("Página carregada!"); 
+        // console.log("Página carregada!"); 
 
         for (const key in listId) { //Itera sobre cada id na listId
             const verifyId = document.getElementById(key); //Verifica se existe algum elemento com um id correspondente a uma das chaves do atributos do objeto listId
 
             if (verifyId) { //Caso algum elemento tenha um id correspondente, executa esse bloco de codigo
-                console.log('testando')
+                // console.log('elemento existe')
                 listId[key](); //Chama a função correspondente ao id, armazenada no atributo correspondente dentro do objeto ListID
             }
         }
+
+        // <MultiStepForm stepDone={3} />
     },);
 
 
@@ -84,21 +89,12 @@ export default function CadastroConcluido() {
                                 
                         </div>
 
-                        <div className="relative">
-                            <p className="bg-[#33b3a6] pb-12 text-center h-[60px] text-white absolute inset-y-12 left-[450px] bottom-0 w-[168%] font-bold text-3xl rounded-l-full"></p>
-                        </div>
-
-                        <div className="relative ">
-                            <ul className=" absolute inset-y-6 left-[100%] bottom-0 flex space-x-72 font-bold ">
-                                <li> ONG</li>
-                                <li> Redes </li>
-                                <li> Concluído</li>
-                            </ul>
-                        </div>
 
                     </div>
 
-                    <div className="w-[642px] h-auto relative ">
+                    <div className="w-[50%] h-auto relative">
+                        
+                        <MultiStepForm stepDone={3}/> 
                         <form className="w-[642px] absolute inset-y-44 left-0 bottom-8 space-y-6">
 
                             <div className="">

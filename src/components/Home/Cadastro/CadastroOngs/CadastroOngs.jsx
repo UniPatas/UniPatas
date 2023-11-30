@@ -7,6 +7,7 @@ import Yellow from "@/assets/logo-unipatas-yellow.png"
 import { useState, useContext, useEffect } from "react";
 import CadastroConcluido from "./CadastroConcluido";
 import { CadastroContext } from "@/contexts/CadastroContext";
+import MultiStepForm from "./MultiFormStep";
 
 export default function CadastroOngs() { 
     //Recebe e armazena em uma variavel, cada valor de input e set que veio dentro do value passado dentro do context
@@ -103,21 +104,14 @@ export default function CadastroOngs() {
                                 alt="Logo amarela da uniptas!"/>
                         </div>
 
-                        <div className="relative">
-                            <p className="bg-[#33b3a6] pb-12 text-center h-[60px] text-white absolute inset-y-12 left-[450px] bottom-0 w-[168%] font-bold text-3xl rounded-l-full"></p>
-                        </div>
 
-                        <div className="relative ">
-                            <ul className=" absolute inset-y-6 left-[100%] bottom-0 flex space-x-72 font-bold ">
-                                <li> ONG</li>
-                                <li> Redes </li>
-                                <li> Concluído</li>
-                            </ul>
-                        </div>
 
                     </div>
 
-                    <div className="w-[642px] h-auto relative ">
+
+                    <div className="w-[50%] h-auto relative ">
+
+                        <MultiStepForm  stepDone={1}/>
                         <form className="w-[642px] absolute inset-y-44 left-0 bottom-8 space-y-6">
 
                             <div className="">

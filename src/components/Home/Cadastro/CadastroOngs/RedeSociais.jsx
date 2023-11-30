@@ -4,6 +4,7 @@ import Link from "next/link";
 import Caramelo from "@/assets/caramelo.png";
 import Logo from "@/assets/logo-verde-texto.png"
 import Yellow from "@/assets/logo-unipatas-yellow.png"
+import MultiStepForm from "./MultiFormStep";
 
 export default function RedesSociais() {
     return (
@@ -13,12 +14,14 @@ export default function RedesSociais() {
                     <div className="w-[642px] h-auto relative">
                         <Image
                             src={Caramelo}
-                            className="w-[850px] h-[420px] absolute inset-y-18 left-0 bottom-8 " />
+                            className="w-[850px] h-[420px] absolute inset-y-18 left-0 bottom-8 "
+                            alt="Imagem mascote caramelo!"/>
 
                         <div className="relative">
                             <Image
                                 src={Logo}
-                                className="w-[350px] absolute inset-y-64 left-36 bottom-0" />
+                                className="w-[350px] absolute inset-y-64 left-36 bottom-0" 
+                                alt="imagem logo roxa uniPatas!"/>
                         </div>
 
                         <div className=" relative" >
@@ -28,23 +31,14 @@ export default function RedesSociais() {
                         <div className="relative">
                             <Image
                                 src={Yellow}
-                                className="w-[150px] h-150px absolute inset-y-8 left-60 bottom-0" />
-                        </div>
-
-                        <div className="relative">
-                            <p className="bg-[#33b3a6] pb-12 text-center h-[60px] text-white absolute inset-y-12 left-[450px] bottom-0 w-[168%] font-bold text-3xl rounded-l-full"></p>
-                        </div>
-
-                        <div className="relative ">
-                            <ul className=" absolute inset-y-6 left-[100%] bottom-0 flex space-x-72 font-bold ">
-                                <li> ONG</li>
-                                <li> Redes </li>
-                                <li> Concluído </li>
-                            </ul>
+                                className="w-[150px] h-150px absolute inset-y-8 left-60 bottom-0" 
+                                alt="Logo nome do unipatas em amarelo!"/>
                         </div>
                     </div>
 
-                    <div className="w-[642px] h-auto relative ">
+                    <div className="w-[50%] h-auto relative ">
+
+                        <MultiStepForm stepDone={2}/>
                         <form className="w-[642px] absolute inset-y-44 left-0 bottom-8 space-y-12">
 
                             <div className="">
