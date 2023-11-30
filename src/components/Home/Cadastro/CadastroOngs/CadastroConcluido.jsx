@@ -4,8 +4,57 @@ import Link from "next/link";
 import Caramelo from "@/assets/caramelo.png";
 import Logo from "@/assets/logo-verde-texto.png"
 import Yellow from "@/assets/logo-unipatas-yellow.png"
+import { useContext, useEffect, useState } from 'react';
+import { CadastroContext } from "@/contexts/CadastroContext";
+
 
 export default function CadastroConcluido() {
+    // Desestruturar o contextValue la do meu useContext(CadastroContext). Dessa maneira, vai ser possivel consumir o valor de contexto que está sendo compartilhado via provider
+    // Desestruturamos os dados que estão sendo exportados 
+    const { nomeOng, nomeResponsavel, telefone, cpf, cep, cidade, uf, endereco } = useContext(CadastroContext);
+
+    const listId = { //Objeto que armazena cada id de cada input, e uma função para armazenar dentro do input o valor que vem pelo contexto
+        'nomeOng': function () {
+            document.getElementById('nomeOng').value = nomeOng;
+        }, 
+        'nomeResponsavel': function () {
+            document.getElementById('nomeResponsavel').value = nomeResponsavel;
+        },
+        'telefone': function () {
+            document.getElementById('telefone').value = telefone;
+        },
+        'cpf': function () {
+            document.getElementById('cpf').value = cpf;
+        },
+        'cep': function () {
+            document.getElementById('cep').value = cep;
+        },
+        'cidade': function () {
+            document.getElementById('cidade').value = cidade;
+        }, 
+        'uf': function () {
+            document.getElementById('uf').value = uf;
+        }, 
+        'endereco': function () {
+            document.getElementById('endereco').value = endereco;
+        }
+    };
+
+    
+    useEffect(() => { //Função que executa algo quando a pagina é carregada
+        console.log("Página carregada!"); 
+
+        for (const key in listId) { //Itera sobre cada id na listId
+            const verifyId = document.getElementById(key); //Verifica se existe algum elemento com um id correspondente a uma das chaves do atributos do objeto listId
+
+            if (verifyId) { //Caso algum elemento tenha um id correspondente, executa esse bloco de codigo
+                console.log('testando')
+                listId[key](); //Chama a função correspondente ao id, armazenada no atributo correspondente dentro do objeto ListID
+            }
+        }
+    },);
+
+
     return (
         <>
             <section className="box-border h-screen flex ">
@@ -55,7 +104,7 @@ export default function CadastroConcluido() {
                             <div className="">
                                 <label className="block" htmlFor="nomeOng">Nome da ong</label>
                                 <div>
-                                    <input disabled className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="nomeOng"></input>
+                                    <input disabled  className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="nomeOng"></input>
                                 </div>
                             </div>
 
@@ -69,13 +118,13 @@ export default function CadastroConcluido() {
 
                             <div className="">
                                 <label className="block" htmlFor="numeroContato">Número de contato</label>
-                                <input disabled className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="numeroContato"></input>
+                                <input disabled className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="telefone"></input>
                             </div>
 
                             <div className="relative">
                                 <label className="absolute inset-x-96 right-12 bottom-[59px]" htmlFor="cpfResponsavel">CPF do responsável</label>
                                 <div>
-                                    <input disabled className="bg-gray-200 h-8 rounded-md w-[350px] absolute inset-x-96 right-24 bottom-[28px] " type="text" id="cpfResponsavel"></input>
+                                    <input disabled className="bg-gray-200 h-8 rounded-md w-[350px] absolute inset-x-96 right-24 bottom-[28px] " type="text" id="cpf"></input>
                                 </div>
                             </div>
 
@@ -100,7 +149,7 @@ export default function CadastroConcluido() {
 
                             <div>
                                 <label className="block" htmlFor="endereço">Endereço</label>
-                                <input disabled className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="endereço"></input>
+                                <input disabled className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="endereco"></input>
                             </div>
 
                             <div className=" text-sm font-bold space-x-8">

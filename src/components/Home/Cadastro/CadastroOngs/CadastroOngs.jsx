@@ -4,28 +4,63 @@ import Link from "next/link";
 import Caramelo from "@/assets/caramelo.png";
 import Logo from "@/assets/logo-verde-texto.png"
 import Yellow from "@/assets/logo-unipatas-yellow.png"
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+import CadastroConcluido from "./CadastroConcluido";
+import { CadastroContext } from "@/contexts/CadastroContext";
 
 export default function CadastroOngs() { 
-    const [nome, setNome] = useState(''); //Nome de ong
-    const [nomeResponsavel, setNomeResponsavel] = useState('');
-    const [telefone, setTelefone] = useState('');
-    const [cpf, setCPF] = useState('');
-    const [cep, setCep] = useState('');
-    const [cidade, setCidade] = useState('');
-    const [uf, setUf] = useState('');
-    const [endereco, setEndereco] = useState('');
- 
+    //Recebe e armazena em uma variavel, cada valor de input e set que veio dentro do value passado dentro do context
+    const { nomeOng, setNome, nomeResponsavel, setNomeResponsavel, telefone, setTelefone, cpf, setCPF, cep, setCep, cidade, setCidade, uf, setUf, endereco, setEndereco } = useContext(CadastroContext); 
+
+    
+    const listId = { //Objeto que armazena cada id de cada input, e uma função para armazenar dentro do input o valor que vem pelo contexto
+        'nomeOng': function () {
+            document.getElementById('nomeOng').value = nomeOng;
+        }, 
+        'nomeResponsavel': function () {
+            document.getElementById('nomeResponsavel').value = nomeResponsavel;
+        },
+        'telefone': function () {
+            document.getElementById('telefone').value = telefone;
+        },
+        'cpf': function () {
+            document.getElementById('cpf').value = cpf;
+        },
+        'cep': function () {
+            document.getElementById('cep').value = cep;
+        },
+        'cidade': function () {
+            document.getElementById('cidade').value = cidade;
+        }, 
+        'uf': function () {
+            document.getElementById('uf').value = uf;
+        }, 
+        'endereco': function () {
+            document.getElementById('endereco').value = endereco;
+        }
+    };
+
+
+    useEffect(() => { //Função que executa algo quando a pagina é carregada, nesse caso, vai salvar o conteudo digitado em cada campo input (armazena o estado)
+        for (const key in listId) { //Itera sobre cada id na listId
+            const verifyId = document.getElementById(key); //Verifica se existe algum elemento com um id correspondente a uma das chaves do atributos do objeto listId
+
+            if (verifyId) { //Caso algum elemento tenha um id correspondente, executa esse bloco de codigo
+                console.log('testando')
+                listId[key]();
+            }
+        }    
+    },);
 
     const handleChange = (event) => {
         const { name,  value } = event.target; //Captura o name do input que registrou o evento, e o seu valor
         // Verifica o name do input onde o evento foi registrado, caso seja igual ele vai setar o valor do input na variavel correspondente
 
-        const sets = { // Objeto cujo chaves sejam funções (os sets)
-            'nome':(valor)  => {setNome(valor)},
+        const sets = { // Objeto cujo chaves sejam funções (os sets) de cada input
+            'nomeOng':(valor)  => {setNome(valor)},
             'nomeResponsavel': (valor) => {setNomeResponsavel(valor)},
             'telefone': (valor) => {setTelefone(valor)},
-            'cpf': (valor) => {setCPF(valor)},
+            'cpf': (valor) => {setCPF(valor); console.log(valor)},
             'cep': (valor) => {setCep(valor)},
             'cidade': (valor) => {setCidade(valor)},
             'uf': (valor) => {setUf(valor)},
@@ -33,7 +68,7 @@ export default function CadastroOngs() {
 
         };
 
-        if (sets[name]) {
+        if (sets[name]) { //Verifica se existe o name dento do objeto sets
             sets[name](value);
         };
 
@@ -43,6 +78,7 @@ export default function CadastroOngs() {
         <>
             <section className="box-border h-screen flex ">
                 <div className="flex w-screen h-auto">
+
                     <div className="w-[642px] h-auto relative">
                         <Image
                             src={Caramelo}
@@ -87,7 +123,7 @@ export default function CadastroOngs() {
                             <div className="">
                                 <label className="block" htmlFor="nomeOng">Nome da ong</label>
                                 <div>
-                                    <input onChange={handleChange} className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="nomeOng" name="nome"></input>
+                                    <input onChange={handleChange} className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="nomeOng" name="nomeOng"></input>
                                 </div>
                             </div>
 
@@ -101,13 +137,13 @@ export default function CadastroOngs() {
 
                             <div className="">
                                 <label className="block" htmlFor="numeroContato">Número de contato</label>
-                                <input onChange={handleChange} name="telefone" className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="numeroContato"></input>
+                                <input onChange={handleChange} name="telefone" className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="telefone"></input>
                             </div>
 
                             <div className="relative">
                                 <label className="absolute inset-x-96 right-12 bottom-[59px]" htmlFor="cpfResponsavel">CPF do responsável</label>
                                 <div>
-                                    <input onChange={handleChange} name="cpf" className="bg-gray-200 h-8 rounded-md w-[350px] absolute inset-x-96 right-24 bottom-[28px] " type="text" id="cpfResponsavel"></input>
+                                    <input onChange={handleChange} name="cpf" className="bg-gray-200 h-8 rounded-md w-[350px] absolute inset-x-96 right-24 bottom-[28px] " type="text" id="cpf"></input>
                                 </div>
                             </div>
 

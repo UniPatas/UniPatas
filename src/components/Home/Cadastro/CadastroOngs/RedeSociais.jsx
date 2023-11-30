@@ -70,7 +70,7 @@ export default function RedesSociais() {
                                 <br />
                                 <br/>
                                 <Link href={"/cadastro-ongs"}> Voltar para dados</Link>
-                                <Link href={"/cadastro-concluido"} className="p-[5px] px-[20px] rounded-md bg-[#33b3a6] text-white w-[20px] ">Proximo</Link>
+                                <Link href={"/cadastro-concluido"} query={{loadPage:true}} className="p-[5px] px-[20px] rounded-md bg-[#33b3a6] text-white w-[20px] ">Proximo</Link>
                             </div>
                         </form>
                         <div>
