@@ -20,7 +20,7 @@ export default function Login() {
               alt="Cachorro amarelo de porte médio"
               className="rounded-l-lg h-[676px]"
             />
-            <div className="fixed bottom-[430px] right-[820px]">
+            <div className="fixed top-[200px] left-[260px]">
               <h1 className="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w- font-bold text-3xl rounded-full">Bem vindos a </h1>
 
               <Image
