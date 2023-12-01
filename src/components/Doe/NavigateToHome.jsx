@@ -1,6 +1,5 @@
-export function BarraHomeAdote() {
-  return (
-    <>
+export default function NavigateToHome({ tela, rota }) {
+    return (
       <section className="pt-[30px]">
         <div className="w-full mx-auto bg-darker-purple">
           <div className="max-w-[1246px] mx-auto">
@@ -11,10 +10,12 @@ export function BarraHomeAdote() {
                     <a href="/">
                       Home
                     </a>
-                  </span>{" "}
-                  <span className="text-[px]">&nbsp;&gt;&nbsp;</span>{" "}
-                  <a href="/adote" className="underline" >
-                    Adote
+                  </span>
+                  {" "}
+                  <span className="text-[px]">&nbsp;&gt;&nbsp;</span>
+                  {" "}
+                  <a href={`/${rota}`} className="underline" >
+                    {tela}
                   </a>
                 </p>
               </div>
@@ -22,6 +23,5 @@ export function BarraHomeAdote() {
           </div>
         </div>
       </section>
-    </>
-  );
-}
+    );
+  }
