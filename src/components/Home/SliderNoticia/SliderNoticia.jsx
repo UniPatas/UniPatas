@@ -47,7 +47,7 @@ export function SliderNoticia() {
                         {" "}
                         <img
                           className="mt-[25px]"
-                          src="https://iuna.es.gov.br/arquivos/images/2022/12/post/p05ss_638f299edfc48.png"
+                          src="https://iuna.es.gov.br/arquivos/images/2022/12/post/p05ss_638f299edfc48.png" alt="Notícia"
                         ></img>
                       </div>
                     </div>
@@ -63,7 +63,7 @@ export function SliderNoticia() {
                     <div className=" cursor-pointer flex justify-around items-center flex-col h-[250px] w-[900px] rounded-custom5 overflow-hidden">
                       <div>
                         {" "}
-                        <img src="https://portalfacilarquivos.blob.core.windows.net/uploads/ITABIRA/imgOrig/%7BA8AEDABA-BCCB-BC7A-A3EA-0AA8BD0A4DAB%7D.png"></img>
+                        <img src="https://portalfacilarquivos.blob.core.windows.net/uploads/ITABIRA/imgOrig/%7BA8AEDABA-BCCB-BC7A-A3EA-0AA8BD0A4DAB%7D.png" alt="Notícia"></img>
                       </div>
                     </div>
                   </div>
@@ -75,7 +75,9 @@ export function SliderNoticia() {
                     <div className=" cursor-pointer flex justify-around items-center flex-col h-[250px] w-[900px] rounded-custom5 overflow-hidden">
                       <div>
                         {" "}
-                        <Image src={News1} />
+                        <Image src={News1} 
+                        alt="Banner com arte da UniPatas, ninguém solta a pata de ninguém"
+                        />
                       </div>
                     </div>
                   </div>
@@ -92,7 +94,7 @@ export function SliderNoticia() {
                         {" "}
                         <img
                           className=" mt-[25px]"
-                          src="https://barbacena.mg.gov.br/imagens/saude/img_2023-05-29-20-33-19-9899-0.jpg"
+                          src="https://barbacena.mg.gov.br/imagens/saude/img_2023-05-29-20-33-19-9899-0.jpg" alt="Notícia"
                         ></img>
                       </div>
                     </div>
@@ -107,7 +109,7 @@ export function SliderNoticia() {
                         {" "}
                         <img
                           className=" h-[300px]"
-                          src="https://sistemas.pc.sc.gov.br/sospets/assets/banner-maus-tratos-animais.png"
+                          src="https://sistemas.pc.sc.gov.br/sospets/assets/banner-maus-tratos-animais.png" alt="Notícia"
                         ></img>
                       </div>
                     </div>
