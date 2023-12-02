@@ -1,4 +1,5 @@
 import { DestaqueAdocao } from "@/components/Home/DestaqueAdocao";
+import { Relatos } from "@/components/Home/Relatos";
 import { SliderOngs } from "@/components/Home/SliderOngs/SliderOngs";
 import { SliderNoticia } from "@/components/Home/SliderNoticia/SliderNoticia";
 import { ContainerAnuncio } from "@/components/Home/ContainerAnuncio";
@@ -14,6 +15,7 @@ export default function Home() {
         <SliderOngs />
         <ContainerAnuncio />
         <ComponenteForum />
+        <Relatos />
       </Layout>
     </>
   );
