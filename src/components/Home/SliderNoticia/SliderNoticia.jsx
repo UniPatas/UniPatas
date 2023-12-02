@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import News1 from "@/assets/capa1-slider-news.png";
-import SliderNews from "@/components/Home/SliderNoticia/SliderNews";
+import Slider from "@/components/Home/SliderOngs/Slider";
 import "@/app/globals.css";
 
 export function SliderNoticia() {
@@ -33,8 +33,8 @@ export function SliderNoticia() {
               {/* Div que contém todos os cards */}
               <div
                 id="carouselNews"
-                onMouseMove={SliderNews}
-                className=" flex justify-between max-w-[1000px] overflow-hidden scroll-smooth"
+                onMouseMove={() => Slider({ carouselId: "carouselNews", cardClass: "cardNews", arrowsClass: "arrowsNews" })}
+                className="flex justify-between max-w-[1000px] overflow-hidden scroll-smooth"
               >
                 {/* CARD 1 */}
                 <a
