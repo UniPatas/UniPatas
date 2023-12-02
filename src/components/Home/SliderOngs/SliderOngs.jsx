@@ -30,8 +30,8 @@ export function SliderOngs() {
             {/* Div que contém todos os cards */}
             <div
               id="carousel"
-              onMouseMove={Slider}
-              className=" flex justify-center items-center max-w-[900px] overflow-hidden scroll-smooth"
+              onMouseMove={() => Slider({ carouselId: "carousel", cardClass: "card", arrowsClass: "arrows" })}
+              className="flex justify-center items-center max-w-[900px] overflow-hidden scroll-smooth"
             >
               <a href="#">
                 <div className="card ml-0">
