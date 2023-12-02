@@ -1,8 +1,5 @@
 import { Anybody } from "next/font/google";
 import "./globals.css";
-import { CadastroContextProvider } from "@/contexts/CadastroContext";
-//Importando o provedor
-
 
 const anybody = Anybody({
   subsets: ["latin"],
@@ -18,10 +15,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={anybody.className}>
-        <CadastroContextProvider>
-          {children}
-        </CadastroContextProvider>
-        <></>
         {children}
       </body>
     </html>

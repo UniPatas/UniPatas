@@ -112,7 +112,7 @@ export default function Cadastro() {
 
                         <div className="flex justify-center space-x-4 gap-px">
                             <Link href={"#"} className="bg-[#a110a9] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">Usuario</Link>
-                            <Link href={"/cadastro-ongs"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">ONG</Link>
+                            <Link href={"/ong"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">ONG</Link>
                         </div>
 
                         <form onSubmit={cadastrarUsuario} className="text-sm/[11px] flex jutify-center flex-col font-bold w-72 gap-1"> {/*formulario do cadastro */}
