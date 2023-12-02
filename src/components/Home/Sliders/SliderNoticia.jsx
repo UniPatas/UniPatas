@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import News1 from "@/assets/capa1-slider-news.png";
-import Slider from "@/components/Home/SliderOngs/Slider";
+import Slider from "@/components/Home/Sliders/Slider";
 import "@/app/globals.css";
 
 export function SliderNoticia() {
