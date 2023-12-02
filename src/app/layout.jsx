@@ -21,8 +21,6 @@ export default function RootLayout({ children }) {
         <CadastroContextProvider>
           {children}
         </CadastroContextProvider>
-        <></>
-        {children}
       </body>
     </html>
   );
