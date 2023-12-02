@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ContainerImgDoe({ img }) {
+export default function ContainerImgDoe({ img, alt }) {
   return (
     <>
       <section className="py-[30px]">
@@ -9,7 +9,7 @@ export default function ContainerImgDoe({ img }) {
             {/* Centralizar imagem */}
             <div className=" flex justify-center">
               <div className=" max-w-[1100px] ">
-                <Image className="h-[100%]" src={img} alt="" />
+                <Image className="h-[100%]" src={img} alt={alt} />
               </div>
             </div>
           </div>

@@ -8,7 +8,7 @@ export default function DoeLayout() {
     <>
       <Layout>
         <NavigateToHome tela="Doe" rota="doe" />
-        <ContainerImgDoe img={BannerDonation} />
+        <ContainerImgDoe img={BannerDonation} alt={"Banner de imagem Doe"} />
       </Layout>
     </>
   );
