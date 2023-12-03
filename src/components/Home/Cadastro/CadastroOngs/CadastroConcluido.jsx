@@ -14,7 +14,6 @@ export default function CadastroConcluido() {
     // Desestruturar o contextValue la do meu useContext(CadastroContext). Dessa maneira, vai ser possivel consumir o valor de contexto que está sendo compartilhado via provider
     // Desestruturamos os dados que estão sendo exportados 
     const { nomeOng, nomeResponsavel, telefone, cpf, cep, cidade, uf, endereco } = useContext(CadastroContext);
-    const page = 3;
 
     const listId = { //Objeto que armazena cada id de cada input, e uma função para armazenar dentro do input o valor que vem pelo contexto
         'nomeOng': function () {

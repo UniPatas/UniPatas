@@ -13,8 +13,8 @@ const MultiStepForm = ({ stepDone }) => {
       }, [stepDone]);
 
       return (
-        <div className="">
-              <div className="w-[126.4%] h-28 flex flex-col teste shrink">
+        <div className="w-[100%]">
+              <div className="h-28 flex flex-col shrink mt-[0.5em]">
                 <div className="flex text-center justify-center">
                   <div className="flex font-bold w-[80%] justify-between">
                     <span> ONG</span>

@@ -18,6 +18,10 @@ export const CadastroContextProvider = ({children}) => {
     const [cidade, setCidade] = useState('');
     const [uf, setUf] = useState('');
     const [endereco, setEndereco] = useState('');
+    const [instagram, setInstagram] = useState('');
+    const [facebook, setFacebook] = useState('');
+    const [doacao, setDoacao] = useState('');
+
 
     const contextValue = { //Objeto que é passado dentro do context, armazena os valores dos inputs e os setters
         nomeOng,
@@ -35,7 +39,13 @@ export const CadastroContextProvider = ({children}) => {
         uf,
         setUf,
         endereco,
-        setEndereco
+        setEndereco,
+        instagram,
+        setInstagram,
+        facebook, 
+        setFacebook,
+        doacao,
+        setDoacao
       };
 
 

@@ -1,11 +1,8 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link";
-import Caramelo from "@/assets/caramelo.png";
-import Logo from "@/assets/logo-verde-texto.png"
-import Yellow from "@/assets/logo-unipatas-yellow.png"
+import ImagemLado from "@/assets/imagemSideBarCadastro.png"
 import { useState, useContext, useEffect } from "react";
-import CadastroConcluido from "./CadastroConcluido";
 import { CadastroContext } from "@/contexts/CadastroContext";
 import MultiStepForm from "./MultiFormStep";
 import "@/app/globals.css"
@@ -73,126 +70,164 @@ export default function CadastroOngs() {
         if (sets[name]) { //Verifica se existe o name dento do objeto sets
             sets[name](value);
         };
-
-    }
+    };
  
     return (
         <>
-            <section className="box-border h-screen flex justify-center">
-                <div className="flex w-screenh-auto teste">
+            <section className="box-border h-screen flex">
+                <div className="flex w-screen h-[97%] self-center">
 
-                    <div className="w-[642px] h-auto teste">
-                        <Image
-                            src={Caramelo}
-                            className="w-[850px] h-[420px] absolute inset-y-18 left-0 bottom-8 "
-                            alt="Mascote da unipatas, cachorro caramelo!"/>
+                    
 
-                        <div className="relative">
-                            <Image
-                                src={Logo}
-                                className="w-[350px] absolute inset-y-64 left-36 bottom-0"
-                                alt="Logo verde com nome da UniPatas!" />
-                        </div>
-
-                        <div className="relative" >
-                            <p className=" bg-[#33b3a6] pb-12 text-center w-72 h-12 text-white absolute inset-y-48 left-44 bottom-0 w-66 font-bold text-3xl rounded-full ">Bem vindos a</p>
-                        </div>
-
-                        {/*Apartir daqui modifique: */}
-                        <div className="relative">
-                            <Image
-                                src={Yellow}
-                                className="w-[150px] h-150px absolute inset-y-8 left-60 bottom-0" 
-                                alt="Logo amarela da uniptas!"/>
-                        </div>
-
-
-
+                    <div className="w-[542px] h-auto flex flex-col justify-center arredondado-r-lg"> {/*container esquerdo */}
+                        <Image src={ImagemLado} className="h-full arredondado-r-lgl" alt="" />
+                    
                     </div>
 
 
-                    {/*Apartir daqui modifique: */}
-                    <div className="w-[50%] h-auto ">
+                    <div id="containerPai" className="w-[1230px] h-auto  flex items-center justify-center flex-col"> {/*Container que armazena o forms */}
 
                         <MultiStepForm  stepDone={1}/>
-                        <form className="w-[642px] inset-y-44 left-0 bottom-8 space-y-6">
+                        <form id="containerFilho" className="w-[642px]"> {/*Formulário com todos os inputs */}
 
-                            <div className="">
-                                <label className="block" htmlFor="nomeOng">Nome da ong</label>
-                                <div>
-                                    <input onChange={handleChange} className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="nomeOng" name="nomeOng"></input>
+                            <div className=" h-[80%] flex w-full"> {/*Container dos inputs */}
+
+                                <div className="h-auto w-[50%] justify-between flex-col flex-wrap space-y-10"> {/*Coluna 1*/}
+
+                                    <div className="flex flex-col gap-2"> {/*Input do nome da ONG */}
+                                        <div>
+                                            <label className="" htmlFor="nomeOng">Nome da ong</label>
+                                        </div>
+                                        <div>
+                                            <input required onChange={handleChange} className="bg-gray-200 h-8 rounded-md w-[250px] text-center" type="text" id="nomeOng" name="nomeOng"></input>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex flex-col gap-2"> {/*Input do numero de contato */}
+                                        <div>
+                                            <label className="" htmlFor="numeroContato">Número de contato</label>
+                                        </div>
+                                        <div>
+                                            <input required onChange={handleChange} name="telefone" className="bg-gray-200 h-8 rounded-md w-[180px] text-center" type="text" id="telefone"></input>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex flex-col gap-2"> {/*Input do CEP */}
+                                        <div>
+                                            <label className=" " htmlFor="cep">CEP</label>
+                                        </div>
+                                        <div>
+                                            <input required onChange={handleChange} type="text" name="cep" className="bg-gray-200 h-8 rounded-md w-[150px] text-center" id="cep"></input>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex gap-6"> {/*Input da Cidade e uf */}
+                                        <div className="flex flex-col gap-2">
+                                            <label className="block" htmlFor="cidade">Cidade</label>
+                                            <input required onChange={handleChange} name="cidade" className="bg-gray-200 h-8 rounded-md w-[150px] text-center" type="text" id="cidade"></input>
+                                        </div>
+
+                                        <div className="flex flex-col gap-2">
+                                            <label className="block" htmlFor="uf">UF</label>
+                                            <input required onChange={handleChange} name="uf" className="bg-gray-200 h-8 rounded-md w-[30px] text-center" type="text" id="uf"></input>
+                                        </div>
+                                    </div>
+
+                                    <div className=" flex flex-col gap-2"> {/*Input do Endereço */}
+
+                                        <div>
+                                            <label className="block" htmlFor="endereço">Endereço</label>
+                                        </div>
+                                        <div className="">
+                                            <input required onChange={handleChange} name="endereco" className="bg-gray-200 h-8 rounded-md w-[250px] text-center" type="text" id="endereco"></input>
+                                        </div>
+                                    </div>
+
+                                </div> {/*Final Coluna 1*/}
+
+                                
+                                <div className="h-auto w-[50%] justify-between flex-col flex-wrap space-y-10"> {/*Coluna 2*/}
+
+                                    <div className="justify-self-end self-start place-self-start flex flex-col gap-2"> {/*Input do nome do responsavel */}
+                                        <div className="">
+                                            <label className="" htmlFor="nomeResponsavel">Nome do responsável</label>                                            
+                                        </div>
+                                        <div className=""> 
+                                            <input required onChange={handleChange} name="nomeResponsavel" className="bg-gray-200 h-8 rounded-md w-[250px] text-center" type="text" id="nomeResponsavel"></input>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex flex-col gap-2">  {/*Input do CPF */}
+                                        <div className="">
+                                            <label className="" htmlFor="cpfResponsavel">CPF do responsável</label>
+                                        </div>
+                                        <div>
+                                            <input required onChange={handleChange} name="cpf" className="bg-gray-200 h-8 rounded-md w-[250px] text-center" type="text" id="cpf"></input>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex flex-col gap-2"> {/*Opções de foco da ong */}
+                                        <div className="flex gap-6">
+                                            <p className=" ">Foco da ONG</p>
+                                        </div>
+
+                                        <ul className="flex justify-around gap-6">
+                                            <li className="text-xs h-[30px] bg-[#33b3a6] rounded-lg">
+                                                <input className="rounded-lg w-[90px] text-center text-white placeholder:text-center placeholder:text-white h-full focus:ring focus:ring-violet-300" name="Cachorro" id="cachorro" disabled placeholder="Cachorro" />
+                                            </li>
+                                            
+                                            <li className="bg-[#A110A9] rounded-lg h-[30px] text-xs ">
+                                                <input className="rounded-lg w-[90px] text-center placeholder:text-white placeholder:text-center h-full" disabled name="Gato" placeholder="Gato" id="igato" />
+                                            </li>
+
+                                            <li className="bg-[#ffc501] rounded-lg h-[30px] text-xs">
+                                                <input required className="rounded-lg w-[90px] text-center placeholder:text-white placeholder:text-center h-full" disabled name="Ambos" id="iambos" placeholder="Ambos" />
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    {/*Seleção da categoria da ong*/}
+                                    <div className="flex flex-col gap-2 self-end">
+                                        <div className=""> 
+                                            <p className=" " >Categorias</p>
+                                        </div>
+                                        <ul className="flex flex-col gap-2  ">
+                                            <li className="">
+                                                <input type="checkbox" name="lar" id="lar" className="before:w-[18px] before:content-[''] before:h-[18px] before:rounded
+                                                before:bg-white before:inline-block before:border before:border-gray-700
+                                                checked:before:bg-center checked:before:bg-lime-300	"/>
+                                                <label htmlFor="lar" className="ml-2 mb-[px]"> Lar de acolhimento </label> 
+                                            </li>
+                                            <li className="">
+                                                <input type="checkbox" name="lar" id="lar" className="before:w-[18px] before:content-[''] before:h-[18px] before:rounded
+                                                before:bg-white before:inline-block before:border before:border-gray-700
+                                                checked:before:bg-center checked:before:bg-lime-300	"/>
+                                                <label htmlFor="temporario" className="ml-2 mb-[px]"> Lar temporario</label>
+                                            </li>
+                                            <li className="">
+                                                <input type="checkbox" name="lar" id="lar" className="before:w-[18px] before:content-[''] before:h-[18px] before:rounded
+                                                before:bg-white before:inline-block before:border before:border-gray-700
+                                                checked:before:bg-center checked:before:bg-lime-300	"/>
+                                                <label htmlFor="temporario" className="ml-2 mb-[px]"> Terapia infantil com animais</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+
+                                </div> {/*Final Coluna 2*/}
+
+                            </div>
+
+                            <div className="text-sm font-bold flex justify-center mt-[4em]"> {/*Botões inferiores*/}
+                                <div className="h-auto w-[70%] flex justify-between text-center items-center"> 
+                                    <Link className="text-sm " href={"/cadastro"}> Voltar para cadastro de usuário</Link>
+                                    <Link href={"/redes-sociais"} className="bg-[#33b3a6] h-8 w-24 rounded-md text-white font-bold text-xs flex justify-center items-center">Proximo</Link>                                    
                                 </div>
                             </div>
 
-                            <div className="relative">
-                                <label className="absolute inset-x-96 right-12 bottom-[55px] " htmlFor="nomeResponsavel">Nome do responsável</label>
-                                <div className="relative">
-                                    <input onChange={handleChange} name="nomeResponsavel" className="bg-gray-200 h-8 w-[350px] rounded-md absolute inset-x-96 right-24 bottom-[22px] " type="text" id="nomeResponsavel"></input>
-                                </div>
-                            </div>
 
 
-                            <div className="">
-                                <label className="block" htmlFor="numeroContato">Número de contato</label>
-                                <input onChange={handleChange} name="telefone" className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="telefone"></input>
-                            </div>
-
-                            <div className="relative">
-                                <label className="absolute inset-x-96 right-12 bottom-[59px]" htmlFor="cpfResponsavel">CPF do responsável</label>
-                                <div>
-                                    <input onChange={handleChange} name="cpf" className="bg-gray-200 h-8 rounded-md w-[350px] absolute inset-x-96 right-24 bottom-[28px] " type="text" id="cpf"></input>
-                                </div>
-
-                                <label className="absolute inset-x-96 right-12 bottom-[3px]" htmlFor="uf">UF</label>
-                                <div>
-                                    <input onChange={handleChange} name="uf" className="bg-gray-200 h-8 rounded-md w-[40px] absolute inset-x-96 right-24 bottom" type="text" id="uf"></input>
-                                </div>
-
-                            </div>
-
-                            <div>
-                                <label className="block" htmlFor="cep">CEP</label>
-                                <input onChange={handleChange} type="text" name="cep" className="bg-gray-200 h-8 rounded-md w-[188px] " id="cep"></input>
-                            </div>
-
-                            <div className=" ">
-                                <label className="" htmlFor="cidade">Cidade</label>
-                                <div>
-                                    <input onChange={handleChange} name="cidade" className="bg-gray-200 h-8 rounded-md w-[188px]" type="text" id="cidade"></input>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label className="block" htmlFor="endereço">Endereço</label>
-                                <input onChange={handleChange} name="endereco" className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="endereco"></input>
-                            </div>
-
-                            <div className="text-sm font-bold space-x-8">
-                                <br />
-                                <Link href={"/cadastro"}> Voltar para cadastro de usuário</Link>
-                                <Link href={"/redes-sociais"} className="p-[5px] px-[20px] rounded-md bg-[#a110a9] text-white w-[20px] ">Proximo</Link>
-                            </div>
-
-                            <div className="relative">
-                                <p className="absolute inset-x-96 right-12 bottom-[280px]">Foco da ONG</p>
-                            </div>
-                            <div className="relative">
-                                <ul className="absolute inset-x-88 left-[380px] bottom-[235px] flex justify-around gap-6">
-                                    <li className="py-2 rounded-full text-white text-xs bg-[#33b3a6]"><input className=" hidden peer rounded-full w-[90px] text-center hover:text-gray-600" type="checkbox" name="Cachorro" id="icachorro" /><label htmlFor="icachorro" className=" p-2 border-2 w-full rounded-full peer-checked:border-blue-700">Cachorro</label></li>
-                                    <li className="py-2 bg-[#a110a9] rounded-full text-white text-xs "><input className="hidden peer rounded-full w-[90px] text-center hover:text-gray-600" type="checkbox" name="Gato" id="igato" /><label htmlFor="igato" className="p-2 border-2 w-full rounded-full peer-checked:border-blue-700">Gatos</label></li>
-                                    <li className="py-2 bg-[#ffc501] rounded-full text-white text-xs"><input className="hidden peer rounded-full w-[90px] text-center hover:text-gray-600" type="checkbox" name="Ambos" id="iambos" /><label htmlFor="iambos" className=" p-2 border-2 w-full rounded-full peer-checked:border-blue-700">Ambos</label></li>
-                                </ul>
-                            </div>
-                            <div className="relative">
-                                <p className="absolute inset-x-96 right-12 bottom-[200px]" >Categorias</p>
-                            </div>
-                            <div className="relative">
-                                <ul className="absolute inset-x-96 right-12 bottom-[100px]  ">
-                                    <li className=""><input type="checkbox" name="lar" id="lar" /><label> Lar de acolhimento</label> </li>
-                                    <li className=""><input type="checkbox" name="temporario" id="temporario" /><label> Lar temporario</label></li>
-                                    <li className=""><input type="checkbox" name="terapia" id="terapia" /><label> Terapia infantil com animais</label></li>
-                                </ul>
-                            </div>
                         </form>
                         <div>
                         </div>
