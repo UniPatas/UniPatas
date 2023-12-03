@@ -1,6 +1,8 @@
 "use client";
 import Slider from "@/components/Home/Sliders/Slider";
 import "@/app/globals.css";
+import Image from "next/image";
+import Equipe from "@/assets/equipe.jpg";
 
 export function SliderOurHist() {
   return (
@@ -18,11 +20,11 @@ export function SliderOurHist() {
               {/* Botão de passar o slide da esquerda */}
               <div
                 id="left"
-                className="arrowsOurHist absolute left-[-23px] top-[40%]"
+                className="arrowsOurHist absolute left-[-23px] top-[45%]"
               >
                 <button>
-                  <div className=" h-[60px] w-[60px] bg-white rounded-full flex justify-center items-center ">
-                    <span className=" text-ligther-purple text-[40px] hover:text-darker-purple">
+                  <div className=" h-[60px] w-[60px] rounded-full flex justify-center items-center ">
+                    <span className=" text-ligther-purple text-[60px] hover:text-darker-purple">
                       &lt;
                     </span>
                   </div>
@@ -31,32 +33,209 @@ export function SliderOurHist() {
               {/* Div que contém todos os cards */}
               <div
                 id="carouselOurHist"
-                onMouseMove={() => Slider({ carouselId: "carouselOurHist", cardClass: "cardOurHist", arrowsClass: "arrowsOurHist" })}
-                className="flex justify-between max-w-[100%] overflow-hidden scroll-smooth"
+                onMouseMove={() =>
+                  Slider({
+                    carouselId: "carouselOurHist",
+                    cardClass: "cardOurHist",
+                    arrowsClass: "arrowsOurHist",
+                  })
+                }
+                className="flex justify-between max-w-[1050px] overflow-hidden scroll-smooth"
               >
                 {/* CARD 1 */}
-                
-                  <div className="cardOurHist ">
-                    <div className=" cursor-pointer flex justify-around items-center flex-col h-[620px] w-[1050px] rounded-custom5 overflow-hidden bg-yellow">
+                <div className="cardOurHist ">
+                  {/* DIV MÃE */}
+                  <div className=" bg-yellow w-[1050px] flex rounded-custom5 overflow-hidden">
+                    {/* LADO ESQUERDO */}
+                    <div className=" w-[50%] p-[30px]">
+                      {/* TITLE */}
+                      <div className=" flex justify-center">
+                      <div className=" bg-darker-purple rounded-full mb-[15px] flex justify-center items-center w-[45%]">
+                        <h1 className=" text-white font-bold text-[20px] py-[5px] px-[20px]">
+                          Nossa história
+                        </h1>
+                      </div>
+                      </div>
+                      {/* CORPO DO TEXTO */}
+                      <div className="">
+                        <div>
+                          <p className=" text-darker-purple text-[15px] text-justify mb-[5px]">
+                            {
+                              " A UniPatas teve sua origem no coração do Instituto PROA, onde uma equipe dedicada de 8 jovens compartilhava uma paixão comum pela causa animal."
+                            }
+                          </p>
+                          <p className=" text-darker-purple text-[15px] text-justify mb-[5px]">
+                            {
+                              " A UniPatas surgiu como um projeto ambicioso, alimentado pela convicção de que cada ser vivo merece amor, cuidado e um lar seguro. Inspirados por histórias de resiliência e conexão entre humanos e animais, nossa equipe se comprometeu a construir mais do que uma simples plataforma de adoção."
+                            }
+                          </p>
+                          <p className=" text-darker-purple text-[15px] text-justify mb-[5px]">
+                            {
+                              "Estamos empenhados em criar uma comunidade vibrante, onde amantes de animais podem compartilhar experiências, conhecimentos e apoio mútuo. Com uma abordagem inovadora, a UniPatas não se limita apenas à adoção, mas busca promover a conscientização sobre os direitos dos animais, incentivando práticas sustentáveis e éticas em relação aos nossos companheiros de quatro patas. Estamos empenhados em estabelecer parcerias com organizações de resgate, veterinários e defensores dos direitos animais, criando uma rede sólida para garantir o bem-estar dos animais em todas as fases de suas vidas. "
+                            }
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    {/* LADO DIREITO */}
+                    <div className=" w-[50%] p-[30px] overflow-hidden">
                       <div>
-                        {" "}
-                        <img
-                          className="mt-[25px]"
-                          src="https://iuna.es.gov.br/arquivos/images/2022/12/post/p05ss_638f299edfc48.png" alt="Notícia"
-                        ></img>
+                        <Image 
+                        src={Equipe}
+                        />
                       </div>
                     </div>
                   </div>
+                </div>
 
+                {/* CARD 2 */}
+                <div className="cardOurHist ml-[15px]">
+                  {/* DIV MÃE */}
+                  <div className=" bg-yellow w-[1050px] flex rounded-custom5 overflow-hidden">
+                    {/* LADO ESQUERDO */}
+                    <div className=" w-[50%] p-[30px]">
+                      {/* TITLE */}
+                      <div className=" flex justify-center">
+                      <div className=" bg-darker-purple rounded-full mb-[15px] flex justify-center items-center w-[45%]">
+                        <h1 className=" text-white font-bold text-[20px] py-[5px] px-[20px]">
+                          Nossa história
+                        </h1>
+                      </div>
+                      </div>
+                      {/* CORPO DO TEXTO */}
+                      <div className="">
+                        <div>
+                          <p className=" text-darker-purple text-[15px] text-justify mb-[5px]">
+                            {
+                              " A UniPatas teve sua origem no coração do Instituto PROA, onde uma equipe dedicada de 8 jovens compartilhava uma paixão comum pela causa animal."
+                            }
+                          </p>
+                          <p className=" text-darker-purple text-[15px] text-justify mb-[5px]">
+                            {
+                              " A UniPatas surgiu como um projeto ambicioso, alimentado pela convicção de que cada ser vivo merece amor, cuidado e um lar seguro. Inspirados por histórias de resiliência e conexão entre humanos e animais, nossa equipe se comprometeu a construir mais do que uma simples plataforma de adoção."
+                            }
+                          </p>
+                          <p className=" text-darker-purple text-[15px] text-justify mb-[5px]">
+                            {
+                              "Estamos empenhados em criar uma comunidade vibrante, onde amantes de animais podem compartilhar experiências, conhecimentos e apoio mútuo. Com uma abordagem inovadora, a UniPatas não se limita apenas à adoção, mas busca promover a conscientização sobre os direitos dos animais, incentivando práticas sustentáveis e éticas em relação aos nossos companheiros de quatro patas. Estamos empenhados em estabelecer parcerias com organizações de resgate, veterinários e defensores dos direitos animais, criando uma rede sólida para garantir o bem-estar dos animais em todas as fases de suas vidas. "
+                            }
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    {/* LADO DIREITO */}
+                    <div className=" w-[50%] p-[30px] overflow-hidden">
+                      <div>
+                        <Image 
+                        src={Equipe}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CARD 3 */}
+                <div className="cardOurHist ml-[15px]">
+                  {/* DIV MÃE */}
+                  <div className=" bg-yellow w-[1050px] flex rounded-custom5 overflow-hidden">
+                    {/* LADO ESQUERDO */}
+                    <div className=" w-[50%] p-[30px]">
+                      {/* TITLE */}
+                      <div className=" flex justify-center">
+                      <div className=" bg-darker-purple rounded-full mb-[15px] flex justify-center items-center w-[45%]">
+                        <h1 className=" text-white font-bold text-[20px] py-[5px] px-[20px]">
+                          Nossa história
+                        </h1>
+                      </div>
+                      </div>
+                      {/* CORPO DO TEXTO */}
+                      <div className="">
+                        <div>
+                          <p className=" text-darker-purple text-[15px] text-justify mb-[5px]">
+                            {
+                              " A UniPatas teve sua origem no coração do Instituto PROA, onde uma equipe dedicada de 8 jovens compartilhava uma paixão comum pela causa animal."
+                            }
+                          </p>
+                          <p className=" text-darker-purple text-[15px] text-justify mb-[5px]">
+                            {
+                              " A UniPatas surgiu como um projeto ambicioso, alimentado pela convicção de que cada ser vivo merece amor, cuidado e um lar seguro. Inspirados por histórias de resiliência e conexão entre humanos e animais, nossa equipe se comprometeu a construir mais do que uma simples plataforma de adoção."
+                            }
+                          </p>
+                          <p className=" text-darker-purple text-[15px] text-justify mb-[5px]">
+                            {
+                              "Estamos empenhados em criar uma comunidade vibrante, onde amantes de animais podem compartilhar experiências, conhecimentos e apoio mútuo. Com uma abordagem inovadora, a UniPatas não se limita apenas à adoção, mas busca promover a conscientização sobre os direitos dos animais, incentivando práticas sustentáveis e éticas em relação aos nossos companheiros de quatro patas. Estamos empenhados em estabelecer parcerias com organizações de resgate, veterinários e defensores dos direitos animais, criando uma rede sólida para garantir o bem-estar dos animais em todas as fases de suas vidas. "
+                            }
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    {/* LADO DIREITO */}
+                    <div className=" w-[50%] p-[30px] overflow-hidden">
+                      <div>
+                        <Image 
+                        src={Equipe}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CARD 4 */}
+                <div className="cardOurHist ml-[15px]">
+                  {/* DIV MÃE */}
+                  <div className=" bg-yellow w-[1050px] flex rounded-custom5 overflow-hidden">
+                    {/* LADO ESQUERDO */}
+                    <div className=" w-[50%] p-[30px]">
+                      {/* TITLE */}
+                      <div className=" flex justify-center">
+                      <div className=" bg-darker-purple rounded-full mb-[15px] flex justify-center items-center w-[45%]">
+                        <h1 className=" text-white font-bold text-[20px] py-[5px] px-[20px]">
+                          Nossa história
+                        </h1>
+                      </div>
+                      </div>
+                      {/* CORPO DO TEXTO */}
+                      <div className="">
+                        <div>
+                          <p className=" text-darker-purple text-[15px] text-justify mb-[5px]">
+                            {
+                              " A UniPatas teve sua origem no coração do Instituto PROA, onde uma equipe dedicada de 8 jovens compartilhava uma paixão comum pela causa animal."
+                            }
+                          </p>
+                          <p className=" text-darker-purple text-[15px] text-justify mb-[5px]">
+                            {
+                              " A UniPatas surgiu como um projeto ambicioso, alimentado pela convicção de que cada ser vivo merece amor, cuidado e um lar seguro. Inspirados por histórias de resiliência e conexão entre humanos e animais, nossa equipe se comprometeu a construir mais do que uma simples plataforma de adoção."
+                            }
+                          </p>
+                          <p className=" text-darker-purple text-[15px] text-justify mb-[5px]">
+                            {
+                              "Estamos empenhados em criar uma comunidade vibrante, onde amantes de animais podem compartilhar experiências, conhecimentos e apoio mútuo. Com uma abordagem inovadora, a UniPatas não se limita apenas à adoção, mas busca promover a conscientização sobre os direitos dos animais, incentivando práticas sustentáveis e éticas em relação aos nossos companheiros de quatro patas. Estamos empenhados em estabelecer parcerias com organizações de resgate, veterinários e defensores dos direitos animais, criando uma rede sólida para garantir o bem-estar dos animais em todas as fases de suas vidas. "
+                            }
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    {/* LADO DIREITO */}
+                    <div className=" w-[50%] p-[30px] overflow-hidden">
+                      <div>
+                        <Image 
+                        src={Equipe}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
               </div>
               {/* Botão de passar o slide da direita */}
               <div
                 id="rigth"
-                className="arrowsOurHist absolute right-[-23px] top-[40%]"
+                className="arrowsOurHist absolute right-[-23px] top-[45%]"
               >
                 <button>
-                  <div className=" h-[60px] w-[60px] bg-white rounded-full flex justify-center items-center ">
-                    <span className=" text-ligther-purple text-[40px] hover:text-darker-purple">
+                  <div className=" h-[60px] w-[60px] flex justify-center items-center ">
+                    <span className=" text-ligther-purple text-[60px] hover:text-darker-purple">
                       &gt;
                     </span>
                   </div>
