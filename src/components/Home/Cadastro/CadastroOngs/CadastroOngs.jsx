@@ -8,6 +8,7 @@ import { useState, useContext, useEffect } from "react";
 import CadastroConcluido from "./CadastroConcluido";
 import { CadastroContext } from "@/contexts/CadastroContext";
 import MultiStepForm from "./MultiFormStep";
+import "@/app/globals.css"
 
 export default function CadastroOngs() { 
     //Recebe e armazena em uma variavel, cada valor de input e set que veio dentro do value passado dentro do context
@@ -77,10 +78,10 @@ export default function CadastroOngs() {
  
     return (
         <>
-            <section className="box-border h-screen flex ">
-                <div className="flex w-screen h-auto">
+            <section className="box-border h-screen flex justify-center">
+                <div className="flex w-screenh-auto teste">
 
-                    <div className="w-[642px] h-auto relative">
+                    <div className="w-[642px] h-auto teste">
                         <Image
                             src={Caramelo}
                             className="w-[850px] h-[420px] absolute inset-y-18 left-0 bottom-8 "
@@ -93,10 +94,11 @@ export default function CadastroOngs() {
                                 alt="Logo verde com nome da UniPatas!" />
                         </div>
 
-                        <div className=" relative" >
+                        <div className="relative" >
                             <p className=" bg-[#33b3a6] pb-12 text-center w-72 h-12 text-white absolute inset-y-48 left-44 bottom-0 w-66 font-bold text-3xl rounded-full ">Bem vindos a</p>
                         </div>
 
+                        {/*Apartir daqui modifique: */}
                         <div className="relative">
                             <Image
                                 src={Yellow}
@@ -109,10 +111,11 @@ export default function CadastroOngs() {
                     </div>
 
 
-                    <div className="w-[50%] h-auto relative ">
+                    {/*Apartir daqui modifique: */}
+                    <div className="w-[50%] h-auto ">
 
                         <MultiStepForm  stepDone={1}/>
-                        <form className="w-[642px] absolute inset-y-44 left-0 bottom-8 space-y-6">
+                        <form className="w-[642px] inset-y-44 left-0 bottom-8 space-y-6">
 
                             <div className="">
                                 <label className="block" htmlFor="nomeOng">Nome da ong</label>
@@ -139,6 +142,12 @@ export default function CadastroOngs() {
                                 <div>
                                     <input onChange={handleChange} name="cpf" className="bg-gray-200 h-8 rounded-md w-[350px] absolute inset-x-96 right-24 bottom-[28px] " type="text" id="cpf"></input>
                                 </div>
+
+                                <label className="absolute inset-x-96 right-12 bottom-[3px]" htmlFor="uf">UF</label>
+                                <div>
+                                    <input onChange={handleChange} name="uf" className="bg-gray-200 h-8 rounded-md w-[40px] absolute inset-x-96 right-24 bottom" type="text" id="uf"></input>
+                                </div>
+
                             </div>
 
                             <div>
@@ -153,19 +162,12 @@ export default function CadastroOngs() {
                                 </div>
                             </div>
 
-                            <div className="relativo">
-                                <label className="absolute inset-x-96 left-64 bottom-[345px]" htmlFor="uf">UF</label>
-                                <div>
-                                    <input onChange={handleChange} name="uf" className="bg-gray-200 h-8 rounded-md w-[40px] absolute inset-x-96 left-64 bottom-[312px]" type="text" id="uf"></input>
-                                </div>
-                            </div>
-
                             <div>
                                 <label className="block" htmlFor="endereço">Endereço</label>
                                 <input onChange={handleChange} name="endereco" className="bg-gray-200 h-8 rounded-md w-[300px]" type="text" id="endereco"></input>
                             </div>
 
-                            <div className=" text-sm font-bold space-x-8">
+                            <div className="text-sm font-bold space-x-8">
                                 <br />
                                 <Link href={"/cadastro"}> Voltar para cadastro de usuário</Link>
                                 <Link href={"/redes-sociais"} className="p-[5px] px-[20px] rounded-md bg-[#a110a9] text-white w-[20px] ">Proximo</Link>

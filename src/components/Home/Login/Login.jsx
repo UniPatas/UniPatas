@@ -6,28 +6,34 @@ import Facebook from "@/assets/facebook.png";
 import Google from "@/assets/google.png";
 import Nome from "@/assets/logo-roxa-texto.png";
 import Link from "next/link";
+import '@/app/globals.css'
 
 export default function Login() {
+
+  const backgroundImageStyle = {
+    backgroundImage: `url(${Capa})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }
 
   return (
     <>
       <section className=" bg-[#a110a9] h-screen flex items-center justify-center align-center ">
-        <div className="w-[768px] h-[676px] flex">
+        <div className="w-[768px] h-[676px] flex align-top">
 
-          <div className="flex flex-col w-[384px] ">
-            <Image
-              src={Capa}
-              alt="Cachorro amarelo de porte médio"
-              className="rounded-l-lg h-[676px]"
-            />
-            <div className="fixed top-[200px] left-[260px]">
-              <h1 className="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w- font-bold text-3xl rounded-full">Bem vindos a </h1>
+          <div className="flex w-[384px] bg-[url('../assets/capa.png')] bg-no-repeat bg-cover bg-center bg-origin-content">
+            <div className="flex h-[38%]">
+              <div className="flex flex-col place-self-end">
+                <div className="bg-[#ffc501] flex w-[286px] justify-center font-bold rounded-full self-center">
+                  <h1 className=" text-[#a110a9] text-3xl rounded-full">Bem vindos a </h1>
+                </div>
 
-              <Image
-                src={Nome}
-                alt="Nome'Unipatas'"
-                className="w-[280px] h-[100px]"
-              />
+                <Image
+                  src={Nome}
+                  alt="Nome'Unipatas'"
+                  className="w-[90%] h-[100px]  self-center"
+                />
+              </div>
             </div>
           </div>
 

@@ -12,6 +12,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 
+
 export default function Cadastro() {
 
     // redirecionar para outra pagina
@@ -82,22 +83,22 @@ export default function Cadastro() {
             <section className="bg-[#a110a9] align-center h-screen flex items-center justify-center ">
                 <div className=" w-[768px] h-[700px] flex">
 
-                    <div className="flex flex-col w-[384px] ">
-                        <Image
-                            src={Capa}
-                            alt="Cachorro amarelo de porte médio"
-                            className="rounded-l-lg h-[700px]"
-                        />
-                        <div className="fixed top-[200px] ml-10">
-                            <h1 className="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w- font-bold text-3xl rounded-full">Faça parte da</h1>
+                    <div className="flex w-[384px] bg-[url('../assets/capa.png')] bg-no-repeat bg-cover bg-center bg-origin-content">
+                        <div className="flex h-[38%]">
+                        <div className="flex flex-col place-self-end">
+                            <div className="bg-[#ffc501] flex w-[286px] justify-center font-bold rounded-full self-center">
+                            <h1 className=" text-[#a110a9] text-3xl rounded-full">Bem vindos a </h1>
+                            </div>
 
                             <Image
-                                src={Nome}
-                                alt="Nome'Unipatas'"
-                                className="w-[280px] h-[100px]"
+                            src={Nome}
+                            alt="Nome'Unipatas'"
+                            className="w-[90%] h-[100px]  self-center"
                             />
                         </div>
+                        </div>
                     </div>
+
 
                     <div className="bg-white rounded-r-lg items-center flex flex-col w-[384px] h-[700px] gap-1 ">
 
