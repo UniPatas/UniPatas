@@ -11,7 +11,7 @@ def create_chatbot():
     chatbot = ChatBot("BotCaramelo", tagger_language=ENGSM)
 
     conversa = [
-"Olá, BotCaramelo!",
+" ",
 "Olá, em que posso ajudar?",
 "Eu adotei um filhote de cachorro recentemente e estou um pouco perdido.",
 "Parabéns pela sua adoção! De que assuntos você tem interesse em saber? Posso te ajudar com dicas de vacinação, alimentação, higiene e etc.",
