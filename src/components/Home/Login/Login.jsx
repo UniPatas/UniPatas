@@ -14,13 +14,13 @@ export default function Login() {
       <section className=" bg-[#a110a9] h-screen flex items-center justify-center align-center ">
         <div className="w-[768px] h-[676px] flex">
 
-          <div className="flex flex-col w-[384px] ">
+          <div className="flex flex-col w-[384px] relative inline-block ">
             <Image
               src={Capa}
               alt="Cachorro amarelo de porte médio"
-              className="rounded-l-lg h-[676px]"
+              className="rounded-l-lg h-[676px] object-cover"
             />
-            <div className="fixed top-[200px] left-[260px]">
+            <div className="absolute top-[120px] left-[50px]">
               <h1 className="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w- font-bold text-3xl rounded-full">Bem vindos a </h1>
 
               <Image
