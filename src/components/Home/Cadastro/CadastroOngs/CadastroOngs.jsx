@@ -10,7 +10,8 @@ import "@/app/globals.css"
 export default function CadastroOngs() { 
     //Recebe e armazena em uma variavel, cada valor de input e set que veio dentro do value passado dentro do context
     const { nomeOng, setNome, nomeResponsavel, setNomeResponsavel, telefone, setTelefone, cpf, setCPF, cep, setCep,
-    cidade, setCidade, uf, setUf, endereco, setEndereco, cachorro, setCachorro, gato, setGato, ambos, setAmbos } = useContext(CadastroContext); 
+    cidade, setCidade, uf, setUf, endereco, setEndereco, cachorro, setCachorro, gato, setGato, ambos, setAmbos, larAcolhimento, setLarAcolhimento,
+    larTemporario, setLarTemporario, terapiaInfantil, setTerapiaInfantil  } = useContext(CadastroContext);  //Todos os estados de elementos que necessitam de armazenar o estado para possivel modificação posterior, puxados do contexto global
 
     
     
@@ -74,7 +75,7 @@ export default function CadastroOngs() {
     };
 
 
-    const handleOptionFocus = (event) => {
+    const handleOptionFocus = (event) => { //Função de gerenciamento de estado dos elementos de foco da ong
         const { name } = event.target; //Captura o name do input que registrou o evento, e o seu valor
         // Verifica o name do input onde o evento foi registrado, caso seja igual ele vai setar o valor do input na variavel correspondente
 
@@ -127,6 +128,67 @@ export default function CadastroOngs() {
             };
         };
     };
+
+    const handleCategory = (event) => { //Função de gerenciamento do estado dos elementos de categoria da ong
+        const { name } = event.target; //Captura o name do input que registrou o evento, e o seu valor
+        // Verifica o name do input onde o evento foi registrado, caso seja igual ele vai setar o valor do input na variavel correspondente
+
+        const sets = { // Objeto cujo chaves sejam funções (os sets) de cada input
+            'larTemporario':(valor)  => {setLarTemporario(valor)},
+            'larAcolhimento': (valor) => {setLarAcolhimento(valor)},
+            'terapiaInfantil': (valor) => {setTerapiaInfantil(valor)}
+        };
+
+        if (sets[name]) { //Verifica se existe o name dento do objeto sets
+            if (name === 'larAcolhimento') { // se o name do elemento for cachorro
+                if (larAcolhimento === false) { //Se o estado correspondente a esse elemento for false (por padrão, é false);
+                    sets[name](true); //Seta o valor para true
+                    const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
+                    elemento.classList.add('before:bg-center', 'before:bg-lime-300'); //Adiciona as classes correspondentes
+                    elemento.classList.remove('bg-white'); //Remove as classes correspondentes
+
+                } else if (larAcolhimento) { //Caso o estado do elemento cachorro seja verdadeiro
+                    sets[name](false);
+                    const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
+                    elemento.classList.add('bg-white'); //Adiciona as classes correspondentes
+                    elemento.classList.remove('before:bg-center', 'before:bg-lime-300'); //Adiciona as classes correspondentes                    
+                
+                }
+            } else if (name === 'larTemporario') {
+                if (larTemporario === false) {
+                    sets[name](true); //Seta o valor para true
+                    const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
+                    elemento.classList.add('before:bg-center', 'before:bg-lime-300'); //Adiciona as classes correspondentes
+                    elemento.classList.remove('bg-white'); //Remove as classes correspondentes
+
+                } else if (larTemporario) {
+                    sets[name](false);
+                    const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
+                    elemento.classList.add('bg-white'); //Adiciona as classes correspondentes
+                    elemento.classList.remove('before:bg-center', 'before:bg-lime-300'); //Adiciona as classes correspondentes                    
+
+                };
+
+            } else if (name === 'terapiaInfantil') {
+                if (terapiaInfantil === false) {
+                    sets[name](true); //Seta o valor para true
+                    const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
+                    elemento.classList.add('before:bg-center', 'before:bg-lime-300'); //Adiciona as classes correspondentes
+                    elemento.classList.remove('bg-white'); //Remove as classes correspondentes
+
+                } else if (terapiaInfantil) {
+                    sets[name](false);
+                    const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
+                    elemento.classList.add('bg-white'); //Adiciona as classes correspondentes
+                    elemento.classList.remove('before:bg-center', 'before:bg-lime-300'); //Adiciona as classes correspondentes                    
+
+                };
+
+            };
+        };
+
+
+    }
  
     return (
         <>
@@ -141,10 +203,10 @@ export default function CadastroOngs() {
                     </div>
 
 
-                    <div id="containerPai" className="w-[1230px] h-auto  flex items-center justify-center flex-col"> {/*Container que armazena o forms */}
+                    <div id="containerPai" className="w-[1230px] h-auto  flex items-center justify-center flex-col teste"> {/*Container que armazena o forms */}
 
                         <MultiStepForm  stepDone={1}/>
-                        <form id="containerFilho" className="w-[642px]"> {/*Formulário com todos os inputs */}
+                        <form id="containerFilho" className="w-[642px] teste"> {/*Formulário com todos os inputs */}
 
                             <div className=" h-[80%] flex w-full"> {/*Container dos inputs */}
 
@@ -249,21 +311,18 @@ export default function CadastroOngs() {
                                         </div>
                                         <ul className="flex flex-col gap-2  ">
                                             <li className="">
-                                                <input type="checkbox" name="lar" id="lar" className="before:w-[18px] before:content-[''] before:h-[18px] before:rounded
-                                                before:bg-white before:inline-block before:border before:border-gray-700
-                                                checked:before:bg-center checked:before:bg-lime-300	"/>
+                                                <input type="checkbox" name="larAcolhimento" id="larAcolhimento" className="before:w-[18px] before:content-[''] before:h-[18px] before:rounded
+                                                before:bg-white before:inline-block before:border before:border-gray-700" onClick={handleCategory}/>
                                                 <label htmlFor="lar" className="ml-2 mb-[px]"> Lar de acolhimento </label> 
                                             </li>
                                             <li className="">
-                                                <input type="checkbox" name="lar" id="lar" className="before:w-[18px] before:content-[''] before:h-[18px] before:rounded
-                                                before:bg-white before:inline-block before:border before:border-gray-700
-                                                checked:before:bg-center checked:before:bg-lime-300	"/>
+                                                <input type="checkbox" name="larTemporario" id="larTemporario" className="before:w-[18px] before:content-[''] before:h-[18px] before:rounded
+                                                before:bg-white before:inline-block before:border before:border-gray-700" onClick={handleCategory}/>
                                                 <label htmlFor="temporario" className="ml-2 mb-[px]"> Lar temporario</label>
                                             </li>
                                             <li className="">
-                                                <input type="checkbox" name="lar" id="lar" className="before:w-[18px] before:content-[''] before:h-[18px] before:rounded
-                                                before:bg-white before:inline-block before:border before:border-gray-700
-                                                checked:before:bg-center checked:before:bg-lime-300	"/>
+                                                <input type="checkbox" name="terapiaInfantil" id="terapiaInfantil" className="before:w-[18px] before:content-[''] before:h-[18px] before:rounded
+                                                before:bg-white before:inline-block before:border before:border-gray-700" onClick={handleCategory}/>
                                                 <label htmlFor="temporario" className="ml-2 mb-[px]"> Terapia infantil com animais</label>
                                             </li>
                                         </ul>
