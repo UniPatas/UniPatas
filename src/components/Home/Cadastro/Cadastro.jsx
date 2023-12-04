@@ -111,11 +111,11 @@ export default function Cadastro() {
                         </div>
 
                         <div className="flex justify-center space-x-4 gap-px">
-                            <Link href={"#"} className="bg-[#a110a9] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">Usuario</Link>
-                            <Link href={"/ong"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">ONG</Link>
+                            <Link href={"#"} className="bg-[#a110a9] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white hover:bg-fuchsia-900 active:bg-fuchsia-600 focus:ring focus:ring-black">Usuario</Link>
+                            <Link href={"#"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white hover:bg-teal-700 active:bg-teal-500 focus:ring focus:ring-black">ONG</Link>
                         </div>
 
-                        <form onSubmit={cadastrarUsuario} className="text-sm/[11px] flex jutify-center flex-col font-bold w-72 gap-1"> {/*formulario do cadastro */}
+                        <form onSubmit={cadastrarUsuario} className="text-sm/[11px] flex jutify-center flex-col font-bold w-72 gap-1 focus-within:shadow-lg"> {/*formulario do cadastro */}
                             <label> Nome </label>
                             <input required type="text" onChange={(e) => setUsuario({ ...usuario, nome: e.target.value })} value={usuario.nome} className="bg-gray-200 h-8 rounded-md p-2 mb-2" />
 
