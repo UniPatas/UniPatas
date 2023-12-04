@@ -86,9 +86,9 @@ export default function Cadastro() {
                         <Image
                             src={Capa}
                             alt="Cachorro amarelo de porte médio"
-                            className="rounded-l-lg h-[700px]"
+                            className="rounded-l-lg h-[700px] object-cover"
                         />
-                        <div className="fixed top-[200px] ml-10">
+                        <div className="absolute top-[120px] left-[50px]">
                             <h1 className="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w- font-bold text-3xl rounded-full">Faça parte da</h1>
 
                             <Image
