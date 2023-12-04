@@ -32,14 +32,14 @@ export default function Cadastro() {
         larTemporario: 0,
     });
 
-    
+
     // funcao assincrona que efetua o cadastro do usuario, enviando os dados para o back
     const cadastrarUsuario = async (event) => {
         event.preventDefault();
-        
+
         // valida a existencia e se os campos nao estao vazios
-        if(!usuario.nome || !usuario.cpf || !usuario.email || !usuario.login || !usuario.telefone || !usuario.senha) {
-            toast('Preencha todos os campos..!', { hideProgressBar: true, autoClose: 2000, type: 'warning', position:'bottom-center' })
+        if (!usuario.nome || !usuario.cpf || !usuario.email || !usuario.login || !usuario.telefone || !usuario.senha) {
+            toast('Preencha todos os campos..!', { hideProgressBar: true, autoClose: 2000, type: 'warning', position: 'bottom-center' })
             return;
         }
 
@@ -56,21 +56,21 @@ export default function Cadastro() {
                 // body - corpo da requisicao, o que vai se renviado/recebido pelo back-end
                 body: JSON.stringify(usuario)
             });
-            
+
             // se o a resposta for 200 ou ok, entao mostra um alerta success com uma mensagem, após isso, redireciona pro login
             if (response.ok) {
-                toast('Cadastro efetuado com sucesso!!', { hideProgressBar: true, autoClose: 2000, type: 'success', position:'bottom-center' })                
+                toast('Cadastro efetuado com sucesso!!', { hideProgressBar: true, autoClose: 2000, type: 'success', position: 'bottom-center' })
                 setTimeout(() => {
                     redirecionarParaLogin();
                 }, 2000);
-            // se nao for, retorna um alert error, e quebra o codigo
+                // se nao for, retorna um alert error, e quebra o codigo
             } else {
                 toast('Erro ao fazer o cadastro..!', { hideProgressBar: true, autoClose: 2000, type: 'warning' })
                 return;
             }
-            
+
             // catch error - erro de servidor... envio com sucesso, porém, o erro acontece do lado do servidor.
-        } catch(error) {
+        } catch (error) {
             toast('Erro ao fazer o cadastro..!', { hideProgressBar: true, autoClose: 2000, type: 'warning' })
         }
 
@@ -164,9 +164,6 @@ export default function Cadastro() {
                             </div>
                         </form>
                         <br />
-
-
-
                     </div>
                 </div>
             </section >
