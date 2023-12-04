@@ -83,7 +83,8 @@ export function SliderOurHist() {
                     {/* LADO DIREITO */}
                     <div className=" w-[50%] p-[30px] overflow-hidden">
                       <div>
-                        <Image src={Equipe} />
+                        <Image src={Equipe}
+                        alt="Imagem da visita à Ong Ajinhos 4 Patas" />
                       </div>
                     </div>
                   </div>
@@ -117,7 +118,8 @@ export function SliderOurHist() {
                     {/* LADO DIREITO */}
                     <div className=" w-[50%] p-[30px] overflow-hidden">
                       <div>
-                        <Image src={Card2} />
+                        <Image src={Card2} 
+                        alt="Imagem de um cachorro da Ong Anjinho 4 Patas"/>
                       </div>
                     </div>
                   </div>
@@ -151,7 +153,8 @@ export function SliderOurHist() {
                     {/* LADO DIREITO */}
                     <div className=" w-[50%] p-[30px] overflow-hidden">
                       <div>
-                        <Image src={Card3} />
+                        <Image src={Card3} 
+                        alt="Imagem de um cachorro da Ong Anjinho 4 Patas"/>
                       </div>
                     </div>
                   </div>
@@ -185,7 +188,8 @@ export function SliderOurHist() {
                     {/* LADO DIREITO */}
                     <div className=" w-[50%] p-[30px] overflow-hidden">
                       <div>
-                        <Image src={Card4} />
+                        <Image src={Card4} 
+                        alt="Imagem de um cachorro da Ong Anjinho 4 Patas"/>
                       </div>
                     </div>
                   </div>
