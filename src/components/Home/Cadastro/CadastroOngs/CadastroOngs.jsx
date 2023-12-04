@@ -9,8 +9,10 @@ import "@/app/globals.css"
 
 export default function CadastroOngs() { 
     //Recebe e armazena em uma variavel, cada valor de input e set que veio dentro do value passado dentro do context
-    const { nomeOng, setNome, nomeResponsavel, setNomeResponsavel, telefone, setTelefone, cpf, setCPF, cep, setCep, cidade, setCidade, uf, setUf, endereco, setEndereco } = useContext(CadastroContext); 
+    const { nomeOng, setNome, nomeResponsavel, setNomeResponsavel, telefone, setTelefone, cpf, setCPF, cep, setCep,
+    cidade, setCidade, uf, setUf, endereco, setEndereco, cachorro, setCachorro, gato, setGato, ambos, setAmbos } = useContext(CadastroContext); 
 
+    
     
     const listId = { //Objeto que armazena cada id de cada input, e uma função para armazenar dentro do input o valor que vem pelo contexto
         'nomeOng': function () {
@@ -45,13 +47,12 @@ export default function CadastroOngs() {
             const verifyId = document.getElementById(key); //Verifica se existe algum elemento com um id correspondente a uma das chaves do atributos do objeto listId
 
             if (verifyId) { //Caso algum elemento tenha um id correspondente, executa esse bloco de codigo
-                console.log('testando')
                 listId[key]();
             }
         }    
     },);
 
-    const handleChange = (event) => {
+    const handleChange = (event) => { //Função para capturar os valores dos inputs do formulário
         const { name,  value } = event.target; //Captura o name do input que registrou o evento, e o seu valor
         // Verifica o name do input onde o evento foi registrado, caso seja igual ele vai setar o valor do input na variavel correspondente
 
@@ -69,6 +70,61 @@ export default function CadastroOngs() {
 
         if (sets[name]) { //Verifica se existe o name dento do objeto sets
             sets[name](value);
+        };
+    };
+
+
+    const handleOptionFocus = (event) => {
+        const { name } = event.target; //Captura o name do input que registrou o evento, e o seu valor
+        // Verifica o name do input onde o evento foi registrado, caso seja igual ele vai setar o valor do input na variavel correspondente
+
+        const sets = { // Objeto cujo chaves sejam funções (os sets) de cada input
+            'cachorro':(valor)  => {setCachorro(valor)},
+            'gato': (valor) => {setGato(valor)},
+            'ambos': (valor) => {setAmbos(valor)}
+        };
+
+        if (sets[name]) { //Verifica se existe o name dento do objeto sets
+            if (name === 'cachorro') { // se o name do elemento for cachorro
+                if (cachorro === false) { //Se o estado correspondente a esse elemento for false (por padrão, é false);
+                    sets[name](true); //Seta o valor para true
+                    const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
+                    elemento.classList.add('ring', 'ring-blue-500/50', 'bg-white', 'text-black'); //Adiciona as classes correspondentes
+                    elemento.classList.remove('text-white'); //Remove as classes correspondentes
+
+                } else if (cachorro) { //Caso o estado do elemento cachorro seja verdadeiro
+                    sets[name](false);
+                    const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
+                    elemento.classList.add('text-white'); //Adiciona as classes correspondentes
+                    elemento.classList.remove('ring', 'ring-blue-500/50', 'bg-white', 'text-black'); //Adiciona as classes correspondentes                    
+                }; 
+            } else if (name === 'gato') {
+                if (gato === false) { //Se o estado correspondente a esse elemento for false (por padrão, é false);
+                    sets[name](true); //Seta o valor para true
+                    const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
+                    elemento.classList.add('ring', 'ring-blue-500/50', 'bg-white', 'text-black'); //Adiciona as classes correspondentes
+                    elemento.classList.remove('text-white'); //Remove as classes correspondentes
+
+                } else if (gato) { //Caso o estado do elemento cachorro seja verdadeiro
+                    sets[name](false);
+                    const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
+                    elemento.classList.add('text-white'); //Adiciona as classes correspondentes
+                    elemento.classList.remove('ring', 'ring-blue-500/50', 'bg-white', 'text-black'); //Adiciona as classes correspondentes                    
+                }; 
+            } else if (name === 'ambos') {
+                if (ambos === false) { //Se o estado correspondente a esse elemento for false (por padrão, é false);
+                    sets[name](true); //Seta o valor para true
+                    const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
+                    elemento.classList.add('ring', 'ring-blue-500/50', 'bg-white', 'text-black'); //Adiciona as classes correspondentes
+                    elemento.classList.remove('text-white'); //Remove as classes correspondentes
+
+                } else if (ambos) { //Caso o estado do elemento cachorro seja verdadeiro
+                    sets[name](false);
+                    const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
+                    elemento.classList.add('text-white'); //Adiciona as classes correspondentes
+                    elemento.classList.remove('ring', 'ring-blue-500/50', 'bg-white', 'text-black'); //Adiciona as classes correspondentes                    
+                }; 
+            };
         };
     };
  
@@ -172,16 +228,16 @@ export default function CadastroOngs() {
                                         </div>
 
                                         <ul className="flex justify-around gap-6">
-                                            <li className="text-xs h-[30px] bg-[#33b3a6] rounded-lg">
-                                                <input className="rounded-lg w-[90px] text-center text-white placeholder:text-center placeholder:text-white h-full focus:ring focus:ring-violet-300" name="Cachorro" id="cachorro" disabled placeholder="Cachorro" />
+                                            <li className="text-xs h-[30px] bg-[#33b3a6] rounded-lg ">
+                                                <a onClick={handleOptionFocus} href="#" className="rounded-lg w-[90px] block text-center py-1.5 text-white placeholder:text-center placeholder:text-white h-full " name="cachorro" id="cachorro" disabled placeholder="Cachorro"> Cachorro</a>
                                             </li>
                                             
-                                            <li className="bg-[#A110A9] rounded-lg h-[30px] text-xs ">
-                                                <input className="rounded-lg w-[90px] text-center placeholder:text-white placeholder:text-center h-full" disabled name="Gato" placeholder="Gato" id="igato" />
+                                            <li className="bg-[#A110A9] h-[30px] rounded-lg text-xs">
+                                                <a onClick={handleOptionFocus} href="#" className="rounded-lg block w-[90px] text-center py-1.5 text-white placeholder:text-white h-full" name="gato" id="gato">Gatos</a>
                                             </li>
 
                                             <li className="bg-[#ffc501] rounded-lg h-[30px] text-xs">
-                                                <input required className="rounded-lg w-[90px] text-center placeholder:text-white placeholder:text-center h-full" disabled name="Ambos" id="iambos" placeholder="Ambos" />
+                                                <a onClick={handleOptionFocus} href="#" required className="rounded-lg w-[90px] text-center py-1.5 block text-white placeholder:text-white placeholder:text-center h-full" name="ambos" id="ambos" >Ambos</a>
                                             </li>
                                         </ul>
                                     </div>

@@ -21,6 +21,10 @@ export const CadastroContextProvider = ({children}) => {
     const [instagram, setInstagram] = useState('');
     const [facebook, setFacebook] = useState('');
     const [doacao, setDoacao] = useState('');
+    const [cachorro, setCachorro] = useState(false); //Estado das opções de foco da ong
+    const [gato, setGato] = useState(false); //Estado das opções de foco da ong
+    const [ambos, setAmbos] = useState(false); //Estado das opções de foco da ong
+    
 
 
     const contextValue = { //Objeto que é passado dentro do context, armazena os valores dos inputs e os setters
@@ -45,7 +49,13 @@ export const CadastroContextProvider = ({children}) => {
         facebook, 
         setFacebook,
         doacao,
-        setDoacao
+        setDoacao,
+        cachorro,
+        setCachorro,
+        gato,
+        setGato,
+        ambos,
+        setAmbos
       };
 
 
