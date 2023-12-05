@@ -68,10 +68,10 @@ export default function RedesSociais() {
                     </div>
 
 
-                    <div id="containerPai" className="w-[1230px] h-auto  flex items-center justify-center flex-col"> {/*Container que armazena o forms */}
+                    <div id="containerPai" className="w-[1580px] h-auto  flex items-center justify-center flex-col"> {/*Container que armazena o forms */}
 
                         <MultiStepForm stepDone={2}/>
-                        <form id="containerFilho" className="w-[642px] h-[90%] "> {/*Formulário com todos os inputs */}
+                        <form id="containerFilho" className="w-[642px] h-[90%]  mt-[8em] "> {/*Formulário com todos os inputs */}
 
                             <div className="flex w-full justify-center"> {/*Container dos inputs */}
 

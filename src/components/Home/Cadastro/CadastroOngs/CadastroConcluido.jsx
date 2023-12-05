@@ -79,10 +79,12 @@ export default function CadastroConcluido() {
                     </div>
 
 
-                    <div id="containerPai" className="w-[1230px] h-auto  flex items-center justify-center flex-col"> {/*Container que armazena o forms */}
+                    <div id="containerPai" className="w-[1580px] h-auto  flex flex-col"> {/*Container que armazena o forms */}
 
-                        <MultiStepForm  stepDone={3}/>
-                        <form id="containerFilho" className="w-[642px]"> {/*Formulário com todos os inputs */}
+                        <div className="h-auto w-full">
+                            <MultiStepForm  stepDone={3}/>
+                        </div>
+                        <form id="containerFilho" className="w-[642px] self-center mt-[5em]"> {/*Formulário com todos os inputs */}
 
                             <div className=" h-[80%] flex w-full"> {/*Container dos inputs */}
 
