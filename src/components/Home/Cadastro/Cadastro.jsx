@@ -12,6 +12,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 
+
 export default function Cadastro() {
 
     // redirecionar para outra pagina
@@ -82,22 +83,22 @@ export default function Cadastro() {
             <section className="bg-[#a110a9] align-center h-screen flex items-center justify-center ">
                 <div className=" w-[768px] h-[700px] flex">
 
-                    <div className="flex flex-col w-[384px] relative">
-                        <Image
-                            src={Capa}
-                            alt="Cachorro amarelo de porte médio"
-                            className="rounded-l-lg h-[700px] object-cover"
-                        />
-                        <div className="absolute top-[120px] left-[50px]">
-                            <h1 className="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w- font-bold text-3xl rounded-full">Faça parte da</h1>
+                    <div className="flex w-[384px] bg-[url('../assets/capa.png')] bg-no-repeat bg-cover bg-center bg-origin-content">
+                        <div className="flex h-[38%]">
+                        <div className="flex flex-col place-self-end">
+                            <div className="bg-[#ffc501] flex w-[286px] justify-center font-bold rounded-full self-center">
+                            <h1 className=" text-[#a110a9] text-3xl rounded-full">Bem vindos a </h1>
+                            </div>
 
                             <Image
-                                src={Nome}
-                                alt="Nome'Unipatas'"
-                                className="w-[280px] h-[100px]"
+                            src={Nome}
+                            alt="Nome'Unipatas'"
+                            className="w-[90%] h-[100px]  self-center"
                             />
                         </div>
+                        </div>
                     </div>
+
 
                     <div className="bg-white rounded-r-lg items-center flex flex-col w-[384px] h-[700px] gap-1 ">
 
@@ -112,7 +113,7 @@ export default function Cadastro() {
 
                         <div className="flex justify-center space-x-4 gap-px">
                             <Link href={"#"} className="bg-[#a110a9] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">Usuario</Link>
-                            <Link href={"/ong"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">ONG</Link>
+                            <Link href={"/cadastro-ongs"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">ONG</Link>
                         </div>
 
                         <form onSubmit={cadastrarUsuario} className="text-sm/[11px] flex jutify-center flex-col font-bold w-72 gap-1"> {/*formulario do cadastro */}
@@ -160,7 +161,7 @@ export default function Cadastro() {
                             <div className="flex gap-5 mt-5 justify-between items-center">
                                 <Link className="flex justify-center items-center bg-[#a110a9] w-2/4 h-8 rounded-md text-white font-bold text-xs " href={"/login"}> Voltar </Link>
                                 {/* botao que aciona a funcao de cadastro de usuario */}
-                                <button className="bg-[#a110a9] w-2/4 h-8 w-24 rounded-md text-white font-bold text-xs "> Cadastre-se 😍 </button>
+                                <button className="bg-[#a110a9] h-8 w-24 rounded-md text-white font-bold text-xs"> Cadastre-se 😍 </button>
                             </div>
                         </form>
                         <br />
