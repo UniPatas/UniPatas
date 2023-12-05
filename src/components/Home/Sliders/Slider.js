@@ -1,7 +1,8 @@
-export default function Slider() {
-  const CAROUSEL = document.querySelector("#carousel"),
-    firstCard = CAROUSEL.querySelectorAll(".card")[0],
-    arrowsIcons = document.querySelectorAll(".arrows");
+// Slider.js
+export default function Slider({ carouselId, cardClass, arrowsClass }) {
+  const CAROUSEL = document.querySelector(`#${carouselId}`);
+  const firstCard = CAROUSEL.querySelectorAll(`.${cardClass}`)[0];
+  const arrowsIcons = document.querySelectorAll(`.${arrowsClass}`);
 
   let isDragStart = false,
     prevPageX,
@@ -11,7 +12,7 @@ export default function Slider() {
   arrowsIcons.forEach((icon) => {
     icon.addEventListener("click", () => {
       CAROUSEL.scrollLeft +=
-        icon.id == "left" ? -firstCardWidth : firstCardWidth;
+        icon.id === "left" ? -firstCardWidth : firstCardWidth;
     });
   });
 
