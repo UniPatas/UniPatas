@@ -45,13 +45,13 @@ export default function Login() {
             </div>
 
             <div className="gap-28">
-            <form className=" flex jutify-center flex-col font-bold w-72 gap-2"> {/*formulario do login */}
-              <label> Login </label>
-              <input type="email" className="bg-gray-200 h-8 rounded-md " />
-              <br/>
-              <label> Senha </label>
-              <input type="password" className="bg-gray-200 h-8 rounded-md" />
-            </form>
+              <form className=" flex jutify-center flex-col font-bold w-72 gap-2"> {/*formulario do login */}
+                <label> Login </label>
+                <input type="email" className="bg-gray-200 h-8 rounded-md " />
+                <br />
+                <label> Senha </label>
+                <input type="password" className="bg-gray-200 h-8 rounded-md" />
+              </form>
             </div>
 
             <div className="flex justify-around space-x-20"> {/* conteiner dos botões*/}
@@ -67,14 +67,14 @@ export default function Login() {
             <p className="flex justify-center items-center text-xs font-bold">
               Esqueceu a senha?
             </p>
-            
+
 
             <div className="flex justify-center text-xs"> {/* conteiner google-facebook*/}
 
               <Image src={Google} width={20} height={50} alt="logo-google" />
               <button>Entrar com o Google</button>
             </div>
-            
+
             <div className="flex justify-center">
               <Image
                 src={Facebook}
