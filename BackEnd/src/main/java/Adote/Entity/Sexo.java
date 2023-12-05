@@ -1,4 +1,4 @@
-package Adote.Entity;
+package Adote.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,33 +9,31 @@ import jakarta.persistence.Id;
 public class Sexo {  // atributos e dependencia pro banco
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String nome;
+    private int id;
+    private boolean femea, macho;
 
-    // construtores
-    public Sexo(Long id) {
-        this.id = id;
-    }
 
-    public Sexo(String nome) {
-        this.nome = nome;
-    }
-
-    //getters e setters
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public boolean isFemea() {
+        return femea;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setFemea(boolean femea) {
+        this.femea = femea;
+    }
+
+    public boolean isMacho() {
+        return macho;
+    }
+
+    public void setMacho(boolean macho) {
+        this.macho = macho;
     }
 }
-

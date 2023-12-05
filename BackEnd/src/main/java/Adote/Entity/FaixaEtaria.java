@@ -1,4 +1,4 @@
-package Adote.Entity;
+package Adote.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,15 +10,17 @@ public class FaixaEtaria {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String nome;
+    private boolean filhote, adulto, idoso;
 
-    public FaixaEtaria(Long id) { //construtor
+    //construtor
+    public FaixaEtaria(Long id, boolean filhote, boolean adulto, boolean idoso) {
         this.id = id;
+        this.filhote = filhote;
+        this.adulto = adulto;
+        this.idoso = idoso;
     }
 
-    public FaixaEtaria(String nome) { //construtor
-        this.nome = nome;
-    }
+    //getters e setters
 
     public Long getId() {
         return id;
@@ -28,12 +30,28 @@ public class FaixaEtaria {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public boolean isFilhote() {
+        return filhote;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setFilhote(boolean filhote) {
+        this.filhote = filhote;
+    }
+
+    public boolean isAdulto() {
+        return adulto;
+    }
+
+    public void setAdulto(boolean adulto) {
+        this.adulto = adulto;
+    }
+
+    public boolean isIdoso() {
+        return idoso;
+    }
+
+    public void setIdoso(boolean idoso) {
+        this.idoso = idoso;
     }
 }
 

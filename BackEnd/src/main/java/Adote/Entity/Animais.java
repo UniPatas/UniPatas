@@ -1,11 +1,11 @@
-package Adote.Entity;
+package Adote.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 
 @Entity // a classe que será mapeada no banco de dados
 public class Animais  {
-   private long id; // long permite intervalo de valores e o ID é chave primária
+   private long id; // long permite intervalo de valores e o ID é a chave primária
    private String nomeAnimal, foto;
    @ManyToOne // relação de muitos-p/-um em animais e TipoAnimal
     private TipoAnimal tipoAnimal;
@@ -17,10 +17,19 @@ public class Animais  {
     private Usuarios usuarios;
    @ManyToOne
     private Caracteristicas caracteristicas;
-   @ManyToOne
-    private Favoritos favoritos;
 
    //construtores
+    public Animais(long id, String nomeAnimal, String foto, TipoAnimal tipoAnimal, Sexo sexo, FaixaEtaria faixaEtaria, Usuarios usuarios, Caracteristicas caracteristicas) {
+        this.id = id;
+        this.nomeAnimal = nomeAnimal;
+        this.foto = foto;
+        this.tipoAnimal = tipoAnimal;
+        this.sexo = sexo;
+        this.faixaEtaria = faixaEtaria;
+        this.usuarios = usuarios;
+        this.caracteristicas = caracteristicas;
+    }
+
     public long getId() {
         return id;
     }
@@ -80,11 +89,5 @@ public class Animais  {
         this.caracteristicas = caracteristicas;
     }
 
-    public Favoritos getFavoritos() {
-        return favoritos;
-    }
 
-    public void setFavoritos(Favoritos favoritos) {
-        this.favoritos = favoritos;
-    }
 }

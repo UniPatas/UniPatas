@@ -1,19 +1,17 @@
-package Adote.Entity;
+package Adote.entity;
 
 import jakarta.persistence.Entity;
 
 @Entity
 public class TipoAnimal { // aqui se refere ao tipo de animal
     private Long id;
-    private String nome;
+    private boolean canino, felino;
 
     //construtores
-    public TipoAnimal(Long id) {
-        this.id = id;
-    }
-
-    public TipoAnimal(String nome) {
-        this.nome = nome;
+    public TipoAnimal(Long id, boolean canino, boolean felino) {
+        this.setId(id);
+        this.setCanino(canino);
+        this.setFelino(felino);
     }
 
     //getters e setters
@@ -25,13 +23,23 @@ public class TipoAnimal { // aqui se refere ao tipo de animal
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public boolean isCanino() {
+        return canino;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setCanino(boolean canino) {
+        this.canino = canino;
+    }
+
+    public boolean isFelino() {
+        return felino;
+    }
+
+    public void setFelino(boolean felino) {
+        this.felino = felino;
     }
 }
+
+
 
 

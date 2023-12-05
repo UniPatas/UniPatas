@@ -1,4 +1,4 @@
-package Adote.Entity;
+package Adote.entity;
 
 import jakarta.persistence.*;
 
@@ -9,9 +9,6 @@ public class Usuarios { // atributos e dependencia com o banco de dados
     @GeneratedValue(strategy = GenerationType.AUTO) // automatiza
     private Long id; //identificação do usuário
     private String nome;
-    @ManyToOne // muitos-p/-um
-    private Tipo tipo; // tipo de usuario
-
 
     // construtores
     public Usuarios(Long id) {
@@ -20,10 +17,6 @@ public class Usuarios { // atributos e dependencia com o banco de dados
 
     public Usuarios(String nome) {
         this.nome = nome;
-    }
-
-    public Usuarios(Tipo tipo) {
-        this.tipo = tipo;
     }
 
     // getters e setters
@@ -41,13 +34,5 @@ public class Usuarios { // atributos e dependencia com o banco de dados
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public Tipo getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(Tipo tipo) {
-        this.tipo = tipo;
     }
 }

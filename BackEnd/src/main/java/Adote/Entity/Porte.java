@@ -1,4 +1,4 @@
-package Adote.Entity;
+package Adote.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,15 +10,18 @@ public class Porte {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String nome;
+    private boolean peque, medio, grande;
 
-    public Porte(Long id) {
+    //construtor
+    public Porte(Long id, boolean peq, boolean med, boolean grande) {
         this.id = id;
+        this.peque = peque;
+        this.medio = medio;
+        this.grande = grande;
     }
 
-    public Porte(String nome) {
-        this.nome = nome;
-    }
+    //getters e setters
+
 
     public Long getId() {
         return id;
@@ -28,12 +31,27 @@ public class Porte {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public boolean isPeque() {
+        return peque;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setPeque(boolean peque) {
+        this.peque = peque;
+    }
+
+    public boolean isMedio() {
+        return medio;
+    }
+
+    public void setMedio(boolean medio) {
+        this.medio = medio;
+    }
+
+    public boolean isGrande() {
+        return grande;
+    }
+
+    public void setGrande(boolean grande) {
+        this.grande = grande;
     }
 }
-
