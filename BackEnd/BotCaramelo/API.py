@@ -31,4 +31,4 @@ def get_response():
     
 
 if __name__ == '__main__': #Garante que o aplicativo só é executado se o script for o ponto de entrada principal.
-    app.run(port=5000, debug=True) #Inicia o aplicativo Flask na porta 3000 em modo de depuração.
+    app.run(port=5000, debug=True) #Inicia o aplicativo Flask na porta 5000 em modo de depuração.

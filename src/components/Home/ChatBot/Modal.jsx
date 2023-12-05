@@ -34,18 +34,6 @@ const Modal = ({ onClose, children }) => {
     }
   };
 
-  //const getResponse = async () => {
-  //  try {
-  //    const res = await fetch('http://localhost:5000/get_response');
-  //    const data = await res.json();
-  //    console.log('Data received from server:', data); 
-  //    setMessages([...messages, { text: data.response, user: false }]);
-      //setResponse(data.response);
-  //  } catch (error) {
-  //    console.error('Erro ao obter resposta:', error);
-  //  }
-  //};
-
   useEffect(() => {
     // Role a área de mensagens para o final
     messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
