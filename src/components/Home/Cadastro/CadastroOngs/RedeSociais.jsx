@@ -110,7 +110,12 @@ export default function RedesSociais() {
 
                             <div className="text-sm font-bold flex justify-center mt-[4em]"> {/*Botões inferiores*/}
                                 <div className="h-auto w-[50%] flex justify-between text-center items-center"> 
-                                    <Link className="text-sm" href={"/cadastro-ongs"}> Voltar para dados</Link>
+                                    <Link className="text-sm flex gap-1 hover:underline" href={"/cadastro-ongs"}> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                                    </svg>
+                                    Voltar para dados
+                                    </Link>
                                     <Link href={"/cadastro-concluido"} query={{loadPage:true}} className="bg-[#33b3a6] h-8 w-24 rounded-md text-white font-bold text-xs flex justify-center items-center">Proximo</Link>
                                 </div>
                             </div>
