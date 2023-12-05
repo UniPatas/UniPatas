@@ -1,9 +1,6 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import Caramelo from "@/assets/caramelo.png";
-import Logo from "@/assets/logo-verde-texto.png";
-import Yellow from "@/assets/logo-unipatas-yellow.png";
 import MultiStepForm from "./MultiFormStep";
 import ImagemLado from "@/assets/imagemSideBarCadastro.png";
 import React, { useState, useEffect, useContext } from "react";

@@ -161,7 +161,7 @@ export default function Cadastro() {
                             <div className="flex gap-5 mt-5 justify-between items-center">
                                 <Link className="flex justify-center items-center bg-[#a110a9] w-2/4 h-8 rounded-md text-white font-bold text-xs " href={"/login"}> Voltar </Link>
                                 {/* botao que aciona a funcao de cadastro de usuario */}
-                                <button className="bg-[#a110a9] w-2/4 h-8 w-24 rounded-md text-white font-bold text-xs "> Cadastre-se 😍 </button>
+                                <button className="bg-[#a110a9] h-8 w-24 rounded-md text-white font-bold text-xs"> Cadastre-se 😍 </button>
                             </div>
                         </form>
                         <br />

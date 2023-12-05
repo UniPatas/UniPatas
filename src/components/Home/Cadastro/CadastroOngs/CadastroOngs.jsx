@@ -144,28 +144,28 @@ export default function CadastroOngs() {
                 if (larAcolhimento === false) { //Se o estado correspondente a esse elemento for false (por padrão, é false);
                     sets[name](true); //Seta o valor para true
                     const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
-                    elemento.classList.add('before:bg-center', 'before:bg-lime-300'); //Adiciona as classes correspondentes
+                    elemento.classList.add('checked:before:bg-center', 'checked:before:bg-lime-300'); //Adiciona as classes correspondentes
                     elemento.classList.remove('bg-white'); //Remove as classes correspondentes
 
                 } else if (larAcolhimento) { //Caso o estado do elemento cachorro seja verdadeiro
                     sets[name](false);
                     const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
                     elemento.classList.add('bg-white'); //Adiciona as classes correspondentes
-                    elemento.classList.remove('before:bg-center', 'before:bg-lime-300'); //Adiciona as classes correspondentes                    
+                    elemento.classList.remove('checked:before:bg-center', 'checked:before:bg-lime-300'); //Adiciona as classes correspondentes                    
                 
                 }
             } else if (name === 'larTemporario') {
                 if (larTemporario === false) {
                     sets[name](true); //Seta o valor para true
                     const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
-                    elemento.classList.add('before:bg-center', 'before:bg-lime-300'); //Adiciona as classes correspondentes
+                    elemento.classList.add('checked:before:bg-center', 'checked:before:bg-lime-300'); //Adiciona as classes correspondentes
                     elemento.classList.remove('bg-white'); //Remove as classes correspondentes
 
                 } else if (larTemporario) {
                     sets[name](false);
                     const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
                     elemento.classList.add('bg-white'); //Adiciona as classes correspondentes
-                    elemento.classList.remove('before:bg-center', 'before:bg-lime-300'); //Adiciona as classes correspondentes                    
+                    elemento.classList.remove('checked:before:bg-center', 'checked:before:bg-lime-300'); //Adiciona as classes correspondentes                    
 
                 };
 
@@ -173,14 +173,14 @@ export default function CadastroOngs() {
                 if (terapiaInfantil === false) {
                     sets[name](true); //Seta o valor para true
                     const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
-                    elemento.classList.add('before:bg-center', 'before:bg-lime-300'); //Adiciona as classes correspondentes
+                    elemento.classList.add('checked:before:bg-center', 'checked:before:bg-lime-300'); //Adiciona as classes correspondentes
                     elemento.classList.remove('bg-white'); //Remove as classes correspondentes
 
                 } else if (terapiaInfantil) {
                     sets[name](false);
                     const elemento = document.getElementById(name); //Recupera o elemento com o id correspondente
                     elemento.classList.add('bg-white'); //Adiciona as classes correspondentes
-                    elemento.classList.remove('before:bg-center', 'before:bg-lime-300'); //Adiciona as classes correspondentes                    
+                    elemento.classList.remove('checked:before:bg-center', 'checked:before:bg-lime-300'); //Adiciona as classes correspondentes                    
 
                 };
 
