@@ -32,14 +32,14 @@ export default function Cadastro() {
         larTemporario: 0,
     });
 
-    
+
     // funcao assincrona que efetua o cadastro do usuario, enviando os dados para o back
     const cadastrarUsuario = async (event) => {
         event.preventDefault();
-        
+
         // valida a existencia e se os campos nao estao vazios
-        if(!usuario.nome || !usuario.cpf || !usuario.email || !usuario.login || !usuario.telefone || !usuario.senha) {
-            toast('Preencha todos os campos..!', { hideProgressBar: true, autoClose: 2000, type: 'warning', position:'bottom-center' })
+        if (!usuario.nome || !usuario.cpf || !usuario.email || !usuario.login || !usuario.telefone || !usuario.senha) {
+            toast('Preencha todos os campos..!', { hideProgressBar: true, autoClose: 2000, type: 'warning', position: 'bottom-center' })
             return;
         }
 
@@ -56,21 +56,21 @@ export default function Cadastro() {
                 // body - corpo da requisicao, o que vai se renviado/recebido pelo back-end
                 body: JSON.stringify(usuario)
             });
-            
+
             // se o a resposta for 200 ou ok, entao mostra um alerta success com uma mensagem, após isso, redireciona pro login
             if (response.ok) {
-                toast('Cadastro efetuado com sucesso!!', { hideProgressBar: true, autoClose: 2000, type: 'success', position:'bottom-center' })                
+                toast('Cadastro efetuado com sucesso!!', { hideProgressBar: true, autoClose: 2000, type: 'success', position: 'bottom-center' })
                 setTimeout(() => {
                     redirecionarParaLogin();
                 }, 2000);
-            // se nao for, retorna um alert error, e quebra o codigo
+                // se nao for, retorna um alert error, e quebra o codigo
             } else {
                 toast('Erro ao fazer o cadastro..!', { hideProgressBar: true, autoClose: 2000, type: 'warning' })
                 return;
             }
-            
+
             // catch error - erro de servidor... envio com sucesso, porém, o erro acontece do lado do servidor.
-        } catch(error) {
+        } catch (error) {
             toast('Erro ao fazer o cadastro..!', { hideProgressBar: true, autoClose: 2000, type: 'warning' })
         }
 
@@ -91,11 +91,13 @@ export default function Cadastro() {
                         <div className="absolute top-[120px] left-[50px]">
                             <h1 className="bg-[#ffc501] text-[#a110a9] px-4 py-4 flex justify-center w- font-bold text-3xl rounded-full">Faça parte da</h1>
 
-                            <Image
-                                src={Nome}
-                                alt="Nome'Unipatas'"
-                                className="w-[280px] h-[100px]"
-                            />
+                            <Link href={"/"}>
+                                <Image
+                                    src={Nome}
+                                    alt="Nome'Unipatas'"
+                                    className="w-[280px] h-[100px]"
+                                />
+                            </Link>
                         </div>
                     </div>
 
@@ -111,11 +113,11 @@ export default function Cadastro() {
                         </div>
 
                         <div className="flex justify-center space-x-4 gap-px">
-                            <Link href={"#"} className="bg-[#a110a9] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">Usuario</Link>
-                            <Link href={"/ong"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">ONG</Link>
+                            <Link href={"#"} className="bg-[#a110a9] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white hover:bg-fuchsia-900 active:bg-fuchsia-600 focus:ring focus:ring-black">Usuario</Link>
+                            <Link href={"#"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white hover:bg-teal-700 active:bg-teal-500 focus:ring focus:ring-black">ONG</Link>
                         </div>
 
-                        <form onSubmit={cadastrarUsuario} className="text-sm/[11px] flex jutify-center flex-col font-bold w-72 gap-1"> {/*formulario do cadastro */}
+                        <form onSubmit={cadastrarUsuario} className="text-sm/[11px] flex jutify-center flex-col font-bold w-72 gap-1 focus-within:shadow-lg"> {/*formulario do cadastro */}
                             <label> Nome </label>
                             <input required type="text" onChange={(e) => setUsuario({ ...usuario, nome: e.target.value })} value={usuario.nome} className="bg-gray-200 h-8 rounded-md p-2 mb-2" />
 
@@ -164,9 +166,6 @@ export default function Cadastro() {
                             </div>
                         </form>
                         <br />
-
-
-
                     </div>
                 </div>
             </section >
