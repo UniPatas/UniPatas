@@ -37,7 +37,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
     <>
       {/* MODELO DE MODAL */}
 
-      <div className=" fixed inset-0 backdrop-blur-sm flex items-center justify-center">
+      <div className=" fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50	">
         <div className=" bg-white w-[50%] h-[95%] rounded-[50px] p-[30px] shadow-box1">
           <form onSubmit={handleUpLoad}>
             {/* BOTÃO FECHAR MODAL */}
