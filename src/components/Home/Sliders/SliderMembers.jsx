@@ -535,7 +535,7 @@ export function SliderMembers() {
                       <div className=" flex justify-center items-center">
                         <div className=" w-[40px]">
                           <a
-                            href="www.linkedin.com/in/thiago-pessoa/"
+                            href="https://www.linkedin.com/in/thiago-da-silva-pessoa-42083822a/"
                             target="_blank"
                           >
                             <Image src={LinkedIn} alt="Ícone do LinkedIn" />
@@ -893,7 +893,7 @@ export function SliderMembers() {
                       </div>
                       <div className="text-[12px] text-justify text-[#414e58] py-[5px] italic">
                         <span>
-                          ""
+                          "Paixão pela tecnologia: desafios inspiram-me, erros são oportunidades. Busco desenvolvimento, conexões e aprendizado constante."
                         </span>
                       </div>
                     </div>
@@ -912,7 +912,7 @@ export function SliderMembers() {
                         </div>
                         <div className=" w-[40px] mx-[10px]">
                           <form
-                            action="mailto:"
+                            action="mailto:mariaclara8779@gmail.com"
                             method="post"
                             enctype="text/plain"
                             className="flex"
