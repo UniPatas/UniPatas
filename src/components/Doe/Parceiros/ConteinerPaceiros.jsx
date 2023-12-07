@@ -10,6 +10,7 @@ export default function Paceiros() {
                             <h1 className="text-3xl font-bold text-center ">
                                 APADRINHE UMA CAUSA
                             </h1>
+                            <h1>teste</h1>
                             <p className="indent-12 text-xl text-slate-600 font-bold tracking-wide">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptate,
                                 eligendi earum sunt natus laboriosam animi dolorem perspiciatis aliquam, et cum.
