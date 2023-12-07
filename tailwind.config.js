@@ -23,6 +23,8 @@ module.exports = {
         custom4: "47% 53% 79% 21% / 46% 38% 62% 54%",
         custom5: "50px",
         custom6: "30px",
+        custom7: "20px 20px 0px 0px",
+        custom8: "0px 0px 20px 20px",
       },
 
       boxShadow: {
