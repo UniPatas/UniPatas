@@ -685,7 +685,7 @@ export function SliderMembers() {
                       <div className=" flex justify-center items-center">
                         <div className=" w-[40px]">
                           <a
-                            href="www.linkedin.com/in/gleice-santos0"
+                            href="https://www.linkedin.com/in/gleice-santos0/"
                             target="_blank"
                           >
                             <Image src={LinkedIn} alt="Ícone do LinkedIn" />
@@ -760,7 +760,7 @@ export function SliderMembers() {
                       <div className=" flex justify-center items-center">
                         <div className=" w-[40px]">
                           <a
-                            href="www.linkedin.com/in/durianfernandes"
+                            href="https://www.linkedin.com/in/durianfernandes/"
                             target="_blank"
                           >
                             <Image src={LinkedIn} alt="Ícone do LinkedIn" />
