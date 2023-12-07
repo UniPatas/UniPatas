@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ContainerImgDoe({ img, alt }) {
+export default function ContainerImg({ img, alt }) {
   return (
     <>
       <section className="py-[30px]">
