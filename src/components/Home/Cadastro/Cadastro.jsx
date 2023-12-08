@@ -83,7 +83,7 @@ export default function Cadastro() {
             <section className="bg-[#a110a9] align-center h-screen flex items-center justify-center ">
                 <div className=" w-[768px] h-[700px] flex">
 
-                    <div className="flex w-[384px] bg-[url('../assets/capa.png')] bg-no-repeat bg-cover bg-center bg-origin-content">
+                    <div className="flex w-[384px] bg-[url('../assets/capa.png')] bg-no-repeat bg-cover bg-center bg-origin-content rounded-md">
                         <div className="flex h-[38%]">
                         <div className="flex flex-col place-self-end">
                             <div className="bg-[#ffc501] flex w-[286px] justify-center font-bold rounded-full self-center">
@@ -112,8 +112,8 @@ export default function Cadastro() {
                         </div>
 
                         <div className="flex justify-center space-x-4 gap-px">
-                            <Link href={"#"} className="bg-[#a110a9] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">Usuario</Link>
-                            <Link href={"/cadastro-ongs"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white">ONG</Link>
+                            <Link href={"#"} className="bg-[#a110a9] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white hover:bg-fuchsia-600 active:bg-fuchsia-400 focus:ring focus:ring-black">Usuario</Link>
+                            <Link href={"/cadastro-ongs"} className="bg-[#33b3a6] h-8 w-18 rounded-full px-4 pt-2 font-bold text-xs text-center text-white hover:bg-teal-600 active:bg-teal-400 focus:ring focus:ring-black">ONG</Link>
                         </div>
 
                         <form onSubmit={cadastrarUsuario} className="text-sm/[11px] flex jutify-center flex-col font-bold w-72 gap-1"> {/*formulario do cadastro */}
@@ -159,9 +159,9 @@ export default function Cadastro() {
                                 </div>
                             </div>
                             <div className="flex gap-5 mt-5 justify-between items-center">
-                                <Link className="flex justify-center items-center bg-[#a110a9] w-2/4 h-8 rounded-md text-white font-bold text-xs " href={"/login"}> Voltar </Link>
+                                <Link className="flex justify-center items-center bg-[#a110a9] w-2/4 h-8 rounded-md text-white font-bold text-xs hover:bg-fuchsia-600 active:bg-fuchsia-400 focus:ring focus:ring-black " href={"/login"}> Voltar </Link>
                                 {/* botao que aciona a funcao de cadastro de usuario */}
-                                <button className="bg-[#a110a9] h-8 w-24 rounded-md text-white font-bold text-xs"> Cadastre-se 😍 </button>
+                                <button className="bg-[#a110a9] h-8 w-24 rounded-md text-white font-bold text-xs hover:bg-fuchsia-600 active:bg-fuchsia-400 focus:ring focus:ring-black"> Cadastre-se </button>
                             </div>
                         </form>
                         <br />
