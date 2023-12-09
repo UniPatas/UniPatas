@@ -11,7 +11,7 @@ def create_chatbot():
     chatbot = ChatBot("BotCaramelo", tagger_language=ENGSM)
 
     conversa = [
-"Olá, BotCaramelo!",
+"Olá",
 "Olá, em que posso ajudar?",
 "Eu adotei um filhote de cachorro recentemente e estou um pouco perdido.",
 "Parabéns pela sua adoção! De que assuntos você tem interesse em saber? Posso te ajudar com dicas de vacinação, alimentação, higiene e etc.",
@@ -29,6 +29,18 @@ def create_chatbot():
 "Sim, é importante estar ciente de alimentos que são prejudiciais para cães. Alguns alimentos proibidos incluem chocolate, cebola, alho, uvas, passas, abacate, cafeína, álcool, alimentos com ossos pequenos que podem causar engasgamento e produtos lácteos em excesso. Certifique-se sempre de oferecer alimentos seguros e consultar o veterinário se tiver dúvidas sobre a dieta do seu cachorro.",
 "Existem alimentos proibidos para gatos?",
 "Sim, é crucial estar ciente de alimentos que são prejudiciais para gatos. Alguns alimentos proibidos incluem chocolate, cebola, alho, café, alimentos ricos em gordura, ossos pequenos que podem causar engasgamento, álcool, uvas, passas, produtos lácteos em excesso e alimentos adoçados com xilitol. Certifique-se sempre de oferecer alimentos seguros e consultar o veterinário se tiver dúvidas sobre a dieta do seu gato.",
+"Estou pensando em adotar um cachorro. Por onde devo começar?",
+"Parabéns pela decisão de adotar um cachorro! É uma escolha maravilhosa. Para começar, é bom refletir sobre alguns aspectos. Você tem alguma preferência quanto ao porte do cachorro ou ao sexo do animal?",
+"Bem, não tenho certeza. Que tipo de perguntas devo considerar para decidir sobre o porte e sexo?",
+"Ótimo! Aqui estão algumas perguntas que podem ajudar na decisão:  01 - Porte do Cachorro: Você mora em um espaço grande ou pequeno? Tem preferência por cachorros pequenos, médios ou grandes? Pode fornecer a quantidade adequada de exercício para um cachorro de porte grande, se for o caso? Parte 01 - Sexo do Cachorro: Alguma preferência quanto ao sexo? (macho ou fêmea) Já tem outros animais de estimação em casa? Alguma preferência para convivência entre machos e fêmeas? Essas perguntas podem ajudar a direcionar suas escolhas. Se tiver alguma preferência específica ou se precisar de mais informações, estou aqui para ajudar!",
+"Hmm, interessante. Eu moro em um apartamento pequeno, talvez um cachorro de porte médio seria melhor. E quanto ao sexo, não tenho uma preferência específica."
+"Entendi! Cachorros de porte médio geralmente se adaptam bem a espaços menores. Agora que temos uma ideia do porte, você gostaria de explorar algumas opções de adoção de cachorros de porte médio, sem preferência específica de sexo? Posso fornecer informações sobre abrigos locais, procedimentos de adoção e até mesmo algumas sugestões de raças que se encaixam nesse perfil. Como posso ajudar mais?",
+"Estou pensando em adotar um gato. Como devo proceder?",
+"Que ótima decisão! Adotar um gato é uma experiência incrível. Para começar, é bom considerar alguns fatores. Você tem alguma preferência quanto ao porte do gato ou ao sexo do animal?",
+"Hmm, não tenho certeza. Que tipo de perguntas eu deveria considerar para decidir sobre o porte e sexo do gato?",
+"Ótimo! Aqui estão algumas perguntas que podem ajudar na sua decisão: Parte 01 - Porte do Gato: Você mora em um espaço grande ou pequeno? Prefere gatos mais ativos ou tranquilos? Tem alguma preferência por gatos de porte pequeno, médio ou grande? Parte 02 - Sexo do Gato: Alguma preferência quanto ao sexo? (macho ou fêmea) Já tem outros animais de estimação em casa? Alguma preferência para convivência entre machos e fêmeas? Responder a essas perguntas pode ajudar a direcionar suas escolhas. Se tiver alguma preferência específica ou se precisar de mais informações, estou aqui para ajudar!",
+"Bom, moro em um apartamento pequeno, talvez um gato de porte pequeno seria melhor. Quanto ao sexo, não tenho uma preferência específica.",
+"Entendi! Gatos de porte pequeno geralmente se adaptam bem a espaços menores. Agora que temos uma ideia do porte, você gostaria de explorar algumas opções de adoção de gatos de porte pequeno, sem preferência específica de sexo? Posso fornecer informações sobre abrigos locais, procedimentos de adoção e até mesmo algumas características de raças que se encaixam nesse perfil. Como posso ajudar mais?",
 "E sobre alimentação em animais doentes?",
 "Quando um animal está doente, a alimentação pode desempenhar um papel crucial na recuperação. Em casos de doença, consulte imediatamente o veterinário para um diagnóstico preciso e recomendações específicas. Em alguns casos, pode ser necessário oferecer uma dieta especializada, como alimentos enlatados, diets terapêuticas ou até mesmo uma alimentação por sonda, dependendo da gravidade da condição. O veterinário irá orientar sobre a melhor abordagem alimentar para atender às necessidades específicas do seu pet doente.",
 "Qual seria a melhor ração para meu Labrador?",
