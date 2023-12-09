@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.teste {
+    border: 1px solid red;
+}
