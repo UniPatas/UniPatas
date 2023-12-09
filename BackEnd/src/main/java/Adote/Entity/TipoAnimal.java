@@ -1,8 +1,12 @@
 package Adote.entity;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import Adote.dto.TipoAnimalDto;
+import jakarta.persistence.*;
+import org.springframework.data.annotation.Id;
 import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
+
 import java.util.List;
 
 
@@ -13,6 +17,8 @@ public class TipoAnimal { // aqui se refere ao tipo de animal
 
     private List <Animais> tipoAnimalList; //array list do objeto tipo animal
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private boolean canino, felino;
 

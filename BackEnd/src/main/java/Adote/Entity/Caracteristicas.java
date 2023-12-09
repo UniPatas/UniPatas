@@ -2,18 +2,17 @@ package Adote.entity;
 
 
 import Adote.dto.*;
-
-import Adote.dto.SexoDto;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.criteria.CriteriaBuilder;
+
 import org.springframework.data.annotation.Id;
 
 @Entity
 public class Caracteristicas { // atributos e variaveis
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private boolean agitado, calmo, amoroso, brincalhao;
 

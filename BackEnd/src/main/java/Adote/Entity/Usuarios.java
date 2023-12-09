@@ -1,16 +1,19 @@
 package Adote.entity;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import Adote.dto.UsuariosDto;
 import Adote.entity.*;
-import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import jakarta.persistence.Entity;
 
 @Entity
 @NoArgsConstructor
 public class Usuarios { // atributos e dependencia com o banco de dados
 
     @Id //mapea o banco
-    @GeneratedValue(strategy = GenerationType.AUTO) // automatiza
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // automatiza
     private Integer id; //identificação do usuário
     private String nome;
 

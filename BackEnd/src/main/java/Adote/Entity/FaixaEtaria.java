@@ -2,13 +2,21 @@ package Adote.entity;
 
 import Adote.dto.FaixaEtariaDto;
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import org.springframework.data.annotation.Id;
+import jakarta.persistence.Entity;
 
 import java.util.List;
 
+@Data
+@NoArgsConstructor
 @Entity
 public class FaixaEtaria {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private boolean filhote, adulto, idoso;
 

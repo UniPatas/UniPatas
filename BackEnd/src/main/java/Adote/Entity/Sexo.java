@@ -1,7 +1,11 @@
 package Adote.entity;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import org.springframework.data.annotation.Id;
 import Adote.dto.SexoDto;
 import jakarta.persistence.*;
+import jakarta.persistence.Entity;
 
 import java.util.List;
 

@@ -4,8 +4,12 @@ import org.springframework.beans.BeanUtils;
 import Adote.dto.AnimaisDto;
 import jakarta.persistence.*;
 import lombok.Data;
+import jakarta.persistence.Id;
 import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.Bean;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Entity;
 
 @Data
 @NoArgsConstructor

@@ -1,5 +1,6 @@
 package Adote.services;
 
+import Adote.dto.CaracteristicasDto;
 import Adote.entity.Animais;
 import Adote.entity.*;
 import Adote.repository.AnimaisRepository;
@@ -15,13 +16,17 @@ public class AnimaisServices {
     AnimaisRepository repository;
 
 
+    // as caracteristicas do animais são:  agitado, calmo, amoroso, brincalhao;
     public Animais adotarAnimais(Animais objDTO) {
-            Animais novoAnimais = new Animais(objDTO);
-        novoAnimais.setId(0);
-        
+        objDTO.setId(0);
+        Animais novoAnimais = new Animais(objDTO);
+        novoAnimais.setId(0); //cria um novo animal a partir do objeto animais
 
-            return newObj;
-    }
+        repository.save(novoAnimais);
+        return  novoAnimais;
+        }
+
+
 
     //getters e setters
     public AnimaisRepository getRepository() {
