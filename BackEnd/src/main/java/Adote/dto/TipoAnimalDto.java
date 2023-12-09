@@ -1,28 +1,22 @@
-package Adote.entity;
+package Adote.dto;
 
-import Adote.dto.TipoAnimalDto;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import java.util.List;
+import  Adote.entity.*;
+import Adote.entity.TipoAnimal;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
+public class TipoAnimalDto {
 
-@Entity
-public class TipoAnimal { // aqui se refere ao tipo de animal
-
-    @OneToMany (mappedBy = "tipoAnimal_ID") // parte de um de muitos p/ um
-
-    private List <Animais> tipoAnimalList; //array list do objeto tipo animal
 
     private Integer id;
     private boolean canino, felino;
 
-    //construtores
-    public TipoAnimal( TipoAnimalDto tipoAnimal) {
+    public TipoAnimalDto( TipoAnimal tipoAnimal) {
         this.id = tipoAnimal.getId();
         this.canino = tipoAnimal.isCanino();
         this.felino = tipoAnimal.isFelino();
     }
-    //getters e setters
+
     public Integer getId() {
         return id;
     }
@@ -47,7 +41,3 @@ public class TipoAnimal { // aqui se refere ao tipo de animal
         this.felino = felino;
     }
 }
-
-
-
-

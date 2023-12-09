@@ -1,31 +1,18 @@
-package Adote.entity;
+package Adote.dto;
+import  Adote.entity.*;
 
-import Adote.dto.PorteDto;
-import jakarta.persistence.*;
+public class PorteDto {
 
-import java.util.List;
-
-@Entity
-public class Porte {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private boolean peque, medio, grande;
 
-    @OneToMany(mappedBy = "porte_ID") // parte de um de muitos p/ um
-
-    private List<Animais> PorteList; //array list do objeto tipo animal
-
-    //construtor
-    public Porte(PorteDto porteDto) {
-        this.id = porteDto.getId();
-        this.peque = porteDto.isPeque();
-        this.medio = porteDto.isMedio();
-        this.grande = porteDto.isGrande();
+    public PorteDto(Porte porte) {
+        this.id = porte.getId();
+        this.peque = porte.isPeque();
+        this.medio = porte.isMedio();
+        this.grande = porte.isGrande();
     }
 
-    //getters e setters
     public Integer getId() {
         return id;
     }

@@ -1,23 +1,16 @@
-package Adote.entity;
+package Adote.dto;
+import Adote.entity.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import Adote.dto.FaixaEtariaDto;
-import jakarta.persistence.*;
-
-import java.util.List;
-
-@Entity
-public class FaixaEtaria {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+@Data
+@NoArgsConstructor
+public class FaixaEtariaDto {
     private Integer id;
     private boolean filhote, adulto, idoso;
 
-    @OneToMany(mappedBy = "faixaEtaria_ID") // parte de um de muitos p/ um
-
-    private List<Animais> faixaEtariaList; //array list do objeto tipo animal
-
     //construtor
-    public FaixaEtaria(FaixaEtariaDto faixaEtariaDto) {
+    public FaixaEtariaDto(FaixaEtariaDto faixaEtariaDto) {
         this.id = faixaEtariaDto.getId();
         this.filhote = faixaEtariaDto.isFilhote();
         this.adulto = faixaEtariaDto.isAdulto();
@@ -25,7 +18,6 @@ public class FaixaEtaria {
     }
 
     //getters e setters
-
     public Integer getId() {
         return id;
     }
@@ -58,4 +50,3 @@ public class FaixaEtaria {
         this.idoso = idoso;
     }
 }
-

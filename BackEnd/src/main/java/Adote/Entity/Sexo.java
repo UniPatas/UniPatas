@@ -1,19 +1,33 @@
 package Adote.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import Adote.dto.SexoDto;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Sexo {  // atributos e dependencia pro banco
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private boolean femea, macho;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private boolean femea;
+    private boolean macho;
 
 
-    public int getId() {
+    @OneToMany(mappedBy = "sexo_ID") // parte de um de muitos p/ um
+
+     List<Animais> SexoList; //array list do objeto tipo animal
+
+    //construtor que converte dto para sexo
+    public Sexo(SexoDto sexoDto ) {
+        this.id = sexoDto.getId();
+        this.femea = sexoDto.isFemea();
+        this.macho = sexoDto.isMacho();
+    }
+
+    //getters e setters
+    public Integer getId() {
         return id;
     }
 
