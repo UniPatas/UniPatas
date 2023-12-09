@@ -21,18 +21,20 @@ export default function Login() {
       <section className=" bg-[#a110a9] h-screen flex items-center justify-center align-center ">
         <div className="w-[768px] h-[676px] flex align-top">
 
-          <div className="flex w-[384px] bg-[url('../assets/capa.png')] bg-no-repeat bg-cover bg-center bg-origin-content rounded-md">
+          <div className="flex w-[384px] bg-[url('../assets/capa.png')] bg-no-repeat bg-cover bg-center bg-origin-content rounded-l-lg">
             <div className="flex h-[38%]">
               <div className="flex flex-col place-self-end">
-                <div className="bg-[#ffc501] flex w-[286px] justify-center font-bold rounded-full self-center">
-                  <h1 className=" text-[#a110a9] text-3xl rounded-full">Bem vindos a </h1>
+                <div className="bg-[#ffc501] flex w-[290px]  h-[65px] pt-2 justify-center font-bold rounded-full self-center">
+                  <h1 className=" text-[#a110a9] text-4xl rounded-full">Bem vindos a </h1>
                 </div>
 
-                <Image
-                  src={Nome}
-                  alt="Nome'Unipatas'"
-                  className="w-[90%] h-[100px]  self-center"
-                />
+                <Link href={"/"}>
+                  <Image
+                    src={Nome}
+                    alt="Nome'Unipatas'"
+                    className="w-[90%] h-[100px]  self-center ml-8"
+                  />
+                </Link>
               </div>
             </div>
           </div>
