@@ -6,6 +6,7 @@ import Cat from "@/assets/cat-adote.png";
 import Fem from "@/assets/sexo-feminino.png";
 import Mach from "@/assets/sexo-masculino.png";
 import { useState } from "react";
+import api from "@/app/services/api";
 
 const ModalPubli = ({ isVisible, onClose }) => {
 
@@ -35,13 +36,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
     };
 
     try {
-      const response = await fetch ('url', {
-        method: POST,
-        headers: {
-          'content-type': 'application/json'
-        },
-        body: JSON.stringify(adote)
-      });
+      const response = await api.post('animais/create', adote);
   
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -86,7 +81,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
 
       <div className=" fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50	">
         <div className=" bg-white w-[50%] h-[95%] rounded-[50px] p-[30px] shadow-box1">
-          <form onSubmit={handleUpLoad}>
+          <form onSubmit={adotar}>
             {/* BOTÃO FECHAR MODAL */}
             <div>
               <div className="flex justify-end">
