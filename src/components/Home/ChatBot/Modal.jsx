@@ -24,6 +24,13 @@ const Modal = ({ onClose, children }) => {
   const sendMessage = async () => {
     
     try {
+      // Adiciona a mensagem do usuário à lista de mensagens
+      setMessages([...messages, { text: userMessage, user: true }]);
+      setUserMessage('');
+
+      // Simula um atraso de 1 segundo antes de obter a resposta do chatBot
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
       const res = await fetch('http://localhost:5000/post_response', {
         method: 'POST',
         headers: {
@@ -33,11 +40,13 @@ const Modal = ({ onClose, children }) => {
       });
 
       const data = await res.json();
-      setResponse(data.response);
 
-      // Adicione a mensagem do usuário e a resposta do bot à lista de mensagens
-      setMessages([...messages, { text: userMessage, user: true }, { text: data.response, user: false }]);
-      setUserMessage('');
+      // Adiciona a resposta do chatBot à lista de mensagens após o atraso
+      setMessages(prevMessages => [
+        ...prevMessages,
+        { text: data.response, user: false },
+      ]);
+      
     } catch (error) {
       console.error('Erro ao enviar mensagem:', error);
     }
@@ -46,6 +55,7 @@ const Modal = ({ onClose, children }) => {
   useEffect(() => {
     // Role a área de mensagens para o final
     messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+
   }, [messages]);
 
   const modalContent = (
@@ -126,6 +136,7 @@ const Modal = ({ onClose, children }) => {
                   send
                 </span>
               </button>
+              
             </div>
           </div>
 
