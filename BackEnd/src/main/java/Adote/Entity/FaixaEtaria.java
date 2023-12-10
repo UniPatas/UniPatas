@@ -2,17 +2,8 @@ package Adote.entity;
 
 import Adote.dto.FaixaEtariaDto;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import org.springframework.data.annotation.Id;
-import jakarta.persistence.Entity;
-
 import java.util.List;
 
-@Data
-@NoArgsConstructor
 @Entity
 public class FaixaEtaria {
     @Id
@@ -20,9 +11,8 @@ public class FaixaEtaria {
     private Integer id;
     private boolean filhote, adulto, idoso;
 
-    @OneToMany(mappedBy = "faixaEtaria_ID") // parte de um de muitos p/ um
-
-    private List<Animais> faixaEtariaList; //array list do objeto tipo animal
+    @OneToMany(mappedBy = "faixaEtaria") // parte de um de muitos p/ um
+    private List<Animais> AnimaisList; //array list do objeto tipo animal
 
     //construtor
     public FaixaEtaria(FaixaEtariaDto faixaEtariaDto) {

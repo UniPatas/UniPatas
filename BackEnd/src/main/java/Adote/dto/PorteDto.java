@@ -1,6 +1,8 @@
 package Adote.dto;
 import  Adote.entity.*;
 
+
+
 public class PorteDto {
 
     private Integer id;

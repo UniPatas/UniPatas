@@ -1,21 +1,13 @@
 package Adote.entity;
+import lombok.*;
 import org.springframework.beans.BeanUtils;
 
-import Adote.dto.AnimaisDto;
-import jakarta.persistence.*;
-import lombok.Data;
-import jakarta.persistence.Id;
-import lombok.NoArgsConstructor;
-import org.springframework.context.annotation.Bean;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Entity;
 
-@Data
+import jakarta.persistence.*;
+
 @NoArgsConstructor
 @Entity // a classe que será mapeada no banco de dados
 public class Animais{
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // estrategia de identificação única
    private Integer id; // long permite intervalo de valores e o ID é a chave primária
@@ -60,7 +52,7 @@ public class Animais{
     }
 
     public Animais (Animais animais){
-        BeanUtils.copyProperties(animais, animais);
+        BeanUtils.copyProperties(animais, this);
     }
 
 

@@ -1,17 +1,12 @@
 package Adote.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import org.springframework.data.annotation.Id;
 import Adote.dto.SexoDto;
 import jakarta.persistence.*;
-import jakarta.persistence.Entity;
 
 import java.util.List;
 
 @Entity
 public class Sexo {  // atributos e dependencia pro banco
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -19,9 +14,8 @@ public class Sexo {  // atributos e dependencia pro banco
     private boolean macho;
 
 
-    @OneToMany(mappedBy = "sexo_ID") // parte de um de muitos p/ um
-
-     List<Animais> SexoList; //array list do objeto tipo animal
+    @OneToMany(mappedBy = "sexo") // parte de um de muitos p/ um
+     List<Animais> AnimaisList ; //array list do objeto tipo animal
 
     //construtor que converte dto para sexo
     public Sexo(SexoDto sexoDto ) {

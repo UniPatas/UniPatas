@@ -1,29 +1,23 @@
 package Adote.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import Adote.dto.PorteDto;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import jakarta.persistence.Entity;
 
 import java.util.List;
 
-@Data
+
 @NoArgsConstructor
 @Entity
 public class Porte {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private boolean peque, medio, grande;
 
-    @OneToMany(mappedBy = "porte_ID") // parte de um de muitos p/ um
-
-    private List<Animais> PorteList; //array list do objeto tipo animal
+    @OneToMany(mappedBy = "porte") // parte de um de muitos p/ um
+    private List<Animais> AnimaisList; //array list do objeto tipo animal
 
     //construtor
     public Porte(PorteDto porteDto) {

@@ -15,7 +15,6 @@ public class AnimaisServices {
     @Autowired
     AnimaisRepository repository;
 
-
     // as caracteristicas do animais são:  agitado, calmo, amoroso, brincalhao;
     public Animais adotarAnimais(Animais objDTO) {
         objDTO.setId(0);
@@ -23,17 +22,8 @@ public class AnimaisServices {
         novoAnimais.setId(0); //cria um novo animal a partir do objeto animais
 
         repository.save(novoAnimais);
-        return  novoAnimais;
-        }
-
-
-
-    //getters e setters
-    public AnimaisRepository getRepository() {
-        return repository;
+        return novoAnimais;
     }
 
-    public void setRepository(AnimaisRepository repository) {
-        this.repository = repository;
-    }
+
 }

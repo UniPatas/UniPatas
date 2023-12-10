@@ -1,13 +1,11 @@
 package Adote.entity;
 
 
-import Adote.dto.*;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.criteria.CriteriaBuilder;
+import Adote.dto.CaracteristicasDto;
 
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Caracteristicas { // atributos e variaveis
@@ -15,6 +13,9 @@ public class Caracteristicas { // atributos e variaveis
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private boolean agitado, calmo, amoroso, brincalhao;
+
+    @OneToMany(mappedBy = "caracteristicas") // parte de um de muitos p/ um
+    List<Animais> AnimaisList; //array list do objeto tipo animal
 
     //construtor que converte dto para sexo
     public Caracteristicas(CaracteristicasDto caracteristicasDto) {
@@ -26,7 +27,6 @@ public class Caracteristicas { // atributos e variaveis
     }
 
     //getters e setters
-
     public long getId() {
         return id;
     }
