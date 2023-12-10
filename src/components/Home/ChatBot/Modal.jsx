@@ -75,7 +75,7 @@ const Modal = ({ onClose, children }) => {
                         <p className="col-start-3 col-span-2">
                           Usuário
                         </p>
-                        <div className=" bg-white rounded-full w-[50px] h-[50px] col-start-7">
+                        <div className="border border-[#43dacb] bg-white rounded-full w-[50px] h-[50px] col-start-7">
                         </div>
                       </div>
                       <div className="bg-white p-[1rem] break-words rounded-lg font-black"> {/*Corpo da mensagem */}
@@ -87,6 +87,7 @@ const Modal = ({ onClose, children }) => {
                   <div className="w-[70%] h-auto mb-[3rem] border-4 border-[#a110a9] rounded-r-lg  rounded-b-lg">
                     <div className="w-full items-center grid grid-cols-6 h-auto bg-[#a110a9] text-white font-black	pt-[3px] pb-[3px] text-[1.3rem]"> {/*Head da mensagem */}
                       <div className=" bg-white rounded-full w-[50px] h-[50px] col-start-1">
+                        <Image className="border border-[#d141e1] w-full h-full rounded-full" src={Caramelo} alt="Imagem do mascote da plataforma, caramelo, olhando para o horizonte." />
                       </div>
                       <p className="col-start-3 col-span-2">
                         Caramelo
