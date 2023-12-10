@@ -392,7 +392,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
               </div>
 
               <div className=" mt-[30px]">
-                <button className="bg-darker-purple text-white text-[18px] font-bold mb-[10px] rounded p-[10px] w-[200px] hover:bg-pool-green">
+                <button onClick={()=>{console.log("teste btn")}} className="bg-darker-purple text-white text-[18px] font-bold mb-[10px] rounded p-[10px] w-[200px] hover:bg-pool-green">
                   Publicar
                 </button>
               </div>
