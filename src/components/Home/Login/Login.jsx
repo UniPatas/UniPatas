@@ -21,18 +21,20 @@ export default function Login() {
       <section className=" bg-[#a110a9] h-screen flex items-center justify-center align-center ">
         <div className="w-[768px] h-[676px] flex align-top">
 
-          <div className="flex w-[384px] bg-[url('../assets/capa.png')] bg-no-repeat bg-cover bg-center bg-origin-content">
+          <div className="flex w-[384px] bg-[url('../assets/capa.png')] bg-no-repeat bg-cover bg-center bg-origin-content rounded-l-lg">
             <div className="flex h-[38%]">
               <div className="flex flex-col place-self-end">
-                <div className="bg-[#ffc501] flex w-[286px] justify-center font-bold rounded-full self-center">
-                  <h1 className=" text-[#a110a9] text-3xl rounded-full">Bem vindos a </h1>
+                <div className="bg-[#ffc501] flex w-[290px]  h-[65px] pt-2 justify-center font-bold rounded-full self-center">
+                  <h1 className=" text-[#a110a9] text-4xl rounded-full">Bem vindos a </h1>
                 </div>
 
-                <Image
-                  src={Nome}
-                  alt="Nome'Unipatas'"
-                  className="w-[90%] h-[100px]  self-center"
-                />
+                <Link href={"/"}>
+                  <Image
+                    src={Nome}
+                    alt="Nome'Unipatas'"
+                    className="w-[90%] h-[100px]  self-center ml-8"
+                  />
+                </Link>
               </div>
             </div>
           </div>
@@ -55,11 +57,11 @@ export default function Login() {
             </div>
 
             <div className="flex justify-around space-x-20"> {/* conteiner dos botões*/}
-              <button className="bg-[#a110a9] h-6 w-16 px-2 rounded-md text-white font-bold text-xs">
+              <button className="bg-[#a110a9] h-6 w-16 px-2 rounded-md text-white font-bold text-xs hover:bg-fuchsia-600 active:bg-fuchsia-400 focus:ring focus:ring-black">
                 Entrar
               </button>
 
-              <Link href="/cadastro" className="bg-gray-200 h-6 w-18 rounded-md px-2 pt-1 font-bold text-xs">
+              <Link href="/cadastro" className="bg-gray-200 h-6 w-18 rounded-md px-2 pt-1 font-bold text-xs hover:bg-slate-300 active:bg-slate-300 focus:ring focus:ring-black">
                 Cadastre-se
               </Link>
 
