@@ -10,16 +10,16 @@ const Modal = ({ onClose, children }) => {
   const [messages, setMessages] = useState([]);
   const messagesContainerRef = useRef();
 
-  const handleCloseClick = (e) => {
+  const handleCloseClick = (e) => { //Função para fechar o modal
     e.preventDefault();
     onClose();
   };
 
-  
-
-  const handleSubmitMessage = () => {
-
-  }
+    const handleKeyDown = (e) => { //Função para enviar a mensagem do input ao clicar na tecla input
+    if (e.key === 'Enter') { //Captura o evento, e captura a propiedade key do evento, se ela for ingual a Enter, chama a função de enviar mensagem
+      sendMessage();
+    }
+  };
 
   const sendMessage = async () => {
     
@@ -114,6 +114,7 @@ const Modal = ({ onClose, children }) => {
             <input
               value={userMessage}
               onChange={(e) => setUserMessage(e.target.value)}
+              onKeyDown={handleKeyDown}
               id="mensagemUsuario"
               name="mensagemUsuario"
               className="text-ellipsis break-words focus:outline-none rounded-b-lg w-[80%] text-center text-lg font-bold"
