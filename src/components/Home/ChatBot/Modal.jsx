@@ -15,7 +15,14 @@ const Modal = ({ onClose, children }) => {
     onClose();
   };
 
+  
+
+  const handleSubmitMessage = () => {
+
+  }
+
   const sendMessage = async () => {
+    
     try {
       const res = await fetch('http://localhost:5000/post_response', {
         method: 'POST',
@@ -30,6 +37,7 @@ const Modal = ({ onClose, children }) => {
 
       // Adicione a mensagem do usuário e a resposta do bot à lista de mensagens
       setMessages([...messages, { text: userMessage, user: true }, { text: data.response, user: false }]);
+      setUserMessage('');
     } catch (error) {
       console.error('Erro ao enviar mensagem:', error);
     }
@@ -106,6 +114,7 @@ const Modal = ({ onClose, children }) => {
             <input
               value={userMessage}
               onChange={(e) => setUserMessage(e.target.value)}
+              id="mensagemUsuario"
               name="mensagemUsuario"
               className="text-ellipsis break-words focus:outline-none rounded-b-lg w-[80%] text-center text-lg font-bold"
               placeholder="Digite Aqui..."
