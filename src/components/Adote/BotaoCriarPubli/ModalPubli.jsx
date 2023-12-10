@@ -9,6 +9,51 @@ import { useState } from "react";
 
 const ModalPubli = ({ isVisible, onClose }) => {
 
+  const [nomeAnimal, setNomeAnimal] = useState('');
+  const [id, setId] = useState('');
+  const [foto, setFoto] = useState('');
+  const [tipoAnimal, setTipoAnimal] = useState('');
+  const [sexo, setSexo] = useState('');
+  const [faixaEtaria, setFaixaEtaria] = useState('');
+  const [usuarios, setUsuarios] = useState('');
+  const [caracteristicas , setCaracteristicas] = useState('');
+  const [porte, setPorte] = useState('');
+  const [descricao, setDescricao] = useState('');
+
+  async function adotar (e){
+    const adote ={
+      nomeAnimal,
+      id,
+      foto,
+      tipoAnimal,
+      sexo,
+      faixaEtaria,
+      usuarios,
+      caracteristicas,
+      porte,
+      descricao,
+    };
+
+    try {
+      const response = await fetch ('url', {
+        method: POST,
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(adote)
+      });
+  
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+      // resposta
+      console.log('adote funcionou!');
+    }
+  } catch (error) {
+    console.log('adote não funcionou ' + error.message);
+  }
+}
+
   
   if (!isVisible) return null;
 
@@ -95,7 +140,8 @@ const ModalPubli = ({ isVisible, onClose }) => {
                           <input
                             type="radio"
                             name="especie"
-                            id="canino"
+                            id="canino" 
+                            value={canino} onChange={e => setTipoAnimal(e.target.value)} //input
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -112,6 +158,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="especie"
                             id="felino"
+                            value={felino} onChange={e => setTipoAnimal(e.target.value)} //input 
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -136,6 +183,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="porte"
                             id="pequeno"
+                            value={peque} onChange={e => setPorte(e.target.value)} //input 
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -152,6 +200,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="porte"
                             id="medio"
+                            value={medio} onChange={e => setPorte(e.target.value)} //input
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -168,6 +217,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="porte"
                             id="grande"
+                            value={medio} onChange={e => setPorte(e.target.value)} //input 
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -190,6 +240,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="sexo"
                             id="fem"
+                            value={femea} onChange={e => setSexo(e.target.value)}
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -206,6 +257,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="sexo"
                             id="mach"
+                            value={macho} onChange={e => setSexo(e.target.value)} //input
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -245,6 +297,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                         type="radio"
                         name="comportamento"
                         id="amoroso"
+                        value={amoroso} onChange={e => setCaracteristicas(e.target.value)}
                         className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Amoroso</span>
@@ -260,6 +313,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                         type="radio"
                         name="comportamento"
                         id="calmo"
+                        value={calmo} onChange={e => setCaracteristicas(e.target.value)} //input 
                         className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Calmo</span>
@@ -275,6 +329,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                         type="radio"
                         name="comportamento"
                         id="brincalhao"
+                        value={brincalhao} onChange={e => setCaracteristicas(e.target.value)} //input
                         className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Brincalhão</span>
@@ -293,6 +348,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                         type="radio"
                         name="idade"
                         id="filhote"
+                        value={filhote} onChange={e => setFaixaEtaria(e.target.value)} //input
                         className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Filhote</span>
@@ -308,6 +364,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                         type="radio"
                         name="idade"
                         id="adulto"
+                        value={adulto} onChange={e => setFaixaEtaria(e.target.value)} //input
                         className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Adulto</span>
@@ -323,6 +380,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                         type="radio"
                         name="idade"
                         id="idoso"
+                        value={idoso} onChange={e => setFaixaEtaria(e.target.value)} //input
                         className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Idoso</span>
