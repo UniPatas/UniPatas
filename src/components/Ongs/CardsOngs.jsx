@@ -38,14 +38,14 @@ export default function CardOngs({ id, OngImg, OngName, OngInsta, OngPhone, bgCo
             >
               {/* Logo top */}
               <div>
-                <Image className=" w-[100px] pt-[7px]" src={Logo} />
+                <Image className=" w-[100px] pt-[7px]" src={Logo} alt="Logo da UniPatas"/>
               </div>
               {/* Imagem da ONG */}
               <div>
                 {" "}
                 <Image
                   className=" h-[170px] w-[255px] rounded-custom6"
-                  src={OngImg}
+                  src={OngImg} alt="Logo da Ong"
                 />
               </div>
               {/* Nome e botão de compartilhar */}
@@ -67,13 +67,13 @@ export default function CardOngs({ id, OngImg, OngName, OngInsta, OngPhone, bgCo
                 </div>
                 <div className=" flex justify-around">
                   <div className=" w-[50px]">
-                    <a href={OngInsta}>
-                      <Image src={Instagram} className=" w-[100%]" />
+                    <a href={OngInsta} target="_blank">
+                      <Image src={Instagram} className=" w-[100%]" alt="Logo do Instagram"/>
                     </a>
                   </div>
                   <div className="w-[50px]">
-                    <a href={OngPhone}>
-                      <Image src={Tel} className=" w-[100%]" />
+                    <a href={`tel:${OngPhone}`}>
+                      <Image src={Tel} className=" w-[100%]" alt="Logo do Apoia-se"/>
                     </a>
                   </div>
                 </div>
