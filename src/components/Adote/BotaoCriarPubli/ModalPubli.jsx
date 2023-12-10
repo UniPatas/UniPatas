@@ -52,31 +52,6 @@ const ModalPubli = ({ isVisible, onClose }) => {
   }
 }
 
-
-  //tentado corrigir esse babado
-  const [file, setFile] = useState(null);
-
-  function handleFile(event) {
-    setFile(event.target.files[0]);
-    // console.log(event.target.files[0]);
-  }
-
-  function handleUpLoad() {
-    const formData = new formData();
-    formData.append("file", file);
-    fetch("url", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        console.log("success", result);
-      })
-      .catch((error) => {
-        console.group("Error:", error);
-      });
-  }
-
   return (
     <>
       {/* MODELO DE MODAL */}
@@ -414,14 +389,6 @@ const ModalPubli = ({ isVisible, onClose }) => {
                   for="pictureinput"
                   // className=" flex items-center justify-center w-[400px] h-[200px] bg-[#ccc] text-[#aaa] border-2 border-dashed border-current cursor-pointer transition-all ease-in-out duration-300 hover:text-[#777] "
                 ></label>
-
-                <input
-                  onChange={handleFile}
-                  className=" "
-                  type="file"
-                  name="pictureinput"
-                  id="pictureinput"
-                ></input>
               </div>
 
               <div className=" mt-[30px]">
