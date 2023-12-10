@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ReactDOM from "react-dom";
 import Caramelo from '@/assets/cachorroHeaderChatBot.png';
+import '@/app/globals.css'
 import { useState, useRef, useEffect } from 'react';
 
 const Modal = ({ onClose, children }) => {
@@ -60,11 +61,43 @@ const Modal = ({ onClose, children }) => {
               </a>
             </div>
           </header>
+
+
           <div ref={messagesContainerRef} className="h-[336px] text-black text-center overflow-y-auto"> {/*Modal Area de mensagens*/}
             {/* Mostrar a conversa aqui */}
             {messages.map((message, index) => (
-              <div key={index} className={message.user ? 'user-message' : 'bot-message'}>
-                {message.text}
+              <div key={index} className="flex flex-col w-full items-center">
+
+                  {message.user 
+                  ? (
+                    <div className="w-[70%] h-auto mt-[3rem] mb-[3rem] border-4 border-[#33b3a6] rounded-l-lg  rounded-b-lg">
+                      <div className="w-full items-center grid grid-cols-5 h-auto bg-[#33b3a6] text-white font-black	pt-[3px] pb-[3px] text-[1.3rem]"> {/*Head da mensagem */}
+                        <p className="col-start-3 col-span-2">
+                          Usuário
+                        </p>
+                        <div className=" bg-white rounded-full w-[50px] h-[50px] col-start-7">
+                        </div>
+                      </div>
+                      <div className="bg-white p-[1rem] break-words rounded-lg font-black"> {/*Corpo da mensagem */}
+                        {message.text}                    
+                      </div>
+                    </div>
+                  )
+                : (
+                  <div className="w-[70%] h-auto mb-[3rem] border-4 border-[#a110a9] rounded-r-lg  rounded-b-lg">
+                    <div className="w-full items-center grid grid-cols-6 h-auto bg-[#a110a9] text-white font-black	pt-[3px] pb-[3px] text-[1.3rem]"> {/*Head da mensagem */}
+                      <div className=" bg-white rounded-full w-[50px] h-[50px] col-start-1">
+                      </div>
+                      <p className="col-start-3 col-span-2">
+                        Caramelo
+                      </p>
+                    </div>
+                    <div className="bg-white p-[1rem] break-words rounded-lg font-black"> {/*Corpo da mensagem */}
+                      {message.text}                    
+                    </div>
+                  </div>
+                )}
+
               </div>
             ))}
           </div>
@@ -84,6 +117,7 @@ const Modal = ({ onClose, children }) => {
               </button>
             </div>
           </div>
+
         </div>
       </div>
     </div>
