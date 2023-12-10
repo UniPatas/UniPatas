@@ -8,6 +8,8 @@ import Mach from "@/assets/sexo-masculino.png";
 import { useState } from "react";
 
 const ModalPubli = ({ isVisible, onClose }) => {
+
+  
   if (!isVisible) return null;
 
   const [file, setFile] = useState();
