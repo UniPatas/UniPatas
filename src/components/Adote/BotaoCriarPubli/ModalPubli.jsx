@@ -10,6 +10,9 @@ import api from "@/app/services/api";
 
 const ModalPubli = ({ isVisible, onClose }) => {
 
+  if (!isVisible) return null;
+
+
   const [nomeAnimal, setNomeAnimal] = useState('');
   const [id, setId] = useState('');
   const [foto, setFoto] = useState('');
@@ -49,8 +52,6 @@ const ModalPubli = ({ isVisible, onClose }) => {
   }
 }
 
-  
-  if (!isVisible) return null;
 
   //tentado corrigir esse babado
   const [file, setFile] = useState(null);
