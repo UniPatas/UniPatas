@@ -1,4 +1,4 @@
-from chatterbot import ChatBot
+from chatterbot import ChatBotm
 from chatterbot.trainers import ListTrainer
 from spacy.cli import download
 
@@ -9,7 +9,6 @@ class ENGSM:
 
 def create_chatbot():
     chatbot = ChatBot("BotCaramelo", tagger_language=ENGSM)
-
     conversa = [
 "Olá",
 "Olá, em que posso ajudar?",
