@@ -10,9 +10,6 @@ import api from "@/app/services/api";
 
 const ModalPubli = ({ isVisible, onClose }) => {
 
-  if (!isVisible) return null;
-
-
   const [nomeAnimal, setNomeAnimal] = useState('');
   const [id, setId] = useState('');
   const [foto, setFoto] = useState('');
@@ -24,8 +21,9 @@ const ModalPubli = ({ isVisible, onClose }) => {
   const [porte, setPorte] = useState('');
   const [descricao, setDescricao] = useState('');
 
+  if (!isVisible) return null;
+
   async function adotar (e){
-    console.log('adotar teste');
     const adote ={
       nomeAnimal,
       id,
