@@ -52,6 +52,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
   
   if (!isVisible) return null;
 
+  //tentado corrigir esse babado
   const [file, setFile] = useState(null);
 
   function handleFile(event) {
