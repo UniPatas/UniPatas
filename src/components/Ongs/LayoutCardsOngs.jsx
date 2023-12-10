@@ -4,8 +4,8 @@ import CatinhoFilo from "@/assets/ongfilo.png"
 const LayoutCardsOngs = () => {
   return (
     <>
-      <div className=" max-w-[1246px] px-[70px] mx-auto border border-red-600">
-        <section className=" flex justify-center">
+      <div className=" max-w-[1246px] px-[70px] mx-auto">
+        <section className=" flex justify-center py-[50px]">
           <div className="grid grid-cols-3 grid-flow-row gap-[80px]">
             {/* Card 1 */}
             <div>
