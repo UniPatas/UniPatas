@@ -25,6 +25,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
   const [descricao, setDescricao] = useState('');
 
   async function adotar (e){
+    console.log('adotar teste');
     const adote ={
       nomeAnimal,
       id,
