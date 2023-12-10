@@ -7,7 +7,7 @@ import { ComponenteForum } from "@/components/Home/ComponenteForum";
 import Layout from "@/components/Layout";
 import { SliderOurHist } from "@/components/Home/Sliders/SliderOurHist";
 import { SliderMembers } from "@/components/Home/Sliders/SliderMembers";
-import DuvidasFrequentes from "@/components/Home/DuvidasFrequentes";
+import DuvidasFrequentes from "@/components/Home/DuvidasFrequentes/DuvidasFrequentes";
 
 export default function Home() {
   return (
