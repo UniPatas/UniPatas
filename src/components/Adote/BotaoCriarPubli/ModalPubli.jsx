@@ -386,8 +386,9 @@ const ModalPubli = ({ isVisible, onClose }) => {
                 <label
                   id="picture"
                   for="pictureinput"
-                  // className=" flex items-center justify-center w-[400px] h-[200px] bg-[#ccc] text-[#aaa] border-2 border-dashed border-current cursor-pointer transition-all ease-in-out duration-300 hover:text-[#777] "
-                ></label>
+                  >
+                    <input type="file"></input>
+                  </label>
               </div>
 
               <div className=" mt-[30px]">

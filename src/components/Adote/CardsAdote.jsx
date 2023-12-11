@@ -3,7 +3,7 @@ import Logo from "@/assets/Logo-UniPatas-Vector-roxa.png";
 import Instagram from "@/assets/icon-insta.png";
 
 
-export default function CardOngs({ id, OngImg, OngName, OngInsta, bgColor }) {
+export default function CardsAdote({ id, OngImg, OngName, OngDesc, bgColor }) {
     const favoritarId = `favoritar-${id}`;
   return (
     <>
@@ -44,7 +44,7 @@ export default function CardOngs({ id, OngImg, OngName, OngInsta, bgColor }) {
               <div>
                 {" "}
                 <Image
-                  className=" h-[170px] w-[230px] rounded-custom6"
+                  className=" h-[200px] w-[230px] rounded-custom6"
                   src={OngImg} alt="Logo da Ong"
                 />
               </div>
@@ -52,7 +52,7 @@ export default function CardOngs({ id, OngImg, OngName, OngInsta, bgColor }) {
               <div>
                 {/* Nome da ong */}
                 <div>
-                  <span className=" text-[22px] text-white font-bold ">
+                  <span className=" text-[22px] font-bold ">
                     {OngName}
                   </span>
                 </div>
@@ -62,15 +62,11 @@ export default function CardOngs({ id, OngImg, OngName, OngInsta, bgColor }) {
               <div>
                 <div className=" text-center text-white">
                   <p className=" text-[18px] text-darker-purple font-bold">
-                    Redes
+                    Características
                   </p>
                 </div>
-                <div className=" flex justify-around">
-                  <div className=" w-[50px]">
-                    <a href={OngInsta} target="_blank">
-                      <Image src={Instagram} className=" w-[100%]" alt="Logo do Instagram"/>
-                    </a>
-                  </div>
+                <div className=" font-bold pb-[8px]">
+                  <p>{OngDesc}</p>
                   
                 </div>
               </div>
