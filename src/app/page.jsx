@@ -3,7 +3,7 @@ import { Relatos } from "@/components/Home/Relatos";
 import { SliderOngs } from "@/components/Home/Sliders/SliderOngs";
 import { SliderNoticia } from "@/components/Home/Sliders/SliderNoticia";
 import { ContainerAnuncio } from "@/components/Home/ContainerAnuncio";
-import { ComponenteForum } from "@/components/Home/ComponenteForum";
+// import { ComponenteForum } from "@/components/Home/ComponenteForum";
 import Layout from "@/components/Layout";
 import { SliderOurHist } from "@/components/Home/Sliders/SliderOurHist";
 import { SliderMembers } from "@/components/Home/Sliders/SliderMembers";
@@ -17,7 +17,7 @@ export default function Home() {
         <DestaqueAdocao />
         <SliderOngs />
         <ContainerAnuncio />
-        <ComponenteForum />
+        {/* <ComponenteForum /> */}
         <Relatos />
         <SliderOurHist />
         <SliderMembers />
