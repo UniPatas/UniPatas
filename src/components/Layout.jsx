@@ -1,11 +1,16 @@
 import { NavBar } from "@/components/Home/NavBar";
+import { Footer } from "./Home/Footer";
+import ChatBot from "./Home/ChatBot/ChatBot";
 
 export default function Layout({ children }) {
   return (
     <>
       <NavBar />
       {children}
-      <br></br>o footer vem aqui
+      <ChatBot />
+      <Footer />
+      <div id="modal-root"></div>
+ 
     </>
   );
-}
+} 
