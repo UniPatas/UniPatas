@@ -6,7 +6,7 @@ import { useState, useContext, useEffect } from "react";
 import { CadastroContext } from "@/contexts/CadastroContext";
 import "@/app/globals.css"
 import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css'; 
 import { ToastContainer } from 'react-toastify';
 import { useRouter } from 'next/navigation';
 
