@@ -9,12 +9,12 @@ import LogoBranca from "@/assets/Logo-UniPatas-Vector-branca.png";
 export function Footer() {
   return (
     <>
-      <footer className=" pt-[30px]">
+      <footer>
         <div className=" w-full h-[45px] bg-yellow"></div>
         {/* Div que contem os três elementos dentro do footer */}
         <div>
-          <div className="w-full h-[300px] bg-darker-purple">
-            <div className=" flex justify-between w-full max-w-[1246px] px-[100px] mx-auto pt-[50px]">
+          <div className="w-full bg-darker-purple">
+            <div className=" flex justify-between w-full max-w-[1246px] px-[100px] mx-auto py-[30px]">
               {/* Breve apresentação da UniPatas com a Logo. */}
               <div className=" max-w-[35%] ">
                 <div>
@@ -39,18 +39,18 @@ export function Footer() {
               {/* Seção MAIS INFORMAÇÕES */}
               <div>
                 <div>
-                  <h1 className="text-[30px] font-black text-white pb-[10px] mt-[10px]">
+                  <h1 className="text-[18px] font-black text-white pb-[10px] mt-[25px]">
                     Mais informações
                   </h1>
                 </div>
                 <div className="flex flex-col gap-[15px] pt-[25px] text-white">
                   <div>
-                    <a href="" className="hover:underline">
+                    <a href="#nossahistoria" className="hover:underline">
                       SOBRE NÓS
                     </a>
                   </div>
                   <div>
-                    <a href="" className="hover:underline">
+                    <a href="mailto:unipatas.plataforma@gmail.com" className="hover:underline">
                       FALE CONOSCO
                     </a>
                   </div>
@@ -64,11 +64,24 @@ export function Footer() {
               {/* Seção REDES SOCIAIS */}
               <div>
                 <div>
-                  <h1 className="text-[30px] font-black text-white pb-[10px] mt-[10px]">
+                  <h1 className="text-[18px] font-black text-white pb-[10px] mt-[25px]">
                     Nos siga
                   </h1>
                 </div>
                 <div className=" flex gap-[15px] pt-[20px]">
+                  <div>
+                    <a
+                      href="https://www.instagram.com/unipatas.plataforma/"
+                      target="_blank"
+                    >
+                      <Image
+                        className="w-[40px]"
+                        src={Instagram}
+                        alt="Ícone do Instagram"
+                      />
+                    </a>
+                  </div>
+
                   <div>
                     <a
                       href="https://www.linkedin.com/company/unipatas"
@@ -77,20 +90,7 @@ export function Footer() {
                       <Image
                         className="w-[40px]"
                         src={Linkedin}
-                        alt="Ícone do LinkedIn"
-                      />
-                    </a>
-                  </div>
-
-                  <div>
-                    <a
-                      href="https://www.facebook.com/unipatas.plataforma"
-                      target="_blank"
-                    >
-                      <Image
-                        className="w-[40px]"
-                        src={Facebook}
-                        alt="Ícone do Facebook"
+                        alt="Ícone do Linkedin"
                       />
                     </a>
                   </div>
@@ -110,13 +110,13 @@ export function Footer() {
 
                   <div>
                     <a
-                      href="https://www.instagram.com/unipatas.plataforma/"
+                      href="https://www.facebook.com/unipatas.plataforma"
                       target="_blank"
                     >
                       <Image
                         className="w-[40px]"
-                        src={Instagram}
-                        alt="Ícone do Instagram"
+                        src={Facebook}
+                        alt="Ícone do Facebook"
                       />
                     </a>
                   </div>

@@ -80,7 +80,7 @@ const DuvidasFrequentes = () => {
 
     return (
 
-        <div id='ajuda' className='w-full h-auto flex justify-center mb-[5rem] mt-[5rem]'> {/*Container pai */}
+        <div id='ajuda' className='w-full h-auto flex justify-center mb-[4rem] mt-[60px]'> {/*Container pai */}
 
 
             <div className='w-[60%]  h-full justify-center items-center flex flex-col'> {/*Container principal */}

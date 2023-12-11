@@ -8,7 +8,7 @@ export function SliderNoticia() {
   return (
     <>
       {/* Slider de notícias */}
-      <section className=" pt-[50px]">
+      <section className=" pt-[30px]">
         {/* Fundo roxo */}
         <div className=" w-full bg-darker-purple">
           {/* Centralizando conteudo no meio do site */}
