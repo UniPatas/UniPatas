@@ -210,7 +210,7 @@ export default function CadastroOngs() {
                         </div>
                         {step === 0 && (
 
-                            <div id="containerFilho" className="w-[642px] self-center mt-[5em]"> {/*Formulário com todos os inputs */}
+                            <div id="containerFilho" className="w-[642px] self-center"> {/*Formulário com todos os inputs */}
 
                                 <div className=" h-[80%] flex w-full"> {/*Container dos inputs */}
 
@@ -441,7 +441,7 @@ export default function CadastroOngs() {
                     
                         {step === 2 && (
 
-                            <div id="containerFilho" className="w-[642px] self-center mt-[5em]"> {/*Formulário com todos os inputs */}
+                            <div id="containerFilho" className="w-[642px] self-center"> {/*Formulário com todos os inputs */}
 
                                 <div className=" h-[80%] flex w-full"> {/*Container dos inputs */}
 
