@@ -3,12 +3,17 @@ import Image from "next/image";
 import Logo from "@/assets/Logo-UniPatas-Vector-roxa.png";
 import Slider from "@/components/Home/Sliders/Slider";
 import "@/app/globals.css";
+import Anjinhos4 from "@/assets/anjinho4patas.jpg";
+import CatinhoFilo from "@/assets/ongfilo.png";
+import AdoteViraLata from "@/assets/adoteumviralata.jpg";
+import AmorSemFronteiras from "@/assets/amorsemfronteiras.jpg";
+import OngGatinhus from "@/assets/onggatinhus.jpg";
 
 export function SliderOngs() {
   return (
     <>
-      <section className="Slider-ongs">
-        <h1 className=" text-center text-[50px] text-darker-purple font-black p-[50px]">
+      <section className="Slider-ongs pb-[30px]">
+        <h1 className=" text-center text-[30px] text-darker-purple font-black pb-[40px]">
           Conheça as ONG's
         </h1>
 
@@ -87,116 +92,128 @@ export function SliderOngs() {
                   </div>
                 </div>
               </a>
-              <a href="#">
+
+              {/* -------- OS CARDS COMEÇAM AQUI  ----------- */}
+              <a href="/ongs">
                 <div className="card ml-[15px]">
                   <div className=" cursor-pointer flex justify-around items-center flex-col h-[355px] w-[285px] rounded-custom5 bg-pool-green ">
                     <div>
                       <Image
                         className=" h-[170px] w-[255px] mt-[7px] rounded-custom6 bg-white"
-                        src={Logo}
+                        src={Anjinhos4}
                       />
                     </div>
                     <div>
                       <span className=" text-[22px] text-white font-bold ">
-                        Nome ONG
+                        Anjinhos 4 Patas
                       </span>
                     </div>
                     <div className=" text-center text-white p-[3px]">
                       <span>
-                        The standard chunk of Lorem Ipsum used since the 1500s
-                        is reproduced below for those interested.
+                        "Salvando anjinhos de rua desde 2019 🐾💛"<br></br>
+                        <br></br>
+                        Recife - PE
                       </span>
                     </div>
                   </div>
                 </div>
               </a>
-              <a href="#">
+              {/* CARD 2 */}
+              <a href="/ongs">
                 <div className="card ml-[15px]">
                   <div className=" cursor-pointer flex justify-around items-center flex-col h-[355px] w-[285px] rounded-custom5 bg-pool-green ">
                     <div>
                       <Image
                         className=" h-[170px] w-[255px] mt-[7px] rounded-custom6 bg-white"
-                        src={Logo}
+                        src={CatinhoFilo}
                       />
                     </div>
                     <div>
                       <span className=" text-[22px] text-white font-bold ">
-                        Nome ONG
+                        Cantinho da Filó
                       </span>
                     </div>
                     <div className=" text-center text-white p-[3px]">
                       <span>
-                        The standard chunk of Lorem Ipsum used since the 1500s
-                        is reproduced below for those interested.
+                        "Instituição que abriga temporariamente Cães e Gatos em
+                        situação de rua."<br></br>
+                        Recife - PE
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                {/* CARD 3 */}
+              </a>
+              <a href="/ongs">
+                <div className="card ml-[15px]">
+                  <div className=" cursor-pointer flex justify-around items-center flex-col h-[355px] w-[285px] rounded-custom5 bg-pool-green ">
+                    <div>
+                      <Image
+                        className=" h-[170px] w-[255px] mt-[7px] rounded-custom6 bg-white"
+                        src={OngGatinhus}
+                      />
+                    </div>
+                    <div>
+                      <span className=" text-[22px] text-white font-bold ">
+                        Gatinhus Urbanos
+                      </span>
+                    </div>
+                    <div className=" text-center text-white p-[3px]">
+                      <span>
+                        "Projeto independente em Recife, não somos ONG!""
+                        <br></br>
+                        <br></br>
+                        Recife - PE
                       </span>
                     </div>
                   </div>
                 </div>
               </a>
-              <a href="#">
+              {/* CARD 4 */}
+              <a href="/ongs">
                 <div className="card ml-[15px]">
                   <div className=" cursor-pointer flex justify-around items-center flex-col h-[355px] w-[285px] rounded-custom5 bg-pool-green ">
                     <div>
                       <Image
                         className=" h-[170px] w-[255px] mt-[7px] rounded-custom6 bg-white"
-                        src={Logo}
+                        src={AdoteViraLata}
                       />
                     </div>
                     <div>
                       <span className=" text-[22px] text-white font-bold ">
-                        Nome ONG
+                        Adote um Vira-Lata
                       </span>
                     </div>
                     <div className=" text-center text-white p-[3px]">
                       <span>
-                        The standard chunk of Lorem Ipsum used since the 1500s
-                        is reproduced below for those interested.
+                        "Projeto de extensão da UFPE. Só divulgamos animais
+                        castrados e saudáveis" <br></br>
+                        Recife - PE
                       </span>
                     </div>
                   </div>
                 </div>
               </a>
-              <a href="#">
+              {/* CARD 5 */}
+              <a href="/ongs">
                 <div className="card ml-[15px]">
                   <div className=" cursor-pointer flex justify-around items-center flex-col h-[355px] w-[285px] rounded-custom5 bg-pool-green ">
                     <div>
                       <Image
                         className=" h-[170px] w-[255px] mt-[7px] rounded-custom6 bg-white"
-                        src={Logo}
+                        src={AmorSemFronteiras}
                       />
                     </div>
                     <div>
                       <span className=" text-[22px] text-white font-bold ">
-                        Nome ONG
+                        Amor sem Fronteiras
                       </span>
                     </div>
                     <div className=" text-center text-white p-[3px]">
                       <span>
-                        The standard chunk of Lorem Ipsum used since the 1500s
-                        is reproduced below for those interested.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a href="#">
-                <div className="card ml-[15px]">
-                  <div className=" cursor-pointer flex justify-around items-center flex-col h-[355px] w-[285px] rounded-custom5 bg-pool-green ">
-                    <div>
-                      <Image
-                        className=" h-[170px] w-[255px] mt-[7px] rounded-custom6 bg-white"
-                        src={Logo}
-                      />
-                    </div>
-                    <div>
-                      <span className=" text-[22px] text-white font-bold ">
-                        Nome ONG
-                      </span>
-                    </div>
-                    <div className=" text-center text-white p-[3px]">
-                      <span>
-                        The standard chunk of Lorem Ipsum used since the 1500s
-                        is reproduced below for those interested.
+                        "Somos um abrigo de cães resgatados!" <br></br>
+                        <br></br>
+                        Recife - PE
                       </span>
                     </div>
                   </div>
