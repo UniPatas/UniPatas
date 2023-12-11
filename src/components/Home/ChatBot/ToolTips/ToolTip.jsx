@@ -9,7 +9,7 @@ const ToolTip = ({text, children}) => {
         <div className="tooltip-container absolute left-full" onMouseEnter = {()=> setIsVisible(true)}
         onMouseLeave={()=> setIsVisible(false)}>
             {children}
-            {isVisible && <div className="tooltip w-[200px] bg-[#33b3a6] 
+            {isVisible && <div className="tooltip w-[200px] bg-[#33b3a6] transition
             rounded-b-lg p-[0.5rem] text-black rounded-l-lg h-auto ring-2 ring-[#d141e1]  absolute right-2 z-50 font-bold">{text}</div>}
         </div>
     );

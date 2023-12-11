@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Caramelo from '@/assets/cachorroHeaderChatBot.png';
 import '@/app/globals.css'
 import { useState, useRef, useEffect } from 'react';
-import ToolTip from "./ToolTip";
+import ToolTip from "./ToolTips/ToolTip";
 
 const Modal = ({ onClose, children }) => {
   const [response, setResponse] = useState('');
