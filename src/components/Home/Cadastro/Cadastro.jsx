@@ -1,15 +1,15 @@
-'use client';
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import Nome from "@/assets/logo-roxa-texto.png";
 import Capa from "@/assets/capa.png";
 import Logo from "@/assets/logo-unipatas.png";
-import '../../../app/globals.css'
+import "../../../app/globals.css";
 import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 
 
