@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Caramelo from '@/assets/cachorroHeaderChatBot.png';
 import '@/app/globals.css'
 import { useState, useRef, useEffect } from 'react';
+import ToolTip from "./ToolTip";
 
 const Modal = ({ onClose, children }) => {
   const [response, setResponse] = useState('');
@@ -68,7 +69,7 @@ const Modal = ({ onClose, children }) => {
   }, [messages]);
 
   const modalContent = (
-    <div className="fixed teste top-0 left-0 w-full h-[100%] flex justify-center items-center">{/*Modal overlay*/}
+    <div className="fixed top-0 left-0 w-full h-[100%] flex justify-center items-center">{/*Modal overlay*/}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />{/*Api do google, para importar icones */}
 
       <div className="fixed flex backdrop-opacity-10 rounded-2xl bottom-35 right-11 w-[500px] h-[500px]"> {/*Modal wrapper*/}
@@ -80,13 +81,19 @@ const Modal = ({ onClose, children }) => {
             <div className="w-[80%] text-center items-center self-center text-white	font-bold">
               <h1 className="text-2xl tracking-wide">Caramelo irá te ajudar!</h1>
             </div>
-            <div className="">
-              <a className="relative left-9 bottom-[2px]" href="#" onClick={handleCloseClick}> {/*Modal Botão de fechar*/}
-                <span className="material-symbols-outlined">
+
+            <ToolTip text={"Caso você saia do chat, as mensagens serão perdidas."}>
+                <span className="animate-bounce material-symbols-outlined cursor-pointer" onClick={handleCloseClick}>
                   cancel
                 </span>
+
+            </ToolTip>
+
+            <div className="">
+              <a className="" href="#" > {/*Modal Botão de fechar*/}
               </a>
-            </div>
+            </div>  
+ 
           </header>
 
 
