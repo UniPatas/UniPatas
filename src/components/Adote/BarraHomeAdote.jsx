@@ -1,6 +1,7 @@
 export function BarraHomeAdote() {
   return (
     <>
+
       <section className="pt-[30px]">
         <div className="w-full mx-auto bg-darker-purple">
           <div className="max-w-[1246px] mx-auto">
@@ -24,4 +25,6 @@ export function BarraHomeAdote() {
       </section>
     </>
   );
+
+ 
 }
