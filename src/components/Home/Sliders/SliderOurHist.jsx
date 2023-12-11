@@ -11,7 +11,7 @@ export function SliderOurHist() {
   return (
     <>
       {/* Slider de notícias */}
-      <section className=" pt-[50px]">
+      <section id="nossahistoria" className=" pt-[50px]">
         {/* Fundo roxo */}
         <div className=" w-full">
           {/* Centralizando conteudo no meio do site */}

@@ -41,7 +41,7 @@ export default function ChatBot () {
 
                 <aside> 
 
-                    <a href='#' onClick={() => setShowModal(true)}>
+                    <a onClick={() => setShowModal(true)}>
                         <button id='chatBot' className="rounded-full bg-[#33b3a6] hover:bg-[#3f968a] focus:bg-[#3f968a] focus:ring-2 
                         focus:ring-[#33b3a6] focus:ring-offset-2 w-[70px] h-[70px] fixed right-[19px] justify-center items-center flex
                         active:ring active:ring-[#33b3a6] active:ring-offset-2 bottom-4 " title="Converse com Caramelo!"> {/*Icone arredondado do chatBot */}
