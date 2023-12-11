@@ -1,6 +1,13 @@
 import CardOngs from "./CardsOngs";
 import Anjinhos4 from "@/assets/anjinho4patas.jpg";
 import CatinhoFilo from "@/assets/ongfilo.png"
+import AdoteViraLata from "@/assets/adoteumviralata.jpg"
+import AmorSemFronteiras from "@/assets/amorsemfronteiras.jpg"
+import OngGatinhus from "@/assets/onggatinhus.jpg"
+import OngGatosSandra from "@/assets/onggatossandra.jpg"
+import OngLoveAnimals from "@/assets/ongeuamoanimais.jpg"
+
+
 const LayoutCardsOngs = () => {
   return (
     <>
@@ -14,7 +21,6 @@ const LayoutCardsOngs = () => {
                 OngImg={Anjinhos4}
                 OngName="Ajinhos 4 Patas"
                 OngInsta="https://www.instagram.com/anjinhos4patas/"
-                OngPhone="+55"
                 bgColor="bg-yellow"
               />
             </div>
@@ -25,7 +31,6 @@ const LayoutCardsOngs = () => {
                 OngImg={CatinhoFilo} className="bg-white"
                 OngName="Cantinho da Filó"
                 OngInsta="https://www.instagram.com/cantinhofilo/"
-                OngPhone="+5581995338872"
                 bgColor="bg-pool-green"
               />
             </div>
@@ -33,10 +38,9 @@ const LayoutCardsOngs = () => {
             <div>
             <CardOngs
                 id="card3"
-                OngImg=""
-                OngName="Nome Ong"
-                OngInsta="#"
-                OngPhone="+55"
+                OngImg={AmorSemFronteiras}
+                OngName="Amor Sem Fronteiras"
+                OngInsta="https://instagram.com/_projetoamorsemfronteiras?igshid=NzZlODBkYWE4Ng=="
                 bgColor="bg-yellow"
               />
             </div>
@@ -44,10 +48,9 @@ const LayoutCardsOngs = () => {
             <div>
             <CardOngs
                 id="card4"
-                OngImg=""
-                OngName="Nome Ong"
-                OngInsta="#"
-                OngPhone="+55"
+                OngImg={AdoteViraLata}
+                OngName="Adote um Vira-Lata"
+                OngInsta="https://instagram.com/adoteumviralata?igshid=NzZlODBkYWE4Ng=="
                 bgColor="bg-pool-green"
               />
             </div>
@@ -55,10 +58,9 @@ const LayoutCardsOngs = () => {
             <div>
             <CardOngs
                 id="card5"
-                OngImg=""
-                OngName="Nome Ong"
-                OngInsta="#"
-                OngPhone="+55"
+                OngImg={OngGatinhus}
+                OngName="Gatinhus Urbanos"
+                OngInsta="https://www.instagram.com/gatinhosurbanos/"
                 bgColor="bg-yellow"
               />
             </div>
@@ -66,10 +68,9 @@ const LayoutCardsOngs = () => {
             <div>
             <CardOngs
                 id="card6"
-                OngImg=""
-                OngName="Nome Ong"
-                OngInsta="#"
-                OngPhone="+55"
+                OngImg={OngGatosSandra}
+                OngName="Gatinhos da Sandra"
+                OngInsta="https://www.instagram.com/gatinhosdasandra/"
                 bgColor="bg-pool-green"
               />
             </div>
@@ -77,35 +78,32 @@ const LayoutCardsOngs = () => {
             <div>
             <CardOngs
                 id="card7"
-                OngImg=""
-                OngName="Nome Ong"
-                OngInsta="#"
-                OngPhone="+55"
+                OngImg={OngLoveAnimals}
+                OngName="Eu Amo Animais"
+                OngInsta="https://www.instagram.com/euamoanimaispe/"
                 bgColor="bg-yellow"
               />
             </div>
-            {/* Card 8 */}
-            <div>
+            {/* Card 8 
+            {/* <div>
             <CardOngs
                 id="card8"
                 OngImg=""
                 OngName="Nome Ong"
                 OngInsta="#"
-                OngPhone="+55"
                 bgColor="bg-pool-green"
               />
             </div>
-            {/* Card 9 */}
+            {/* Card 9 
             <div>
             <CardOngs
                 id="card7"
                 OngImg=""
                 OngName="Nome Ong"
                 OngInsta="#"
-                OngPhone="+55"
                 bgColor="bg-yellow"
               />
-            </div>
+            </div> */}
           </div>
         </section>
       </div>

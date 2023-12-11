@@ -8,7 +8,7 @@ export default function NossoCompromisso() {
             Nosso Compromisso social
           </h1>
           <div className=" flex justify-center items-center">
-          <p className=" w-[65%] text-justify">
+          <p className=" w-[50%] text-center">
             A missão da UniPatas é promover a conexão genuína entre humanos e
             animais, construindo pontes de compaixão e amor. Buscamos criar uma
             plataforma inclusiva e inovadora, onde a tecnologia e o cuidado se

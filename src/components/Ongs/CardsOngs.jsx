@@ -3,7 +3,7 @@ import Logo from "@/assets/Logo-UniPatas-Vector-roxa.png";
 import Instagram from "@/assets/icon-insta.png";
 import Tel from "@/assets/icon-tel.png";
 
-export default function CardOngs({ id, OngImg, OngName, OngInsta, OngPhone, bgColor }) {
+export default function CardOngs({ id, OngImg, OngName, OngInsta, bgColor }) {
     const favoritarId = `favoritar-${id}`;
   return (
     <>
@@ -44,7 +44,7 @@ export default function CardOngs({ id, OngImg, OngName, OngInsta, OngPhone, bgCo
               <div>
                 {" "}
                 <Image
-                  className=" h-[170px] w-[255px] rounded-custom6"
+                  className=" h-[170px] w-[230px] rounded-custom6"
                   src={OngImg} alt="Logo da Ong"
                 />
               </div>
@@ -62,7 +62,7 @@ export default function CardOngs({ id, OngImg, OngName, OngInsta, OngPhone, bgCo
               <div>
                 <div className=" text-center text-white">
                   <p className=" text-[18px] text-darker-purple font-bold">
-                    Redes e Contato
+                    Redes
                   </p>
                 </div>
                 <div className=" flex justify-around">
@@ -71,11 +71,7 @@ export default function CardOngs({ id, OngImg, OngName, OngInsta, OngPhone, bgCo
                       <Image src={Instagram} className=" w-[100%]" alt="Logo do Instagram"/>
                     </a>
                   </div>
-                  <div className="w-[50px]">
-                    <a href={`tel:${OngPhone}`}>
-                      <Image src={Tel} className=" w-[100%]" alt="Logo do Apoia-se"/>
-                    </a>
-                  </div>
+                  
                 </div>
               </div>
             </div>
