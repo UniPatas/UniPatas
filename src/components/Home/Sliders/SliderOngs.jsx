@@ -12,7 +12,7 @@ import OngGatinhus from "@/assets/onggatinhus.jpg";
 export function SliderOngs() {
   return (
     <>
-      <section className="Slider-ongs pb-[30px]">
+      <section className="Slider-ongs pt-[60px]">
         <h1 className=" text-center text-[30px] text-darker-purple font-black pb-[40px]">
           Conheça as ONG's
         </h1>
