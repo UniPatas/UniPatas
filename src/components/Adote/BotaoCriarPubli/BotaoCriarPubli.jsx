@@ -15,7 +15,7 @@ export function BotaoCriarPubli() {
           <button onClick={() => setOpenModal(true)}>
             <div className=" flex items-center justify-between bg-pool-green p-[10px] rounded-[10px] border-[3px] border-ligther-green hover:bg-lighter-green hover:border-pool-green text-[20px] text-white font-black hover:text-darker-purple">
               <div>
-                <Image className=" w-[40px]" src={Plus}></Image>
+                <Image className=" w-[40px]" src={Plus} alt="botao de criar publicacao de adote" />
               </div>
               <div className=" ml-[10px]">
                 <p>Criar publicação</p>
