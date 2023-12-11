@@ -1,0 +1,35 @@
+{
+  "folders": [
+	{
+		"path": "../../../cursoreact"
+	},
+	{
+		"path": "../../../HTML-CSS---Liferay"
+	},
+	{
+		"path": "../../../FACULDADE"
+	},
+	{
+		"path": "../../../Projeto_insta"
+	},
+	{
+		"path": "../../../projetoSiteResponsivo"
+	},
+	{
+		"path": "../../../Desktop/INTENSIVÃO JS"
+	},
+	{
+		"path": "../../../Downloads/MeuRelogioCloudFront/MeuRelogioCloudFront"
+	},
+	{
+		"path": "../../../tarefaNext"
+	},
+	{
+		"path": "../../../Desktop/aulaJava_SpringBoot"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "HTML-CSS---Liferay",
+    "java.configuration.updateBuildConfiguration": "interactive"
+  }
+}
