@@ -6,40 +6,58 @@ import Cat from "@/assets/cat-adote.png";
 import Fem from "@/assets/sexo-feminino.png";
 import Mach from "@/assets/sexo-masculino.png";
 import { useState } from "react";
+import api from "@/app/services/api";
 
 const ModalPubli = ({ isVisible, onClose }) => {
+
+  const [nomeAnimal, setNomeAnimal] = useState('');
+  const [id, setId] = useState('');
+  const [foto, setFoto] = useState('');
+  const [tipoAnimal, setTipoAnimal] = useState('');
+  const [sexo, setSexo] = useState('');
+  const [faixaEtaria, setFaixaEtaria] = useState('');
+  const [usuarios, setUsuarios] = useState('');
+  const [caracteristicas , setCaracteristicas] = useState('');
+  const [porte, setPorte] = useState('');
+  const [descricao, setDescricao] = useState('');
+
   if (!isVisible) return null;
 
-  const [file, setFile] = useState();
+  async function adotar (e){
+    const adote ={
+      nomeAnimal,
+      id,
+      foto,
+      tipoAnimal,
+      sexo,
+      faixaEtaria,
+      usuarios,
+      caracteristicas,
+      porte,
+      descricao,
+    };
 
-  function handleFile(event) {
-    setFile(event.target.files[0]);
-    // console.log(event.target.files[0]);
+    try {
+      const response = await api.post('animais/create', adote);
+  
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+      // resposta
+      console.log('adote funcionou!');
+    }
+  } catch (error) {
+    console.log('adote não funcionou ' + error.message);
   }
-
-  function handleUpLoad() {
-    const formData = new formData();
-    formData.append("file", file);
-    fetch("url", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        console.log("success", result);
-      })
-      .catch((error) => {
-        console.group("Error:", error);
-      });
-  }
+}
 
   return (
     <>
       {/* MODELO DE MODAL */}
 
-      <div className=" fixed inset-0 backdrop-blur-sm flex items-center justify-center">
+      <div className=" fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50	">
         <div className=" bg-white w-[50%] h-[95%] rounded-[50px] p-[30px] shadow-box1">
-          <form onSubmit={handleUpLoad}>
+          <form onSubmit={adotar}>
             {/* BOTÃO FECHAR MODAL */}
             <div>
               <div className="flex justify-end">
@@ -93,7 +111,8 @@ const ModalPubli = ({ isVisible, onClose }) => {
                           <input
                             type="radio"
                             name="especie"
-                            id="canino"
+                            id="canino" 
+                            value='canino'  onChange={e => setTipoAnimal(e.target.value)} //input
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -110,6 +129,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="especie"
                             id="felino"
+                            value='felino' onChange={e => setTipoAnimal(e.target.value)} //input 
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -134,6 +154,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="porte"
                             id="pequeno"
+                            value='peque' onChange={e => setPorte(e.target.value)} //input 
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -150,6 +171,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="porte"
                             id="medio"
+                            value='medio' onChange={e => setPorte(e.target.value)} //input
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -166,6 +188,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="porte"
                             id="grande"
+                            value='grande' onChange={e => setPorte(e.target.value)} //input 
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -188,6 +211,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="sexo"
                             id="fem"
+                            value='femea' onChange={e => setSexo(e.target.value)}
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -204,6 +228,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                             type="radio"
                             name="sexo"
                             id="mach"
+                            value='macho' onChange={e => setSexo(e.target.value)} //input
                             className="ml-[5px] cursor-pointer"
                           ></input>
                         </label>
@@ -243,6 +268,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                         type="radio"
                         name="comportamento"
                         id="amoroso"
+                        value='amoroso' onChange={e => setCaracteristicas(e.target.value)}
                         className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Amoroso</span>
@@ -258,6 +284,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                         type="radio"
                         name="comportamento"
                         id="calmo"
+                        value='calmo' onChange={e => setCaracteristicas(e.target.value)} //input 
                         className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Calmo</span>
@@ -273,6 +300,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                         type="radio"
                         name="comportamento"
                         id="brincalhao"
+                        value='brincalhao' onChange={e => setCaracteristicas(e.target.value)} //input
                         className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Brincalhão</span>
@@ -291,6 +319,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                         type="radio"
                         name="idade"
                         id="filhote"
+                        value='filhote' onChange={e => setFaixaEtaria(e.target.value)} //input
                         className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Filhote</span>
@@ -306,6 +335,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                         type="radio"
                         name="idade"
                         id="adulto"
+                        value='adulto' onChange={e => setFaixaEtaria(e.target.value)} //input
                         className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Adulto</span>
@@ -321,6 +351,7 @@ const ModalPubli = ({ isVisible, onClose }) => {
                         type="radio"
                         name="idade"
                         id="idoso"
+                        value='idoso' onChange={e => setFaixaEtaria(e.target.value)} //input
                         className="mr-[5px] cursor-pointer"
                       ></input>
                       <span className=" font-bold">Idoso</span>
@@ -357,18 +388,10 @@ const ModalPubli = ({ isVisible, onClose }) => {
                   for="pictureinput"
                   // className=" flex items-center justify-center w-[400px] h-[200px] bg-[#ccc] text-[#aaa] border-2 border-dashed border-current cursor-pointer transition-all ease-in-out duration-300 hover:text-[#777] "
                 ></label>
-
-                <input
-                  onChange={handleFile}
-                  className=" "
-                  type="file"
-                  name="pictureinput"
-                  id="pictureinput"
-                ></input>
               </div>
 
               <div className=" mt-[30px]">
-                <button className="bg-darker-purple text-white text-[18px] font-bold mb-[10px] rounded p-[10px] w-[200px] hover:bg-pool-green">
+                <button onClick={()=>{console.log("teste btn")}} className="bg-darker-purple text-white text-[18px] font-bold mb-[10px] rounded p-[10px] w-[200px] hover:bg-pool-green">
                   Publicar
                 </button>
               </div>
