@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Logo from "@/assets/Logo-UniPatas-Vector-roxa.png";
 import Lupa from "@/assets/lupa.png";
+import { SliderOurHist } from "./Sliders/SliderOurHist";
 
 export function NavBar() {
   return (
@@ -49,7 +50,7 @@ export function NavBar() {
 
                 <div className=" pt-[5px]">
                   <a
-                    href="/sobre-nos"
+                    href="#nossahistoria"
                     className="text-darker-purple text-[20px] font-extrabold transition-all ease-in-out duration-200 hover:text-white hover:bg-darker-purple px-[15px] py-[5px] rounded-full"
                   >
                     SOBRE NÓS
@@ -58,7 +59,7 @@ export function NavBar() {
 
                 <div className=" pt-[5px]">
                   <a
-                    href="/ajuda"
+                    href="#ajuda"
                     className="text-darker-purple text-[20px] font-extrabold transition-all ease-in-out duration-200 hover:text-white hover:bg-darker-purple px-[15px] py-[5px] rounded-full"
                   >
                     AJUDA
